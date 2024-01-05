@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Gordita";
+  src:
+    url("/assets/font/Gordita-Black.woff2") format("woff2"),
+    url("/assets/font/Gordita-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gordita";
+  src:
+    url("/assets/font/Gordita-BlackItalic.woff2") format("woff2"),
+    url("/assets/font/Gordita-BlackItalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gordita";
+  src:
+    url("/assets/font/Gordita-Bold.woff2") format("woff2"),
+    url("/assets/font/Gordita-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gordita";
+  src:
+    url("/assets/font/Gordita-BoldItalic.woff2") format("woff2"),
+    url("/assets/font/Gordita-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gordita";
+  src:
+    url("/assets/font/Gordita-Light.woff2") format("woff2"),
+    url("/assets/font/Gordita-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gordita";
+  src:
+    url("/assets/font/Gordita-Medium.woff2") format("woff2"),
+    url("/assets/font/Gordita-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gordita";
+  src:
+    url("/assets/font/Gordita-LightItalic.woff2") format("woff2"),
+    url("/assets/font/Gordita-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gordita";
+  src:
+    url("/assets/font/Gordita-MediumItalic.woff2") format("woff2"),
+    url("/assets/font/Gordita-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gordita";
+  src:
+    url("/assets/font/Gordita-Italic.woff2") format("woff2"),
+    url("/assets/font/Gordita-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gordita";
+  src:
+    url("/assets/font/Gordita-Regular.woff2") format("woff2"),
+    url("/assets/font/Gordita-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Gordita", sans-serif;
+  font-size: 1.6px;
+}
+
+h1 {
+  font-size: 26px;
+  line-height: 38px;
+  font-weight: 600;
+}
+
+h2 {
+  font-size:18px;
+  line-height: 28px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 600;
+}
+
+p {
+  font-size: 14px;
+  line-height: 22px;
+}

@@ -1,0 +1,9 @@
+{
+  "server-component": {
+    "welcome": "Xin chào, đây là một ứng dụng Vue.js được tạo bằng vue-cli & vue-rx."
+  },
+  "counter": {
+    "increment": "Increment",
+    "decrement": "Decrement"
+  }
+}
