@@ -32,7 +32,10 @@
       "@/styles/*": ["src/shared/styles/*"],
       "@/types/*": ["src/shared/types/*"],
       "@/hooks/*": ["src/shared/hooks/*"],
-      "@/constants/*": ["src/constants/*"],
+      "@/constants/*": ["src/shared/constants/*"],
+      "@/contexts/*": ["src/shared/contexts/*"],
+      "@/assets/*": ["public/assets/*"],
+      "@/images/*": ["public/assets/images/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

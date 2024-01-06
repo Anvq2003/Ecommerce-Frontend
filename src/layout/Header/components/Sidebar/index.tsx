@@ -1,7 +1,10 @@
-import { Fragment } from "react";
-import { Dialog, Transition } from "@headlessui/react";
-import { ArrowLeftIcon } from "@heroicons/react/24/outline";
-import { CartIcon } from "@/components/Icons";
+'use client';
+
+import { Fragment } from 'react';
+import { Dialog, Transition } from '@headlessui/react';
+import { ArrowLeftIcon } from '@heroicons/react/24/outline';
+import { CartIcon } from '@/components/Icons';
+import Content from './Content';
 
 interface ISidebarProps {
   isOpen: boolean;
@@ -37,21 +40,7 @@ export default function Sidebar({ isOpen, onOpenChange }: ISidebarProps) {
                 leaveTo="-translate-x-full"
               >
                 <Dialog.Panel className="pointer-events-auto relative w-screen max-w-md">
-                  <div className="dark: flex h-full flex-col overflow-y-auto bg-white p-5 shadow-xl dark:bg-bgPrimary">
-                    <ArrowLeftIcon
-                      className="h-6 w-6 text-textPrimary cursor-pointer"
-                      onClick={() => onOpenChange(false)}
-                    />
-                    <div className="my-5 flex flex-col gap-5">
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center text-textPrimary">
-                          <CartIcon />
-                          Cart
-                        </div>
-                        <span className="text-textPrimary">2</span>
-                      </div>
-                    </div>
-                  </div>
+                  <Content isOpen={isOpen} onOpenChange={onOpenChange} />
                 </Dialog.Panel>
               </Transition.Child>
             </div>

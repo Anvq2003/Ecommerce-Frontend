@@ -1,11 +1,13 @@
+'use client';
+
 import { useState, useEffect } from "react";
 
 const MOBILE_WIDTH = 768;
 
-export const useDeviceType = (
-  layout: "mobile" | "tablet" | "desktop" = "desktop",
-) => {
-  const [device, setDevice] = useState<"mobile" | "tablet" | "desktop">(layout);
+export type TScreenType = "mobile" | "tablet" | "desktop";
+
+export const useDeviceType = (layout: TScreenType = "desktop") => {
+  const [device, setDevice] = useState<TScreenType>(layout);
 
   useEffect(() => {
     let _layout = layout;
@@ -25,6 +27,7 @@ export const useDeviceType = (
     return () => {
       window.removeEventListener("resize", handleResize);
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return device;

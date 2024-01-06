@@ -1,22 +1,31 @@
-"use client";
+'use client';
 
-import * as React from "react";
-import { NextUIProvider } from "@nextui-org/system";
-import { useRouter } from 'next/navigation'
-import { ThemeProvider as NextThemesProvider } from "next-themes";
-import { ThemeProviderProps } from "next-themes/dist/types";
+import { ThemeProvider as NextThemesProvider } from 'next-themes';
+import { ThemeProviderProps } from 'next-themes/dist/types';
+import { useRouter } from 'next/navigation';
+import * as React from 'react';
+
+import { i18n, Locale } from '@/config/i18n';
+import useLanguage, { languageSelector, setLanguageSelector } from '@/contexts/language';
+import { NextUIProvider } from '@nextui-org/system';
 
 export interface ProvidersProps {
-	children: React.ReactNode;
-	themeProps?: ThemeProviderProps;
+  children: React.ReactNode;
+  themeProps?: ThemeProviderProps;
+  lang?: Locale;
 }
 
-export function Providers({ children, themeProps }: ProvidersProps) {
+export function Providers({ children, themeProps, lang }: ProvidersProps) {
   const router = useRouter();
+  const setLanguage = useLanguage(setLanguageSelector);
 
-	return (
-		<NextUIProvider navigate={router.push}>
-			<NextThemesProvider {...themeProps}>{children}</NextThemesProvider>
-		</NextUIProvider>
-	);
+  React.useEffect(() => {
+    setLanguage(lang || i18n.defaultLocale);
+  }, [lang, setLanguage]);
+
+  return (
+    <NextUIProvider navigate={router.push}>
+      <NextThemesProvider {...themeProps}>{children}</NextThemesProvider>
+    </NextUIProvider>
+  );
 }

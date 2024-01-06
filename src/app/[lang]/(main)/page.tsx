@@ -1,17 +1,18 @@
-import { Link } from '@nextui-org/link';
-import { Snippet } from '@nextui-org/snippet';
-import { Code } from '@nextui-org/code';
-import { button as buttonStyles } from '@nextui-org/theme';
-import { siteConfig } from '@/config/site';
-import { title, subtitle } from '@/components/primitives';
+import CategoryBox from '@/components/Category';
+import ProductBox from '@/components/Product';
 import { Locale } from '@/config/i18n';
 import { getLanguage } from '@/shared/helpers/getLanguage';
+import { Slider } from '@nextui-org/react';
 
 export default async function Home({ params: { lang } }: { params: { lang: Locale } }) {
   const dict = await getLanguage(lang);
   return (
-    <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-			<h1>{dict['server-component'].welcome}</h1>
-		</section>
+    <section className="container flex gap-[30px]">
+      <CategoryBox />
+      <div className="flex-1">
+        <Slider />
+        <ProductBox />
+      </div>
+    </section>
   );
 }

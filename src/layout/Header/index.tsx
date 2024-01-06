@@ -1,3 +1,5 @@
+'use client';
+
 import { useDeviceType } from "@/shared/hooks/useDeviceType";
 import Desktop from "./devices/Desktop";
 import Mobile from "./devices/Mobile";

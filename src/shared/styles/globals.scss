@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// @import 'stylesheets';
+@font-face {
+  font-family: 'Gordita';
+  src: url('/public/assets/fonts/Gordita-Black.woff2') format('woff2'),
+    url('/public/assets/fonts/Gordita-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gordita';
+  src: url('/public/assets/fonts/Gordita-Bold.woff2') format('woff2'),
+    url('/public/assets/fonts/Gordita-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gordita';
+  src: url('/public/assets/fonts/Gordita-Medium.woff2') format('woff2'),
+    url('/public/assets/fonts/Gordita-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gordita';
+  src: url('/public/assets/fonts/Gordita-Regular.woff2') format('woff2'),
+    url('/public/assets/fonts/Gordita-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gordita';
+  src: url('/public/assets/fonts/Gordita-Light.woff2') format('woff2'),
+    url('/public/assets/fonts/Gordita-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Gordita', sans-serif;
+  font-size: 14px;
+  color: #1a162e;
+}
+
+h1 {
+  font-size: 26px;
+  line-height: 38px;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+}
+
+h6 {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 500;
+}
+
+p {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+// style default scrollbar
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
