@@ -1,9 +1,9 @@
-import category from '/public/assets/images/category.png';
-import React from 'react';
+import category from "/public/assets/images/category.png";
+import React from "react";
 
-import Title from '@/components/Title';
+import { title } from "@/styles/primitives";
 
-import CategoryCard from './components/CategoryCard';
+import CategoryCard from "./components/CategoryCard";
 
 export default function CategoryBox() {
   const array = [
@@ -65,9 +65,9 @@ export default function CategoryBox() {
   ];
 
   return (
-    <div className="w-[250px]">
-      <Title title="Category" className="mb-5" />
-      <div className="flex flex-col gap-4">
+    <div className="mb-5 w-full px-5 lg:mb-0 lg:w-[250px] lg:px-0">
+      <h2 className={title({ class: "mb-5" })}>Category</h2>
+      <div className="grid snap-x auto-cols-[40%] grid-flow-col gap-5 overflow-x-auto overflow-y-hidden lg:flex lg:flex-col lg:gap-4">
         {array.map((item: any, index: number) => (
           <CategoryCard
             key={index}

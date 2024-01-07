@@ -7,6 +7,6 @@ export default function Logo() {
   const { theme } = useTheme();
 
   return (
-    <Link href="/">{theme === "dark" ? <LogoDark /> : <LogoLight />}</Link>
+    <Link href="/">{theme === "dark" ? <LogoDark  /> : <LogoLight />}</Link>
   );
 }

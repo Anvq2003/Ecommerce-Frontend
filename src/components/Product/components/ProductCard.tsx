@@ -18,7 +18,7 @@ export default function ProductCard({ data }: IProductCardProps) {
   const { urlImage, name, category, price, star } = data;
 
   return (
-    <div className="w-full rounded-[20px] bg-white dark:bg-bgSecondary p-4 shadow-[0_20px_60px_10px_rgba(237,237,246,0.20)] dark:shadow-[0px_20px_60px_10px_rgba(0,0,0,0.20)]">
+    <div className="w-full rounded-[20px] bg-white p-4 shadow-[0_20px_60px_10px_rgba(237,237,246,0.20)] dark:bg-bgSecondary dark:shadow-[0px_20px_60px_10px_rgba(0,0,0,0.20)]">
       <div className="relative m-[10px] mb-4">
         <Image
           width={500}
@@ -27,7 +27,7 @@ export default function ProductCard({ data }: IProductCardProps) {
           alt={name}
           className="w-full cursor-pointer"
         />
-        <div className="absolute bottom-0 right-0 flex h-[50px] w-[50px]  cursor-pointer items-center justify-center rounded-full bg-white dark:bg-bgPrimary shadow-[0_20px_60px_rgba(124,124,124,0.4)]">
+        <div className="absolute bottom-0 right-0 flex h-[50px] w-[50px] cursor-pointer items-center justify-center rounded-full bg-white shadow-[0_20px_60px_rgba(124,124,124,0.4)] dark:text-white dark:bg-bgPrimary">
           <HeartIcon />
         </div>
       </div>
@@ -39,9 +39,7 @@ export default function ProductCard({ data }: IProductCardProps) {
           {category}
         </p>
         <div className="flex items-center justify-between">
-          <h3 className="text-base font-medium text-textPrimary">
-            ${price}
-          </h3>
+          <h3 className="text-base font-medium text-textPrimary">${price}</h3>
           <div className="flex items-center gap-[6px]">
             <StarIcon />
             <span className="text-base font-medium text-textPrimary">

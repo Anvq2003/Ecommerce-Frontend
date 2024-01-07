@@ -1,9 +1,9 @@
 'use client';
 
 import { Fragment } from 'react';
+
 import { Dialog, Transition } from '@headlessui/react';
-import { ArrowLeftIcon } from '@heroicons/react/24/outline';
-import { CartIcon } from '@/components/Icons';
+
 import Content from './Content';
 
 interface ISidebarProps {
@@ -13,7 +13,7 @@ interface ISidebarProps {
 
 export default function Sidebar({ isOpen, onOpenChange }: ISidebarProps) {
   return (
-    <Transition.Root show={true} as={Fragment}>
+    <Transition.Root show={isOpen} as={Fragment}>
       <Dialog as="div" className="relative z-10" onClose={onOpenChange}>
         <Transition.Child
           as={Fragment}
@@ -40,7 +40,7 @@ export default function Sidebar({ isOpen, onOpenChange }: ISidebarProps) {
                 leaveTo="-translate-x-full"
               >
                 <Dialog.Panel className="pointer-events-auto relative w-screen max-w-md">
-                  <Content isOpen={isOpen} onOpenChange={onOpenChange} />
+                  <Content onClickClose={() => onOpenChange(false)} />
                 </Dialog.Panel>
               </Transition.Child>
             </div>

@@ -4,8 +4,12 @@ import slider from "/public/assets/images/slider.png";
 
 export default function Slider() {
   return (
-    <div className="mb-10 w-full rounded-[20px]">
-      <Image className="w-full" src={slider} alt="slider" />
+    <div className="mb-10 aspect-video px-5 lg:px-0">
+      <Image
+        className="rounded-5 h-full w-full object-cover"
+        src={slider}
+        alt="slider"
+      />
     </div>
   );
 }

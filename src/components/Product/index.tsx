@@ -1,10 +1,10 @@
-import productImage from '/public/assets/images/product.png';
-import React from 'react';
+import productImage from "/public/assets/images/product.png";
+import React from "react";
 
-import FilterBox from './components/FilterBox';
-import Title from '@/components/Title';
+import FilterBox from "./components/FilterBox";
 
-import ProductCard, { IProductCard } from './components/ProductCard';
+import ProductCard, { IProductCard } from "./components/ProductCard";
+import { title } from "@/shared/styles/primitives";
 
 export default function ProductBox() {
   const array: IProductCard[] = [
@@ -32,12 +32,12 @@ export default function ProductBox() {
   ];
 
   return (
-    <div className=" mb-[38px]">
+    <div className="mb-[38px] px-5 lg:px-0">
       <div className="mb-[30px] flex items-center justify-between">
-        <Title title="Total LavAzza 1320" />
+        <h2 className={title()}>Total LavAzza 1320</h2>
         <FilterBox />
       </div>
-      <div className="flex gap-[30px]">
+      <div className="grid grid-cols-1 gap-[30px] lg:grid-cols-3">
         {array.map((item: any, index: number) => (
           <ProductCard key={index} data={item} />
         ))}

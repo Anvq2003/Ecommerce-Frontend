@@ -3,7 +3,7 @@ import '@/shared/styles/globals.scss';
 import clsx from 'clsx';
 import { Metadata } from 'next';
 
-// import { fontSans } from '@/config/fonts';
+import { gordita } from '@/assets/fonts';
 import { i18n, Locale } from '@/config/i18n';
 import { siteConfig } from '@/config/site';
 
@@ -40,7 +40,7 @@ export default function RootLayout({
   return (
     <html lang={params.lang} suppressHydrationWarning>
       <head />
-      <body className={clsx('min-h-screen antialiased')}>
+      <body className={clsx('min-h-screen overflow-x-hidden antialiased', gordita.className)}>
         <Providers lang={params.lang} themeProps={{ attribute: 'class', defaultTheme: 'light' }}>
           {children}
         </Providers>

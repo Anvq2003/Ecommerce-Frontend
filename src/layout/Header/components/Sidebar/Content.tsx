@@ -2,16 +2,15 @@ import React from 'react';
 
 import { CartIcon, HeartIcon } from '@/components/Icons';
 import { ArrowLeftIcon } from '@heroicons/react/24/outline';
-import { Accordion, AccordionItem } from '@nextui-org/react';
+import { Accordion, AccordionItem, ScrollShadow } from '@nextui-org/react';
 import MenuItem from '../Menu/MenuItem';
-import menuIcon from '/public/assets/images/menu-icon.png'
+import menuIcon from '/public/assets/images/menu-icon.png';
 
 interface IContentProps {
-  isOpen: boolean;
-  onOpenChange: (open: boolean) => void;
+  onClickClose: () => void;
 }
 
-export default function Content({ isOpen, onOpenChange }: IContentProps) {
+export default function Content({ onClickClose }: IContentProps) {
   const actions = [
     {
       label: 'Cart',
@@ -136,16 +135,16 @@ export default function Content({ isOpen, onOpenChange }: IContentProps) {
 
   const itemClasses = {
     base: 'p-0 w-full',
-    title: 'text-4 text-medium text-textPrimary',
+    title: 'text-[16px] font-medium text-textPrimary',
     trigger: 'px-2 py-0 data-[hover=true]:bg-default-100 rounded-lg h-11 flex items-center',
-    svg: 'text-textPrimary',
+    indicator: 'text-textPrimary',
   };
 
   return (
-    <div className="dark: flex h-full flex-col overflow-y-auto bg-white p-5 shadow-xl dark:bg-bgPrimary">
+    <div className=" flex h-full flex-col overflow-y-auto bg-white p-5 shadow-xl dark:bg-bgPrimary">
       <ArrowLeftIcon
         className="h-6 w-6 text-textPrimary cursor-pointer"
-        onClick={() => onOpenChange(false)}
+        onClick={onClickClose}
       />
       <div>
         {actions.map((action) => (
@@ -153,25 +152,27 @@ export default function Content({ isOpen, onOpenChange }: IContentProps) {
             <div className="flex items-center justify-between">
               <div className="flex items-center text-textPrimary gap-3">
                 {action.icon}
-                <p className="font-medium">{action.label}</p>
+                <p className="font-medium text-[15px]">{action.label}</p>
               </div>
               <span className="text-textPrimary text-[15px] font-medium">{action.number}</span>
             </div>
           </div>
         ))}
       </div>
-      <div className="overflow-y-auto">
+      <div>
         <Accordion className="p-0" showDivider={false} itemClasses={itemClasses}>
           {menu.map((item, index) => (
-            <AccordionItem className="p-0" key={index} aria-label={item.label} title={item.label}>
-              {item?.children?.map((child) => (
-                <MenuItem
-                  key={child.label}
-                  image={child.image}
-                  label={child.label}
-                  list={child.list}
-                />
-              ))}
+            <AccordionItem key={index} aria-label={item.label} title={item.label}>
+              <ScrollShadow className="w-full px-1 max-h-[500px]">
+                {item?.children?.map((child) => (
+                  <MenuItem
+                    key={child.label}
+                    image={child.image}
+                    label={child.label}
+                    list={child.list}
+                  />
+                ))}
+              </ScrollShadow>
             </AccordionItem>
           ))}
         </Accordion>

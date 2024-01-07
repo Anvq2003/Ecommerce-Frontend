@@ -2,50 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
-// @import 'stylesheets';
-@font-face {
-  font-family: 'Gordita';
-  src: url('/public/assets/fonts/Gordita-Black.woff2') format('woff2'),
-    url('/public/assets/fonts/Gordita-Black.woff') format('woff');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
+:root {
+  --bg-track: #f1f1f1;
+  --bg-thumb: #ccc;
+  --bg-thumbHover: #888;
+}
+
+[data-theme="dark"] {
+  --bg-track: #1a162e;
+  --bg-thumb: #1a162e;
+  --bg-thumbHover: #1a162e;
 }
 
 @font-face {
-  font-family: 'Gordita';
-  src: url('/public/assets/fonts/Gordita-Bold.woff2') format('woff2'),
-    url('/public/assets/fonts/Gordita-Bold.woff') format('woff');
+  font-family: "Gordita";
   font-weight: bold;
   font-style: normal;
   font-display: swap;
+  src:
+    local("gordita"),
+    url("/public/assets/fonts/Gordita-Bold.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: 'Gordita';
-  src: url('/public/assets/fonts/Gordita-Medium.woff2') format('woff2'),
-    url('/public/assets/fonts/Gordita-Medium.woff') format('woff');
+  font-family: "Gordita";
   font-weight: 500;
   font-style: normal;
   font-display: swap;
+  src:
+    local("gordita"),
+    url("/public/assets/fonts/Gordita-Medium.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: 'Gordita';
-  src: url('/public/assets/fonts/Gordita-Regular.woff2') format('woff2'),
-    url('/public/assets/fonts/Gordita-Regular.woff') format('woff');
+  font-family: "Gordita";
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+  src:
+    local("gordita"),
+    url("/public/assets/fonts/Gordita-Regular.woff") format("woff2");
 }
 
 @font-face {
-  font-family: 'Gordita';
-  src: url('/public/assets/fonts/Gordita-Light.woff2') format('woff2'),
-    url('/public/assets/fonts/Gordita-Light.woff') format('woff');
+  font-family: "Gordita";
   font-weight: 300;
   font-style: normal;
   font-display: swap;
+  src:
+    local("gordita"),
+    url("/public/assets/fonts/Gordita-Light.woff2") format("woff2");
 }
 
 html {
@@ -53,7 +59,7 @@ html {
 }
 
 body {
-  font-family: 'Gordita', sans-serif;
+  font-family: "Gordita", sans-serif;
   font-size: 14px;
   color: #1a162e;
 }
@@ -102,18 +108,19 @@ p {
 // style default scrollbar
 ::-webkit-scrollbar {
   width: 4px;
+  height: 4px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: var(--bg-track);
   border-radius: 2px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ccc;
+  background: var(--bg-thumb);
   border-radius: 2px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #888;
+  background: var(--bg-thumbHover);
 }

@@ -10,12 +10,12 @@ export default function Information() {
 
       {/* Info */}
       <div className="flex h-[50px] items-center gap-5 rounded-lg bg-white px-5 dark:bg-bgPrimary">
-        <div className="flex items-center gap-[10px]">
+        <div className="flex items-center gap-[10px] text-white">
           <HeartIcon />
           <span className="text-[15px] font-medium text-textPrimary">03</span>
         </div>
-        <div className="h-[30px] w-[1px] bg-line "></div>
-        <div className="flex items-center gap-[10px]">
+        <div className="h-[30px] w-[1px] bg-line"></div>
+        <div className="flex items-center gap-[10px] text-white">
           <CartIcon />
           <span className="text-[15px] font-medium text-textPrimary">
             $65:20

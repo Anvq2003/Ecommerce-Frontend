@@ -20,9 +20,9 @@ export default function MenuItem({ image, label, list }: IMenuItem) {
         <div className="">
           <Image className="w-9 h-9" src={image} alt={label} width={72} height={72} quality={100} />
         </div>
-        <h6 className="text-4 font-medium">{label}</h6>
+        <h6 className="text-[15px] font-medium">{label}</h6>
       </div>
-      <ul className="mt-5 pl-12 flex flex-col gap-3">
+      <ul className="mt-4 pl-12 flex flex-col gap-3">
         {list.map((item, index) => (
           <li key={index}>
             <Link href={item.link}> {item.label}</Link>
