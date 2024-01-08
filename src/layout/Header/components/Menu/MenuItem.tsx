@@ -23,7 +23,7 @@ export default function MenuItem({ image, label, list }: IMenuItem) {
         <h6 className="text-[15px] font-medium">{label}</h6>
       </div>
       <ul className="mt-4 pl-12 flex flex-col gap-3">
-        {list.map((item, index) => (
+        {list?.map((item, index) => (
           <li key={index}>
             <Link href={item.link}> {item.label}</Link>
           </li>
