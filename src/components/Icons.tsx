@@ -7,7 +7,12 @@ interface IIconProps {
   [x: string]: any;
 }
 
-export const SearchIcon = ({ size = 24, width, height, ...props }: IIconProps) => (
+export const SearchIcon = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}: IIconProps) => (
   <svg
     width={width || size}
     height={height || size}
@@ -42,7 +47,12 @@ export const SearchIcon = ({ size = 24, width, height, ...props }: IIconProps) =
   </svg>
 );
 
-export const CartIcon = ({ size = 24, width, height, ...props }: IIconProps) => (
+export const CartIcon = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}: IIconProps) => (
   <svg
     width={width || size}
     height={height || size}
@@ -118,7 +128,13 @@ export const CartIcon = ({ size = 24, width, height, ...props }: IIconProps) => 
   </svg>
 );
 
-export const HeartIcon = ({ size = 24, width, height, isFilled = false, ...props }: IIconProps) =>
+export const HeartIcon = ({
+  size = 24,
+  width,
+  height,
+  isFilled = false,
+  ...props
+}: IIconProps) =>
   isFilled ? (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -167,7 +183,11 @@ export const HeartIcon = ({ size = 24, width, height, isFilled = false, ...props
             type="matrix"
             values="0 0 0 0 0.976471 0 0 0 0 0.270588 0 0 0 0 0.270588 0 0 0 0.2 0"
           />
-          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_49120_5021" />
+          <feBlend
+            mode="normal"
+            in2="BackgroundImageFix"
+            result="effect1_dropShadow_49120_5021"
+          />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -210,7 +230,12 @@ export const HeartIcon = ({ size = 24, width, height, isFilled = false, ...props
     </svg>
   );
 
-export const ArrayBottomIcon = ({ size = 12, width, height, ...props }: IIconProps) => (
+export const ArrayBottomIcon = ({
+  size = 12,
+  width,
+  height,
+  ...props
+}: IIconProps) => (
   <svg
     width={width || size}
     height={height || size}
@@ -230,7 +255,12 @@ export const ArrayBottomIcon = ({ size = 12, width, height, ...props }: IIconPro
 );
 
 // MenuMega
-export const CircleIcon = ({ size = 30, width, height, ...props }: IIconProps) => (
+export const CircleIcon = ({
+  size = 30,
+  width,
+  height,
+  ...props
+}: IIconProps) => (
   <svg
     width={width || size}
     height={height || size}
@@ -244,7 +274,12 @@ export const CircleIcon = ({ size = 30, width, height, ...props }: IIconProps) =
   </svg>
 );
 
-export const GridIcon = ({ size = 24, width, height, ...props }: IIconProps) => (
+export const GridIcon = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}: IIconProps) => (
   <svg
     width={width || size}
     height={height || size}
@@ -293,7 +328,12 @@ export const GridIcon = ({ size = 24, width, height, ...props }: IIconProps) => 
 );
 
 // Title
-export const FilterIcon = ({ size = 24, width, height, ...props }: IIconProps) => (
+export const FilterIcon = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}: IIconProps) => (
   <svg
     width={width || size}
     height={height || size}
@@ -338,7 +378,13 @@ export const FilterIcon = ({ size = 24, width, height, ...props }: IIconProps) =
 );
 
 // Product
-export const StarIcon = ({ size = 24, width, height, isFilled = false, ...props }: IIconProps) =>
+export const StarIcon = ({
+  size = 24,
+  width,
+  height,
+  isFilled = false,
+  ...props
+}: IIconProps) =>
   isFilled ? (
     <svg
       width={width || size}
@@ -380,7 +426,11 @@ export const StarIcon = ({ size = 24, width, height, isFilled = false, ...props 
     </svg>
   );
 
-export const LogoLight = ({ width = 190, height = 32, ...props }: IIconProps) => (
+export const LogoLight = ({
+  width = 190,
+  height = 32,
+  ...props
+}: IIconProps) => (
   <svg
     width={width}
     height={height}
@@ -402,7 +452,11 @@ export const LogoLight = ({ width = 190, height = 32, ...props }: IIconProps) =>
   </svg>
 );
 
-export const LogoDark = ({ width = 190, height = 32, ...props }: IIconProps) => (
+export const LogoDark = ({
+  width = 190,
+  height = 32,
+  ...props
+}: IIconProps) => (
   <svg
     width={width}
     height={height}
@@ -453,6 +507,25 @@ export const Menu = ({ width = 14, height = 17, ...props }: IIconProps) => (
       strokeWidth={2}
       strokeLinecap="round"
       strokeLinejoin="round"
+    />
+  </svg>
+);
+
+export const ArrowMegaMenu = ({
+  width = 23,
+  height = 17,
+  ...props
+}: IIconProps) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={width}
+    height={height}
+    viewBox="0 0 23 17"
+    fill="none"
+  >
+    <path
+      d="M9.45277 1.1122C10.253 0.0530214 11.8441 0.0530201 12.6443 1.1122L21.6591 13.0444C22.6545 14.362 21.7147 16.25 20.0633 16.25H2.03375C0.382421 16.25 -0.557459 14.362 0.437972 13.0444L9.45277 1.1122Z"
+      fill="currentColor"
     />
   </svg>
 );

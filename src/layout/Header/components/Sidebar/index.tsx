@@ -14,7 +14,7 @@ interface ISidebarProps {
 export default function Sidebar({ isOpen, onOpenChange }: ISidebarProps) {
   return (
     <Transition.Root show={isOpen} as={Fragment}>
-      <Dialog as="div" className="relative z-10" onClose={onOpenChange}>
+      <Dialog as="div" className="relative z-40" onClose={onOpenChange}>
         <Transition.Child
           as={Fragment}
           enter="ease-in-out duration-500"
@@ -32,10 +32,10 @@ export default function Sidebar({ isOpen, onOpenChange }: ISidebarProps) {
             <div className="pointer-events-none fixed inset-y-0 left-0 flex w-80 max-w-full shadow-[0px,40px,90px,20px,rgba(23,28,40,0.40)]">
               <Transition.Child
                 as={Fragment}
-                enter="transform transition ease-in-out duration-700 sm:duration-900 delay-150"
+                enter="transition transform ease-out duration-700 delay-200"
                 enterFrom="-translate-x-full"
                 enterTo="translate-x-0"
-                leave="transform transition ease-in-out duration-700 sm:duration-900 delay-150"
+                leave="transition transform ease-in duration-700"
                 leaveFrom="translate-x-0"
                 leaveTo="-translate-x-full"
               >
