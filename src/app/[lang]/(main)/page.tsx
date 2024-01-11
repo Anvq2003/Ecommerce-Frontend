@@ -1,11 +1,10 @@
-import CategoryBox from '@/components/Category';
-import ProductBox from '@/components/Product';
-import { Locale } from '@/config/i18n';
-import { getLanguage } from '@/shared/helpers/getLanguage';
-import Slider from '@/components/Slider';
+import CategoryBox from "@/components/Category";
+import ProductBox from "@/components/Product";
+import { getLanguage } from "@/shared/helpers/getLanguage";
+import Slider from "@/components/Slider";
+import { IPageProps } from "@/shared/types";
 
-export default async function Home({ params: { lang } }: { params: { lang: Locale } }) {
-  const dict = await getLanguage(lang);
+export default async function Home({ params: { lang } }: IPageProps) {
   return (
     <section className="container flex flex-col gap-5 lg:flex-row lg:gap-[30px]">
       <CategoryBox />

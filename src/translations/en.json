@@ -1,0 +1,25 @@
+{
+  "common": {
+    "cancel": "Cancel",
+    "ok": "OK",
+    "delete": "Delete",
+    "edit": "Edit"
+  },
+  "home": {
+    "filter": "Filter",
+    "categories": "Categories",
+    "price": "Price",
+    "min": "Min",
+    "max": "Max",
+    "size/weigh": "Size/Weigh",
+    "size": "Size",
+    "weight": "Weight",
+    "small": "Small",
+    "medium": "Medium",
+    "large": "Large",
+    "color": "Color",
+    "brand": "Brand",
+    "brand.placeholder": "Search brand",
+    "show.result": "Show result"
+  }
+}

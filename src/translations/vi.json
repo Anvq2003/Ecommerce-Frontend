@@ -1,0 +1,25 @@
+{
+  "common": {
+    "cancel": "Hủy",
+    "ok": "Đồng ý",
+    "delete": "Xóa",
+    "edit": "Sửa"
+  },
+  "home": {
+    "filter": "Lọc",
+    "categories": "Danh mục",
+    "price": "Giá",
+    "min": "Tối thiểu",
+    "max": "Tối đa",
+    "size/weigh": "Kích thước / Cân nặng",
+    "size": "Kích thước",
+    "weight": "Cân nặng",
+    "small": "Nhỏ",
+    "medium": "Vừa",
+    "large": "Lớn",
+    "color": "Màu sắc",
+    "brand": "Thương hiệu",
+    "brand.placeholder": "Tìm kiếm thương hiệu",
+    "show.result": "Hiển thị kết quả"
+  }
+}

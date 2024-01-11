@@ -7,6 +7,7 @@ import ProductCard, { IProductCard } from "./components/ProductCard";
 import { title } from "@/shared/styles/primitives";
 
 export default function ProductBox() {
+  
   const array: IProductCard[] = [
     {
       urlImage: productImage,

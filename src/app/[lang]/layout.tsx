@@ -6,8 +6,10 @@ import { Metadata } from 'next';
 import { gordita } from '@/assets/fonts';
 import { i18n, Locale } from '@/config/i18n';
 import { siteConfig } from '@/config/site';
+import { getLanguage } from '@/shared/helpers/getLanguage';
 
 import { Providers } from './providers';
+import StoreProvider from './StoreProvider';
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
@@ -37,13 +39,16 @@ export default function RootLayout({
   children: React.ReactNode;
   params: { lang: Locale };
 }) {
+  
   return (
     <html lang={params.lang} suppressHydrationWarning>
       <head />
       <body className={clsx('min-h-screen overflow-x-hidden antialiased', gordita.className)}>
-        <Providers lang={params.lang} themeProps={{ attribute: 'class', defaultTheme: 'light' }}>
-          {children}
-        </Providers>
+        <StoreProvider>
+          <Providers lang={params.lang} themeProps={{ attribute: 'class', defaultTheme: 'light' }}>
+            {children}
+          </Providers>
+        </StoreProvider>
       </body>
     </html>
   );

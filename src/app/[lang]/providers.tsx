@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import * as React from 'react';
 
 import { i18n, Locale } from '@/config/i18n';
-import useLanguage, { languageSelector, setLanguageSelector } from '@/contexts/language';
+import useLanguageContext, { languageSelector, setLanguageSelector } from '@/contexts/language';
 import { NextUIProvider } from '@nextui-org/system';
 
 export interface ProvidersProps {
@@ -17,7 +17,7 @@ export interface ProvidersProps {
 
 export function Providers({ children, themeProps, lang }: ProvidersProps) {
   const router = useRouter();
-  const setLanguage = useLanguage(setLanguageSelector);
+  const setLanguage = useLanguageContext(setLanguageSelector);
 
   React.useEffect(() => {
     setLanguage(lang || i18n.defaultLocale);
