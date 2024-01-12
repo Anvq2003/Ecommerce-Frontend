@@ -9,7 +9,7 @@ import { siteConfig } from '@/config/site';
 import { getLanguage } from '@/shared/helpers/getLanguage';
 
 import { Providers } from './providers';
-import StoreProvider from './StoreProvider';
+import StoreProvider from './storeProvider';
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
