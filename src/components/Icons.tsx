@@ -392,6 +392,21 @@ export const StarIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M13.1043 4.17701L14.9317 7.82776C15.1108 8.18616 15.4565 8.43467 15.8573 8.49218L19.9453 9.08062C20.9554 9.22644 21.3573 10.4505 20.6263 11.1519L17.6702 13.9924C17.3797 14.2718 17.2474 14.6733 17.3162 15.0676L18.0138 19.0778C18.1856 20.0698 17.1298 20.8267 16.227 20.3574L12.5732 18.4627C12.215 18.2768 11.786 18.2768 11.4268 18.4627L7.773 20.3574C6.87023 20.8267 5.81439 20.0698 5.98724 19.0778L6.68385 15.0676C6.75257 14.6733 6.62033 14.2718 6.32982 13.9924L3.37368 11.1519C2.64272 10.4505 3.04464 9.22644 4.05466 9.08062L8.14265 8.49218C8.54354 8.43467 8.89028 8.18616 9.06937 7.82776L10.8957 4.17701C11.3477 3.27433 12.6523 3.27433 13.1043 4.17701Z"
+        fill="#FFB700"
+      />
+    </svg>
+  ) : (
+    <svg
+      width={width || size}
+      height={height || size}
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <g id="Iconly/Light/Star">
@@ -408,21 +423,6 @@ export const StarIcon = ({
           />
         </g>
       </g>
-    </svg>
-  ) : (
-    <svg
-      width={width || size}
-      height={height || size}
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M13.1043 4.17701L14.9317 7.82776C15.1108 8.18616 15.4565 8.43467 15.8573 8.49218L19.9453 9.08062C20.9554 9.22644 21.3573 10.4505 20.6263 11.1519L17.6702 13.9924C17.3797 14.2718 17.2474 14.6733 17.3162 15.0676L18.0138 19.0778C18.1856 20.0698 17.1298 20.8267 16.227 20.3574L12.5732 18.4627C12.215 18.2768 11.786 18.2768 11.4268 18.4627L7.773 20.3574C6.87023 20.8267 5.81439 20.0698 5.98724 19.0778L6.68385 15.0676C6.75257 14.6733 6.62033 14.2718 6.32982 13.9924L3.37368 11.1519C2.64272 10.4505 3.04464 9.22644 4.05466 9.08062L8.14265 8.49218C8.54354 8.43467 8.89028 8.18616 9.06937 7.82776L10.8957 4.17701C11.3477 3.27433 12.6523 3.27433 13.1043 4.17701Z"
-        fill="#FFB700"
-      />
     </svg>
   );
 
@@ -526,6 +526,95 @@ export const ArrowMegaMenu = ({
     <path
       d="M9.45277 1.1122C10.253 0.0530214 11.8441 0.0530201 12.6443 1.1122L21.6591 13.0444C22.6545 14.362 21.7147 16.25 20.0633 16.25H2.03375C0.382421 16.25 -0.557459 14.362 0.437972 13.0444L9.45277 1.1122Z"
       fill="currentColor"
+    />
+  </svg>
+);
+
+export const CompareIcon = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}: IIconProps) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={width || size}
+    height={height || size}
+    viewBox="0 0 19 20"
+    fill="none"
+    {...props}
+  >
+    <path
+      d="M12.7161 14.2236H5.49609"
+      stroke="#1A162E"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M12.7161 10.0371H5.49609"
+      stroke="#1A162E"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M8.25207 5.86035H5.49707"
+      stroke="#1A162E"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M12.909 0.75C12.909 0.75 5.23198 0.754 5.21998 0.754C2.45998 0.771 0.750977 2.587 0.750977 5.357V14.553C0.750977 17.337 2.47298 19.16 5.25698 19.16C5.25698 19.16 12.933 19.157 12.946 19.157C15.706 19.14 17.416 17.323 17.416 14.553V5.357C17.416 2.573 15.693 0.75 12.909 0.75Z"
+      stroke="#1A162E"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);
+
+export const BagIcon = ({ size = 24, width, height, ...props }: IIconProps) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={width || size}
+    height={height || size}
+    viewBox="0 0 21 22"
+    fill="none"
+    {...props}
+  >
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M14.5134 20.5003H6.16555C3.09919 20.5003 0.746786 19.3928 1.41498 14.9351L2.19301 8.89394C2.60491 6.66968 4.02367 5.81842 5.26852 5.81842H15.447C16.7102 5.81842 18.0466 6.73375 18.5225 8.89394L19.3006 14.9351C19.8681 18.8894 17.5797 20.5003 14.5134 20.5003Z"
+      stroke="#1A162E"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M14.6502 5.59873C14.6502 3.21265 12.716 1.27836 10.3299 1.27836V1.27836C9.18088 1.27349 8.07727 1.72652 7.26308 2.53727C6.44889 3.34803 5.9912 4.44971 5.99121 5.59873H5.99121"
+      stroke="#1A162E"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M13.296 10.1021H13.2502"
+      stroke="#1A162E"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M7.46492 10.1022H7.41916"
+      stroke="#1A162E"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
     />
   </svg>
 );
