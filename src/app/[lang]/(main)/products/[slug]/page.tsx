@@ -1,8 +1,9 @@
-import BreadcrumbComponent from "@/layout/Breadcrumb";
-import * as React from "react";
-import ProductInfo from "./components/ProductInfo";
-import { getDictionary, Dictionary } from "@/shared/helpers/getDictionary";
-import { Locale } from "@/config/i18n";
+import { Locale } from '@/config/i18n';
+import { Dictionary, getDictionary } from '@/shared/helpers/getDictionary';
+
+import ProductInfo from './components/ProductInfo';
+import TabsDetail from './components/TabsDetail';
+import Breadcrumb from '@/layout/Breadcrumb';
 
 export interface IDetailPageProps {
   params: {
@@ -17,10 +18,11 @@ export default async function DetailPage({
   const dict: Dictionary = await getDictionary(lang);
 
   return (
-    <div className="pt-5 lg:pt-[30px]">
+    <div className="pt-5 lg:pt-main">
       <div className="mx-auto w-main">
-        {/* <BreadcrumbComponent /> */}
+        <Breadcrumb />
         <ProductInfo dict={dict} />
+        <TabsDetail />
       </div>
     </div>
   );

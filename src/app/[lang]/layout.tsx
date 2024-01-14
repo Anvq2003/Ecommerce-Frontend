@@ -6,7 +6,6 @@ import { Metadata } from 'next';
 import { gordita } from '@/assets/fonts';
 import { i18n, Locale } from '@/config/i18n';
 import { siteConfig } from '@/config/site';
-import { getLanguage } from '@/shared/helpers/getDictionary';
 
 import { Providers } from './providers';
 import StoreProvider from './storeProvider';

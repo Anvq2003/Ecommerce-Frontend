@@ -1,17 +1,18 @@
 {
   "common": {
     "cancel": "Hủy",
-    "ok": "Đồng ý",
+    "ok": "OK",
     "delete": "Xóa",
-    "edit": "Sửa"
+    "edit": "Sửa",
+    "buy": "Mua ngay"
   },
   "home": {
-    "filter": "Lọc",
+    "filter": "Bộ lọc",
     "categories": "Danh mục",
     "price": "Giá",
-    "min": "Tối thiểu",
-    "max": "Tối đa",
-    "size/weigh": "Kích thước / Cân nặng",
+    "min": "Nhỏ nhất",
+    "max": "Lớn nhất",
+    "size/weigh": "Kích thước/cân nặng",
     "size": "Kích thước",
     "weight": "Cân nặng",
     "small": "Nhỏ",
@@ -21,6 +22,9 @@
     "brand": "Thương hiệu",
     "brand.placeholder": "Tìm kiếm thương hiệu",
     "show.result": "Hiển thị kết quả",
-    "compare": "So sánh"
+    "compare": "So sánh",
+    "delivery": "Giao hàng",
+    "pickup": "Nhận hàng",
+    "reviews": "Đánh giá"
   }
 }

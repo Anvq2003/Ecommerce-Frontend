@@ -15,7 +15,7 @@ export default function Information() {
           <HeartIcon />
           <span className="text-[15px] font-medium text-textPrimary">03</span>
         </div>
-        <div className="h-[30px] w-[1px] bg-line"></div>
+        <div className="h-main w-[1px] bg-line"></div>
         <div className="flex items-center gap-[10px] dark:text-white">
           <CartIcon />
           <span className="text-[15px] font-medium text-textPrimary">

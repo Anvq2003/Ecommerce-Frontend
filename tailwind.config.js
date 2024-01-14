@@ -21,6 +21,9 @@ module.exports = {
           xl: '1340px',
         },
       },
+      spacing : {
+        main: '30px',
+      } , 
       width: {
         main: '1340px',
       },

@@ -127,7 +127,7 @@ export default function Nav() {
 
   return (
     <nav className="ml-36">
-      <ul className="flex items-center gap-[30px]">
+      <ul className="flex items-center gap-main">
         {navBarList.map((item, index) => (
           <li
             key={index}

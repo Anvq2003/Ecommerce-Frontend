@@ -8,13 +8,17 @@ export type IconSvgProps = SVGProps<SVGSVGElement> & {
 export interface IPageProps {
   params: {
     lang: Locale;
-    [key: string]: string | string[];
   };
-  [key: string]: any;
 }
 
 export interface ISelectOption {
   value: string;
   label: string;
   [key: string]: any;
+}
+export interface ITab {
+  key: string;
+  title: string | React.ReactNode;
+  component: React.FC;
+  href?: string;
 }

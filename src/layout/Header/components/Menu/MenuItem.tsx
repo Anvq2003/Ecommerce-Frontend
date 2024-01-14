@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
@@ -8,7 +8,7 @@ export interface IList {
 }
 
 export interface IMenuItem {
-  image: string;
+  image: string | StaticImageData;
   label: string;
   list: IList[];
 }

@@ -68,13 +68,13 @@ export default function ProductInfo({ dict }: IProductInfoProps) {
       <div className="w-5/12">
         <Image src={product} alt="" width={500} height={500} quality={100} />
       </div>
-      <div className="flex w-7/12 flex-col gap-[30px] bg-bgPrimary p-[60px]">
+      <div className="flex w-7/12 flex-col gap-main bg-bgPrimary p-[60px]">
         <h1 className="line-clamp-2 text-[26px] font-medium text-textPrimary">
           lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
         </h1>
 
         <div className="flex gap-[60px]">
-          <div className="flex flex-1 flex-col gap-[30px]">
+          <div className="flex flex-1 flex-col gap-main">
             <div className="flex gap-4">
               <StarIcon isFilled={true} />
               <h3 className="text-textPrimary">

@@ -55,6 +55,7 @@
     "@types/negotiator": "^0.6.3",
     "prettier": "^3.1.1",
     "prettier-plugin-tailwindcss": "^0.5.11",
-    "sass": "^1.69.7"
+    "sass": "^1.69.7",
+    "sharp": "^0.33.2"
   }
 }

@@ -34,11 +34,11 @@ export default function ProductBox() {
 
   return (
     <div className="mb-[38px] px-5 lg:px-0">
-      <div className="mb-[30px] flex items-center justify-between">
+      <div className="mb-main flex items-center justify-between">
         <h2 className={title()}>Total LavAzza 1320</h2>
         <FilterBox />
       </div>
-      <div className="grid grid-cols-1 gap-[30px] lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-main lg:grid-cols-3">
         {array.map((item: any, index: number) => (
           <ProductCard key={index} data={item} />
         ))}

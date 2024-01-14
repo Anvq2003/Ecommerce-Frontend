@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { RootState } from "@/lib/store";
+import { RootState } from "@/store/index";
 
 export interface ISettingsState {
   language: string;
