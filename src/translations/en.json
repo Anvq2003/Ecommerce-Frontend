@@ -3,7 +3,8 @@
     "cancel": "Cancel",
     "ok": "OK",
     "delete": "Delete",
-    "edit": "Edit"
+    "edit": "Edit",
+    "buy": "Buy Now"
   },
   "home": {
     "filter": "Filter",
@@ -20,6 +21,10 @@
     "color": "Color",
     "brand": "Brand",
     "brand.placeholder": "Search brand",
-    "show.result": "Show result"
+    "show.result": "Show result",
+    "compare": "Compare",
+    "delivery": "Delivery",
+    "pickup": "Pickup",
+    "reviews": "Reviews"
   }
 }

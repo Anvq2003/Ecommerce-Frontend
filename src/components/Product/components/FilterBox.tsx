@@ -3,7 +3,7 @@
 import { FilterIcon } from "@/components/Icons";
 import { selectDictionary } from "@/lib/features/settings/settingsSlice";
 import { useAppSelector } from "@/lib/hooks";
-import { getLanguage } from "@/shared/helpers/getLanguage";
+import { getLanguage } from "@/shared/helpers/getDictionary";
 import { Popover, PopoverContent, PopoverTrigger } from "@nextui-org/react";
 import React from "react";
 

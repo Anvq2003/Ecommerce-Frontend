@@ -547,33 +547,36 @@ export const CompareIcon = ({
     <path
       d="M12.7161 14.2236H5.49609"
       stroke="#1A162E"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    />
-    <path
-      d="M12.7161 10.0371H5.49609"
-      stroke="#1A162E"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    />
-    <path
-      d="M8.25207 5.86035H5.49707"
-      stroke="#1A162E"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    />
-    <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
-      d="M12.909 0.75C12.909 0.75 5.23198 0.754 5.21998 0.754C2.45998 0.771 0.750977 2.587 0.750977 5.357V14.553C0.750977 17.337 2.47298 19.16 5.25698 19.16C5.25698 19.16 12.933 19.157 12.946 19.157C15.706 19.14 17.416 17.323 17.416 14.553V5.357C17.416 2.573 15.693 0.75 12.909 0.75Z"
-      stroke="#1A162E"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    />
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path
+        d="M12.7161 10.0371H5.49609"
+        stroke="#1A162E"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path
+          d="M8.25207 5.86035H5.49707"
+          stroke="#1A162E"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M12.909 0.75C12.909 0.75 5.23198 0.754 5.21998 0.754C2.45998 0.771 0.750977 2.587 0.750977 5.357V14.553C0.750977 17.337 2.47298 19.16 5.25698 19.16C5.25698 19.16 12.933 19.157 12.946 19.157C15.706 19.14 17.416 17.323 17.416 14.553V5.357C17.416 2.573 15.693 0.75 12.909 0.75Z"
+            stroke="#1A162E"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          ></path>
+        </path>
+      </path>
+    </path>
   </svg>
 );
 
@@ -587,34 +590,37 @@ export const BagIcon = ({ size = 24, width, height, ...props }: IIconProps) => (
     {...props}
   >
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M14.5134 20.5003H6.16555C3.09919 20.5003 0.746786 19.3928 1.41498 14.9351L2.19301 8.89394C2.60491 6.66968 4.02367 5.81842 5.26852 5.81842H15.447C16.7102 5.81842 18.0466 6.73375 18.5225 8.89394L19.3006 14.9351C19.8681 18.8894 17.5797 20.5003 14.5134 20.5003Z"
       stroke="#1A162E"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    />
-    <path
-      d="M14.6502 5.59873C14.6502 3.21265 12.716 1.27836 10.3299 1.27836V1.27836C9.18088 1.27349 8.07727 1.72652 7.26308 2.53727C6.44889 3.34803 5.9912 4.44971 5.99121 5.59873H5.99121"
-      stroke="#1A162E"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    />
-    <path
-      d="M13.296 10.1021H13.2502"
-      stroke="#1A162E"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    />
-    <path
-      d="M7.46492 10.1022H7.41916"
-      stroke="#1A162E"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    />
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path
+        d="M14.6502 5.59873C14.6502 3.21265 12.716 1.27836 10.3299 1.27836V1.27836C9.18088 1.27349 8.07727 1.72652 7.26308 2.53727C6.44889 3.34803 5.9912 4.44971 5.99121 5.59873H5.99121"
+        stroke="#1A162E"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path
+          d="M13.296 10.1021H13.2502"
+          stroke="#1A162E"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path
+            d="M7.46492 10.1022H7.41916"
+            stroke="#1A162E"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          ></path>
+        </path>
+      </path>
+    </path>
   </svg>
 );

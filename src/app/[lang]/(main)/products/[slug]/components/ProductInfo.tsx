@@ -1,13 +1,21 @@
-import Image from "next/image";
-import * as React from "react";
-import product from "@/images/product.png";
-import { BagIcon, CartIcon, CompareIcon, StarIcon } from "@/components/Icons";
-import { Button, Select, SelectItem } from "@nextui-org/react";
-import { ISelectOption } from "@/shared/types";
+import Image from 'next/image';
+import { useParams } from 'next/navigation';
+import * as React from 'react';
 
-export interface IProductInfoProps {}
+import MyButton from '@/components/Button';
+import { BagIcon, CartIcon, CompareIcon, HeartIcon, StarIcon } from '@/components/Icons';
+import product from '@/images/product.png';
+import { Dictionary } from '@/shared/helpers/getDictionary';
+import { ISelectOption } from '@/shared/types';
+import { Button, Select, SelectItem } from '@nextui-org/react';
 
-export default function ProductInfo(props: IProductInfoProps) {
+import ButtonHeart from './ButtonHeart';
+
+export interface IProductInfoProps {
+  dict: Dictionary;
+}
+
+export default function ProductInfo({ dict }: IProductInfoProps) {
   const sizes: ISelectOption[] = [
     {
       label: "Small",
@@ -40,16 +48,16 @@ export default function ProductInfo(props: IProductInfoProps) {
 
   const listInfo = [
     {
-      label: "Compare",
+      label: dict?.home?.compare,
       icon: <CompareIcon size={20} />,
     },
     {
-      label: "Delivery",
+      label: dict?.home?.delivery,
       icon: <CartIcon />,
       description: "From $6 for 1-3 days",
     },
     {
-      label: "Compare",
+      label: dict?.home?.pickup,
       icon: <BagIcon />,
       description: "Out of 2 store, today",
     },
@@ -66,14 +74,16 @@ export default function ProductInfo(props: IProductInfoProps) {
         </h1>
 
         <div className="flex gap-[60px]">
-          <div className="flex flex-col gap-[30px]">
+          <div className="flex flex-1 flex-col gap-[30px]">
             <div className="flex gap-4">
               <StarIcon isFilled={true} />
-              <h3 className="text-textPrimary">(3.5) 1100 reviews</h3>
+              <h3 className="text-textPrimary">
+                (3.5) 1100 {dict?.home?.reviews}
+              </h3>
             </div>
             <div className="flex flex-col gap-5">
               <h2 className="text-[22px] font-medium text-textPrimary">
-                Size/Weight
+                {dict?.home?.["size/weigh"]}
               </h2>
               {/* <Select
                 labelPlacement="outside"
@@ -86,7 +96,7 @@ export default function ProductInfo(props: IProductInfoProps) {
               </Select> */}
             </div>
           </div>
-          <div className="flex flex-col gap-7">
+          <div className="flex flex-1 flex-col  gap-7">
             {listInfo.map((item, index) => (
               <div key={index} className="flex gap-4">
                 {item.icon}
@@ -98,19 +108,17 @@ export default function ProductInfo(props: IProductInfoProps) {
                 </div>
               </div>
             ))}
-            <div className="flex flex-col gap-5 rounded-md border-[#B9BABE] p-5">
+            <div className="flex flex-col gap-5 rounded-md border-1 border-[#B9BABE] p-5">
               <div className="flex gap-[10px]">
                 <h5 className="text-black">$500.00</h5>
-                <div className="bg-[#67B044] px-2 py-0.5 text-[#67B044]">
+                <div className="bg-[#E1EFDA] px-2 py-0.5 text-[#67B044]">
                   10%
                 </div>
               </div>
               <h1 className="text-black">$540.00</h1>
-              <div className="flex gap-5">
-                <Button>
-                  Buy Now
-                </Button>
-                
+              <div className="flex gap-4">
+                <MyButton fullWidth>{dict?.common?.buy}</MyButton>
+                <ButtonHeart />
               </div>
             </div>
           </div>
