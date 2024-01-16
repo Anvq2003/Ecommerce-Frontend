@@ -14,6 +14,8 @@ export interface IPageProps {
 export interface ISelectOption {
   value: string;
   label: string;
+  icon?: React.FC<IconSvgProps>;
+  action?: () => void;
   [key: string]: any;
 }
 export interface ITab {

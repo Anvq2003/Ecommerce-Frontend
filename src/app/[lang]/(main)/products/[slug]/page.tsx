@@ -18,7 +18,7 @@ export default async function DetailPage({
   const dict: Dictionary = await getDictionary(lang);
 
   return (
-    <div className="pt-5 lg:pt-main">
+    <div className="pt-5 lg:pt-main bg-bgPrimary">
       <div className="mx-auto w-main">
         <Breadcrumb />
         <ProductInfo dict={dict} />

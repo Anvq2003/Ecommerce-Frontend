@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import Button from "@/components/Button";
 import { ArrayBottomIcon, ArrowMegaMenu } from "@/components/Icons";
 import menuIcon from "@/assets/images/menu-icon.png";
-import MenuItem from "./Menu/MenuItem";
+import MenuItem from "./components/Menu/MenuItem";
 import { Transition } from "@headlessui/react";
 import { isEmpty, isNumber } from "lodash";
 

@@ -7,12 +7,7 @@ interface IIconProps {
   [x: string]: any;
 }
 
-export const SearchIcon = ({
-  size = 24,
-  width,
-  height,
-  ...props
-}: IIconProps) => (
+export const SearchIcon = ({ size = 24, width, height, ...props }: IIconProps) => (
   <svg
     width={width || size}
     height={height || size}
@@ -47,20 +42,8 @@ export const SearchIcon = ({
   </svg>
 );
 
-export const CartIcon = ({
-  size = 24,
-  width,
-  height,
-  ...props
-}: IIconProps) => (
-  <svg
-    width={width || size}
-    height={height || size}
-    viewBox="0 0 24 24"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
+export const CartIcon = ({ size = 24, width, height, ...props }: IIconProps) => (
+  <svg width={width || size} height={height || size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
     <g id="Iconly/Light/Buy">
       <g id="Buy">
         <path
@@ -128,22 +111,9 @@ export const CartIcon = ({
   </svg>
 );
 
-export const HeartIcon = ({
-  size = 24,
-  width,
-  height,
-  isFilled = false,
-  ...props
-}: IIconProps) =>
+export const HeartIcon = ({ size = 24, width, height, isFilled = false, ...props }: IIconProps) =>
   isFilled ? (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width={40}
-      height={38}
-      className="mt-3"
-      viewBox="0 0 40 38"
-      fill="none"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" width={40} height={38} className="mt-3" viewBox="0 0 40 38" fill="none">
       <g filter="url(#filter0_d_49120_5021)">
         <path
           fillRule="evenodd"
@@ -170,41 +140,18 @@ export const HeartIcon = ({
           colorInterpolationFilters="sRGB"
         >
           <feFlood floodOpacity={0} result="BackgroundImageFix" />
-          <feColorMatrix
-            in="SourceAlpha"
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-            result="hardAlpha"
-          />
+          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
           <feOffset dy={4} />
           <feGaussianBlur stdDeviation={5} />
           <feComposite in2="hardAlpha" operator="out" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0.976471 0 0 0 0 0.270588 0 0 0 0 0.270588 0 0 0 0.2 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="BackgroundImageFix"
-            result="effect1_dropShadow_49120_5021"
-          />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="effect1_dropShadow_49120_5021"
-            result="shape"
-          />
+          <feColorMatrix type="matrix" values="0 0 0 0 0.976471 0 0 0 0 0.270588 0 0 0 0 0.270588 0 0 0 0.2 0" />
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_49120_5021" />
+          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_49120_5021" result="shape" />
         </filter>
       </defs>
     </svg>
   ) : (
-    <svg
-      width={width || size}
-      height={height || size}
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width={width || size} height={height || size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g id="Love=Off">
         <g id="Heart">
           <path
@@ -230,64 +177,22 @@ export const HeartIcon = ({
     </svg>
   );
 
-export const ArrayBottomIcon = ({
-  size = 12,
-  width,
-  height,
-  ...props
-}: IIconProps) => (
-  <svg
-    width={width || size}
-    height={height || size}
-    viewBox="0 0 12 12"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
-    <path
-      d="M9.5 4.25L6 7.75L2.5 4.25"
-      stroke="#1A162E"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
+export const ArrayBottomIcon = ({ size = 12, width, height, ...props }: IIconProps) => (
+  <svg width={width || size} height={height || size} viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <path d="M9.5 4.25L6 7.75L2.5 4.25" stroke="#1A162E" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 );
 
 // MenuMega
-export const CircleIcon = ({
-  size = 30,
-  width,
-  height,
-  ...props
-}: IIconProps) => (
-  <svg
-    width={width || size}
-    height={height || size}
-    viewBox="0 0 30 30"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
+export const CircleIcon = ({ size = 30, width, height, ...props }: IIconProps) => (
+  <svg width={width || size} height={height || size} viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
     <circle cx="15" cy="15" r="15" fill="#FFB700" />
     <circle cx="15" cy="15" r="15" fill="white" fill-opacity="0.5" />
   </svg>
 );
 
-export const GridIcon = ({
-  size = 24,
-  width,
-  height,
-  ...props
-}: IIconProps) => (
-  <svg
-    width={width || size}
-    height={height || size}
-    viewBox="0 0 24 24"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
+export const GridIcon = ({ size = 24, width, height, ...props }: IIconProps) => (
+  <svg width={width || size} height={height || size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
     <path
       fillRule="evenodd"
       clipRule="evenodd"
@@ -328,34 +233,10 @@ export const GridIcon = ({
 );
 
 // Title
-export const FilterIcon = ({
-  size = 24,
-  width,
-  height,
-  ...props
-}: IIconProps) => (
-  <svg
-    width={width || size}
-    height={height || size}
-    viewBox="0 0 24 24"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
-    <path
-      d="M10.33 16.593H4.0293"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <path
-      d="M13.1406 6.90164H19.4413"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
+export const FilterIcon = ({ size = 24, width, height, ...props }: IIconProps) => (
+  <svg width={width || size} height={height || size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <path d="M10.33 16.593H4.0293" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M13.1406 6.90164H19.4413" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
     <path
       fillRule="evenodd"
       clipRule="evenodd"
@@ -378,21 +259,9 @@ export const FilterIcon = ({
 );
 
 // Product
-export const StarIcon = ({
-  size = 24,
-  width,
-  height,
-  isFilled = false,
-  ...props
-}: IIconProps) =>
+export const StarIcon = ({ size = 24, width, height, isFilled = false, ...props }: IIconProps) =>
   isFilled ? (
-    <svg
-      width={width || size}
-      height={height || size}
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width={width || size} height={height || size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -401,14 +270,7 @@ export const StarIcon = ({
       />
     </svg>
   ) : (
-    <svg
-      width={width || size}
-      height={height || size}
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      {...props}
-    >
+    <svg width={width || size} height={height || size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
       <g id="Iconly/Light/Star">
         <g id="Star">
           <path
@@ -426,19 +288,8 @@ export const StarIcon = ({
     </svg>
   );
 
-export const LogoLight = ({
-  width = 190,
-  height = 32,
-  ...props
-}: IIconProps) => (
-  <svg
-    width={width}
-    height={height}
-    viewBox="0 0 190 32"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
+export const LogoLight = ({ width = 190, height = 32, ...props }: IIconProps) => (
+  <svg width={width} height={height} viewBox="0 0 190 32" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
     <path
       fillRule="evenodd"
       clipRule="evenodd"
@@ -452,19 +303,8 @@ export const LogoLight = ({
   </svg>
 );
 
-export const LogoDark = ({
-  width = 190,
-  height = 32,
-  ...props
-}: IIconProps) => (
-  <svg
-    width={width}
-    height={height}
-    viewBox="0 0 190 32"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
+export const LogoDark = ({ width = 190, height = 32, ...props }: IIconProps) => (
+  <svg width={width} height={height} viewBox="0 0 190 32" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
     <path
       fillRule="evenodd"
       clipRule="evenodd"
@@ -479,50 +319,15 @@ export const LogoDark = ({
 );
 
 export const Menu = ({ width = 14, height = 17, ...props }: IIconProps) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width={width}
-    height={height}
-    viewBox="0 0 14 17"
-    fill="none"
-    {...props}
-  >
-    <path
-      d="M13 1.5H1"
-      stroke="currentColor"
-      strokeWidth={2}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <path
-      d="M13 9H1"
-      stroke="currentColor"
-      strokeWidth={2}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <path
-      d="M6 16H1"
-      stroke="currentColor"
-      strokeWidth={2}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
+  <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 14 17" fill="none" {...props}>
+    <path d="M13 1.5H1" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M13 9H1" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M6 16H1" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 );
 
-export const ArrowMegaMenu = ({
-  width = 23,
-  height = 17,
-  ...props
-}: IIconProps) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width={width}
-    height={height}
-    viewBox="0 0 23 17"
-    fill="none"
-  >
+export const ArrowMegaMenu = ({ width = 23, height = 17, ...props }: IIconProps) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 23 17" fill="none">
     <path
       d="M9.45277 1.1122C10.253 0.0530214 11.8441 0.0530201 12.6443 1.1122L21.6591 13.0444C22.6545 14.362 21.7147 16.25 20.0633 16.25H2.03375C0.382421 16.25 -0.557459 14.362 0.437972 13.0444L9.45277 1.1122Z"
       fill="currentColor"
@@ -530,97 +335,42 @@ export const ArrowMegaMenu = ({
   </svg>
 );
 
-export const CompareIcon = ({
-  size = 24,
-  width,
-  height,
-  ...props
-}: IIconProps) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width={width || size}
-    height={height || size}
-    viewBox="0 0 19 20"
-    fill="none"
-    {...props}
-  >
+export const CompareIcon = ({ size = 24, width, height, ...props }: IIconProps) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={width || size} height={height || size} viewBox="0 0 19 20" fill="none">
+    <path d="M12.7161 14.2236H5.49609" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M12.7161 10.0371H5.49609" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M8.25207 5.86035H5.49707" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
     <path
-      d="M12.7161 14.2236H5.49609"
-      stroke="#1A162E"
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M12.909 0.75C12.909 0.75 5.23198 0.754 5.21998 0.754C2.45998 0.771 0.750977 2.587 0.750977 5.357V14.553C0.750977 17.337 2.47298 19.16 5.25698 19.16C5.25698 19.16 12.933 19.157 12.946 19.157C15.706 19.14 17.416 17.323 17.416 14.553V5.357C17.416 2.573 15.693 0.75 12.909 0.75Z"
+      stroke="currentColor"
       strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
-    >
-      <path
-        d="M12.7161 10.0371H5.49609"
-        stroke="#1A162E"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path
-          d="M8.25207 5.86035H5.49707"
-          stroke="#1A162E"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path
-            fillRule="evenodd"
-            clipRule="evenodd"
-            d="M12.909 0.75C12.909 0.75 5.23198 0.754 5.21998 0.754C2.45998 0.771 0.750977 2.587 0.750977 5.357V14.553C0.750977 17.337 2.47298 19.16 5.25698 19.16C5.25698 19.16 12.933 19.157 12.946 19.157C15.706 19.14 17.416 17.323 17.416 14.553V5.357C17.416 2.573 15.693 0.75 12.909 0.75Z"
-            stroke="#1A162E"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          ></path>
-        </path>
-      </path>
-    </path>
+    />
   </svg>
 );
 
 export const BagIcon = ({ size = 24, width, height, ...props }: IIconProps) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width={width || size}
-    height={height || size}
-    viewBox="0 0 21 22"
-    fill="none"
-    {...props}
-  >
+  <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22" fill="none">
     <path
       fillRule="evenodd"
       clipRule="evenodd"
       d="M14.5134 20.5003H6.16555C3.09919 20.5003 0.746786 19.3928 1.41498 14.9351L2.19301 8.89394C2.60491 6.66968 4.02367 5.81842 5.26852 5.81842H15.447C16.7102 5.81842 18.0466 6.73375 18.5225 8.89394L19.3006 14.9351C19.8681 18.8894 17.5797 20.5003 14.5134 20.5003Z"
-      stroke="#1A162E"
+      stroke="currentColor"
       strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
-    >
-      <path
-        d="M14.6502 5.59873C14.6502 3.21265 12.716 1.27836 10.3299 1.27836V1.27836C9.18088 1.27349 8.07727 1.72652 7.26308 2.53727C6.44889 3.34803 5.9912 4.44971 5.99121 5.59873H5.99121"
-        stroke="#1A162E"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path
-          d="M13.296 10.1021H13.2502"
-          stroke="#1A162E"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path
-            d="M7.46492 10.1022H7.41916"
-            stroke="#1A162E"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          ></path>
-        </path>
-      </path>
-    </path>
+    />
+    <path
+      d="M14.6502 5.59873C14.6502 3.21265 12.716 1.27836 10.3299 1.27836V1.27836C9.18088 1.27349 8.07727 1.72652 7.26308 2.53727C6.44889 3.34803 5.9912 4.44971 5.99121 5.59873H5.99121"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path d="M13.296 10.1021H13.2502" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M7.46492 10.1022H7.41916" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 );

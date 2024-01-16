@@ -5,7 +5,7 @@ import { Menu } from '@/components/Icons';
 import Logo from '@/components/Logo';
 import { useDisclosure } from '@nextui-org/react';
 
-import Avatar from '../components/Avatar';
+import Avatar from '../components/Actions/components/Avatar';
 import Sidebar from '../components/Sidebar';
 
 export default function Mobile() {

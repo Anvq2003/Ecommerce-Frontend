@@ -3,7 +3,7 @@ import React from "react";
 import { CartIcon, HeartIcon } from "@/components/Icons";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import { Accordion, AccordionItem, ScrollShadow } from "@nextui-org/react";
-import MenuItem from "../Menu/MenuItem";
+import MenuItem from "../Nav/components/Menu/MenuItem";
 import menuIcon from "/public/assets/images/menu-icon.png";
 
 interface IContentProps {

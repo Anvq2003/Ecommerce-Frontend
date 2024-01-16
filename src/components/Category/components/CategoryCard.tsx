@@ -1,15 +1,15 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React from "react";
 
-interface ICategoryCard {
+export interface ICategoryCard {
   name: string;
-  urlImage: string;
+  image: string | StaticImageData;
   isActive?: boolean;
 }
 
 export default function CategoryCard({
   name,
-  urlImage,
+  image,
   isActive = false,
 }: ICategoryCard) {
   const bg = isActive ? "bg-bgLightBlue" : "bg-bgSecondary";
@@ -24,7 +24,7 @@ export default function CategoryCard({
         width={100}
         height={100}
         className="h-full w-auto object-contain lg:h-full lg:w-[70px] lg:object-cover"
-        src={urlImage}
+        src={image}
         alt={name}
       />
     </div>
