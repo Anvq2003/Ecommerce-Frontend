@@ -12,17 +12,19 @@ export default function Mobile() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   return (
-    <div className="flex h-[82px] items-center justify-between px-5 py-4">
-      <motion.div
-        whileTap={{ scale: 0.8 }}
-        onClick={onOpen}
-        className="flex h-12 w-12 cursor-pointer items-center justify-center text-textPrimary dark:bg-bgSecondary"
-      >
-        <Menu />
-      </motion.div>
-      <Logo />
-      <Avatar />
-      <Sidebar isOpen={isOpen} onOpenChange={onOpenChange} />
-    </div>
+    <>
+      <div className="flex h-[82px] items-center justify-between px-5 py-4">
+        <motion.div
+          whileTap={{ scale: 0.8 }}
+          onClick={onOpen}
+          className="flex h-12 w-12 cursor-pointer items-center justify-center text-textPrimary dark:bg-bgSecondary"
+        >
+          <Menu />
+        </motion.div>
+        <Logo />
+        <Avatar />
+        <Sidebar isOpen={isOpen} onOpenChange={onOpenChange} />
+      </div>
+    </>
   );
 }

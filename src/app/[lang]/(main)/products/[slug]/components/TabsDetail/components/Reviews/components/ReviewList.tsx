@@ -7,7 +7,7 @@ export interface IReviewListProps {
 
 export default function ReviewList({ reviewList }: IReviewListProps) {
   return (
-    <div className="grid grid-cols-3 gap-main">
+    <div className="grid grid-cols-1 gap-main md:grid-cols-2 lg:grid-cols-3">
       {reviewList.map((item, index) => (
         <ReviewCard key={index} data={item} />
       ))}

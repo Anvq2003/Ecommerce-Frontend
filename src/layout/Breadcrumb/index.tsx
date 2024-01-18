@@ -30,7 +30,7 @@ export default function BreadcrumbComponent(props: IBreadcrumbComponentProps) {
   }, []);
 
   return (
-    <div className="mb-main bg-bgSecondary w-full rounded-[10px] p-3 ">
+    <div className="mb-main flex rounded-[10px] bg-bgSecondary p-3 mx-5 xl:mx-0">
       <Breadcrumbs
         variant="solid"
         classNames={{
@@ -41,9 +41,11 @@ export default function BreadcrumbComponent(props: IBreadcrumbComponentProps) {
           separator: 'text-xl ml-2 mr-5',
         }}
       >
-        <BreadcrumbItem key={0} href="/">Home</BreadcrumbItem>
+        <BreadcrumbItem key={0} href="/">
+          Home
+        </BreadcrumbItem>
         {breadcrumbs.map((breadcrumb, i) => (
-          <BreadcrumbItem key={i + 1}  href={breadcrumb.href}>
+          <BreadcrumbItem key={i + 1} href={breadcrumb.href}>
             {breadcrumb.breadcrumb}
           </BreadcrumbItem>
         ))}

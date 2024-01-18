@@ -12,14 +12,12 @@ export interface IDetailPageProps {
   };
 }
 
-export default async function DetailPage({
-  params: { slug, lang },
-}: IDetailPageProps) {
+export default async function DetailPage({ params: { slug, lang } }: IDetailPageProps) {
   const dict: Dictionary = await getDictionary(lang);
 
   return (
-    <div className="pt-5 lg:pt-main bg-bgPrimary">
-      <div className="mx-auto w-main">
+    <div className="bg-bgPrimary w-full pt-5 lg:pt-main">
+      <div className="mx-auto w-full xl:w-main">
         <Breadcrumb />
         <ProductInfo dict={dict} />
         <TabsDetail />

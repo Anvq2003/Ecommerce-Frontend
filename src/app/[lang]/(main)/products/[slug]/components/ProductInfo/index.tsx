@@ -56,19 +56,19 @@ export default function ProductInfo({ dict }: IProductInfoProps) {
   ];
 
   return (
-    <div className="flex">
+    <div className="mx-5 flex flex-col lg:flex-row xl:mx-0">
       {/* Box left */}
-      <div className="w-5/12">
-        <Image src={product} alt="" width={500} height={500} quality={100} />
+      <div className="w-full xl:w-5/12">
+        <Image src={product} className="mx-auto" alt="" width={500} height={500} quality={100} />
       </div>
 
       {/* Box right */}
-      <div className="flex w-7/12 flex-col gap-main rounded-sm bg-bgPrimary p-[60px] dark:bg-[#171C28]">
+      <div className="mb-5 flex w-full flex-col gap-main rounded-sm bg-bgPrimary dark:bg-[#171C28] sm:mb-0 md:p-5 lg:p-8 xl:w-7/12 xl:p-[60px]">
         <h1 className="line-clamp-2 text-[26px] font-medium text-textPrimary">
           lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
         </h1>
 
-        <div className="flex gap-[60px]">
+        <div className="flex flex-col gap-10 sm:flex-row lg:gap-8 xl:gap-[60px]">
           <div className="flex flex-1 flex-col gap-main">
             <div className="flex gap-4">
               <StarIcon isFilled={true} />

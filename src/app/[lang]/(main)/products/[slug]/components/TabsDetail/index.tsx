@@ -35,7 +35,7 @@ export default function TabsDetail(props: ITabsDetailProps) {
   };
 
   return (
-    <div className="">
+    <div className="mx-5 xl:mx-0">
       <Tabs
         aria-label="Options"
         color="primary"
