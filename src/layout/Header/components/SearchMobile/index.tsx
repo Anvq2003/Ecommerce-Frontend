@@ -18,7 +18,7 @@ export default function SearchMobile(props: ISearchMobileProps) {
   };
 
   return (
-    <div className="mt-[82px] bg-bgPrimary p-5 pb-0">
+    <div className="bg-bgPrimary p-5 pb-0">
       <Input
         variant="bordered"
         placeholder="Search for items"

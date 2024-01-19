@@ -1,4 +1,4 @@
-import category from '/public/assets/images/category.png';
+import category from '@/assets/images/category.png';
 import React from 'react';
 
 import { title } from '@/styles/primitives';

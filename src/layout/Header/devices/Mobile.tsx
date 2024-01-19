@@ -1,30 +1,35 @@
-import { motion } from 'framer-motion';
-import React from 'react';
+import { useState } from 'react';
 
-import { Menu } from '@/components/Icons';
 import Logo from '@/components/Logo';
-import { useDisclosure } from '@nextui-org/react';
+import { Navbar, NavbarContent, NavbarMenuToggle } from '@nextui-org/react';
 
 import Avatar from '../components/Actions/components/Avatar';
-import Sidebar from '../components/Sidebar';
+import NavbarMenuMobile from '../components/NavbarMenuMobile';
 
 export default function Mobile() {
-  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const [isOpen, onOpenChange] = useState(false);
 
   return (
-    <>
-      <div className="flex h-[82px] items-center justify-between px-5 py-4">
-        <motion.div
-          whileTap={{ scale: 0.8 }}
-          onClick={onOpen}
-          className="flex h-12 w-12 cursor-pointer items-center justify-center text-textPrimary dark:bg-bgSecondary"
-        >
-          <Menu />
-        </motion.div>
+    <Navbar
+      onMenuOpenChange={onOpenChange}
+      classNames={{
+        base: 'h-[82px] bg-bgSecondary dark:shadow-[0px_20px_60px_10px_rgba(237,237,246,0.20)]',
+        toggleIcon: 'dark:text-textPrimary',
+      }}
+    >
+      <NavbarContent>
+        <NavbarMenuToggle aria-label={isOpen ? 'Close menu' : 'Open menu'} />
+      </NavbarContent>
+
+      <NavbarContent className="gap-4 sm:flex" justify="center">
         <Logo />
+      </NavbarContent>
+
+      <NavbarContent justify="end">
         <Avatar />
-        <Sidebar isOpen={isOpen} onOpenChange={onOpenChange} />
-      </div>
-    </>
+      </NavbarContent>
+
+      <NavbarMenuMobile />
+    </Navbar>
   );
 }

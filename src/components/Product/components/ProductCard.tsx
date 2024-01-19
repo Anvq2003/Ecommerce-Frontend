@@ -32,7 +32,7 @@ export default function ProductCard({ data }: IProductCardProps) {
         </div>
       </div>
       <div className="flex flex-col gap-4">
-        <h2 className="line-clamp-2 min-h-[48px] text-base font-medium text-textPrimary">
+        <h2 className="line-clamp-2 max-h-[48px] text-base font-medium text-textPrimary">
           {name}
         </h2>
         <p className="text-[15px] leading-[22px] text-textSecondary">

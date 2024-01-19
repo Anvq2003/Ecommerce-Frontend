@@ -24,3 +24,4 @@ export interface ITab {
   component: React.FC;
   href?: string;
 }
+
