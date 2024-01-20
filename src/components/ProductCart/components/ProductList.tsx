@@ -1,14 +1,14 @@
 import * as React from 'react';
-import ProductItem, { IProductItem } from './ProductItem';
+import ProductItem, { ICartItem } from './ProductItem';
 
 export interface IProductListProps {
-  productList: IProductItem[];
+  productList: ICartItem[];
 }
 
 export default function ProductList({ productList }: IProductListProps) {
   return (
-    <div className="grid grid-cols-1 gap-main sm:grid-cols-2 lg:grid-cols-3">
-      {productList.map((item: any, index: number) => (
+    <div className="p-main">
+      {productList.map((item, index) => (
         <ProductItem key={index} data={item} />
       ))}
     </div>

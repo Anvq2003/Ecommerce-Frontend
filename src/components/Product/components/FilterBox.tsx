@@ -8,7 +8,7 @@ export default function FilterBox() {
   return (
     <Popover showArrow placement="bottom-end">
       <PopoverTrigger>
-        <div className="flex h-9 items-center gap-[14px] rounded-[6px] bg-white px-3 text-base font-medium text-textPrimary dark:bg-bgSecondary">
+        <div className="flex h-9 items-center gap-[14px] rounded-[6px] bg-white px-3 text-base font-medium text-primary dark:bg-bgSecondary">
           Filter <FilterIcon />
         </div>
       </PopoverTrigger>

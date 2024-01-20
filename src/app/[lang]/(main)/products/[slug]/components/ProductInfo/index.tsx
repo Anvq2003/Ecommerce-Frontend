@@ -64,7 +64,7 @@ export default function ProductInfo({ dict }: IProductInfoProps) {
 
       {/* Box right */}
       <div className="mb-5 flex w-full flex-col gap-main rounded-sm bg-bgPrimary dark:bg-[#171C28] sm:mb-0 md:p-5 lg:p-8 xl:w-7/12 xl:p-[60px]">
-        <h1 className="line-clamp-2 text-[26px] font-medium text-textPrimary">
+        <h1 className="line-clamp-2 text-[26px] font-medium text-primary">
           lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
         </h1>
 
@@ -72,7 +72,7 @@ export default function ProductInfo({ dict }: IProductInfoProps) {
           <div className="flex flex-1 flex-col gap-main">
             <div className="flex gap-4">
               <StarIcon isFilled={true} />
-              <h3 className="text-textPrimary">(3.5) 1100 {dict?.home?.reviews}</h3>
+              <h3 className="text-primary">(3.5) 1100 {dict?.home?.reviews}</h3>
             </div>
             {classifications.map((item, index) => (
               <ClassificationBox key={index} title={item.title} options={item.options} />
@@ -84,7 +84,7 @@ export default function ProductInfo({ dict }: IProductInfoProps) {
             {listInfo.map((item, index) => (
               <div key={index} className="flex gap-4 dark:text-white">
                 {item.icon}
-                <div className="flex flex-col gap-2 text-textPrimary">
+                <div className="flex flex-col gap-2 text-primary">
                   <h3 className="text-lg font-medium leading-4">{item.label}</h3>
                   {item.description && <p>{item?.description}</p>}
                 </div>

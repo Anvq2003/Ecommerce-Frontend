@@ -14,7 +14,7 @@ export default function Mobile() {
       onMenuOpenChange={onOpenChange}
       classNames={{
         base: 'h-[82px] bg-bgSecondary dark:shadow-[0px_20px_60px_10px_rgba(237,237,246,0.20)]',
-        toggleIcon: 'dark:text-textPrimary',
+        toggleIcon: 'dark:text-primary',
       }}
     >
       <NavbarContent>

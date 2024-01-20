@@ -18,7 +18,7 @@ export default function SearchBox(props: ISearchBoxProps) {
     base: 'h-[50px] w-[280px]',
     mainWrapper: 'h-full',
     input: 'text-base',
-    inputWrapper: 'px-4 h-full font-normal text-textPrimary bg-white',
+    inputWrapper: 'px-4 h-full font-normal text-primary bg-white',
   };
 
   const stylesIcon = {

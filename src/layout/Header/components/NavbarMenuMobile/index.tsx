@@ -132,9 +132,9 @@ export default function NavbarMenuMobile({}: INavbarMenuMobileProps) {
 
   const itemClasses = {
     base: 'p-0 w-full',
-    title: 'text-[16px] font-medium text-textPrimary',
+    title: 'text-[16px] font-medium text-primary',
     trigger: 'px-2 py-0 data-[hover=true]:bg-default-100 rounded-lg h-11 flex items-center',
-    indicator: 'text-textPrimary',
+    indicator: 'text-primary',
   };
 
   return (
@@ -143,11 +143,11 @@ export default function NavbarMenuMobile({}: INavbarMenuMobileProps) {
         {actions.map((action) => (
           <div key={action.label} className="my-5 flex flex-col gap-5">
             <div className="flex items-center justify-between">
-              <div className="flex items-center gap-3 text-textPrimary">
+              <div className="flex items-center gap-3 text-primary">
                 {action.icon}
                 <p className="text-[15px] font-medium">{action.label}</p>
               </div>
-              <span className="text-[15px] font-medium text-textPrimary">{action.number}</span>
+              <span className="text-[15px] font-medium text-primary">{action.number}</span>
             </div>
           </div>
         ))}

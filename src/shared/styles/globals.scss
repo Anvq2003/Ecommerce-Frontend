@@ -8,50 +8,50 @@
   --bg-thumbHover: #888;
 }
 
-[data-theme="dark"] {
+html.dark {
   --bg-track: #1a162e;
   --bg-thumb: #1a162e;
   --bg-thumbHover: #1a162e;
 }
 
 @font-face {
-  font-family: "Gordita";
+  font-family: 'Gordita';
   font-weight: bold;
   font-style: normal;
   font-display: swap;
   src:
-    local("gordita"),
-    url("/public/assets/fonts/Gordita-Bold.woff2") format("woff2");
+    local('gordita'),
+    url('/public/assets/fonts/Gordita-Bold.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: "Gordita";
+  font-family: 'Gordita';
   font-weight: 500;
   font-style: normal;
   font-display: swap;
   src:
-    local("gordita"),
-    url("/public/assets/fonts/Gordita-Medium.woff2") format("woff2");
+    local('gordita'),
+    url('/public/assets/fonts/Gordita-Medium.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: "Gordita";
+  font-family: 'Gordita';
   font-weight: normal;
   font-style: normal;
   font-display: swap;
   src:
-    local("gordita"),
-    url("/public/assets/fonts/Gordita-Regular.woff") format("woff2");
+    local('gordita'),
+    url('/public/assets/fonts/Gordita-Regular.woff') format('woff2');
 }
 
 @font-face {
-  font-family: "Gordita";
+  font-family: 'Gordita';
   font-weight: 300;
   font-style: normal;
   font-display: swap;
   src:
-    local("gordita"),
-    url("/public/assets/fonts/Gordita-Light.woff2") format("woff2");
+    local('gordita'),
+    url('/public/assets/fonts/Gordita-Light.woff2') format('woff2');
 }
 
 html {
@@ -59,7 +59,7 @@ html {
 }
 
 body {
-  font-family: "Gordita", sans-serif;
+  font-family: 'Gordita', sans-serif;
   font-size: 14px;
   color: #1a162e;
 }
@@ -103,6 +103,14 @@ h6 {
 p {
   font-size: 14px;
   line-height: 22px;
+}
+
+html.dark {
+  .card-main {
+    border-radius: 20px;
+    background: var(--Dark-1, #171c28);
+    box-shadow: 0px 20px 60px 10px rgba(23, 28, 40, 0.2);
+  }
 }
 
 // style default scrollbar

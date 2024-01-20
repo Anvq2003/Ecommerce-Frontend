@@ -11,6 +11,13 @@ module.exports = {
   ],
   darkMode: 'class',
   theme: {
+    card: {
+      background: '#000',
+      shadow: '0 0 0 1px #EDEDF6',
+      hover: {
+        shadow: '0 0 0 1px #EDEDF6',
+      },
+    },
     extend: {
       container: {
         center: true,
@@ -21,21 +28,21 @@ module.exports = {
           xl: '1340px',
         },
       },
-      spacing : {
+      spacing: {
         main: '30px',
-      } , 
+      },
       width: {
         main: '1340px',
       },
       colors: {
-        bgYellow: '#FFB700',
-        bgRed: '#F94545',
-        bgGreen: '#67B044',
-        bgBlue: '#0071DC',
-        bgLightBlue: '#77DAE6',
-        bgPurple: '#7644E1',
+        yellow: '#FFB700',
+        red: '#F94545',
+        green: '#67B044',
+        blue: '#0071DC',
+        'light-blue': '#77DAE6',
+        purple: '#7644E1',
 
-        bgBorder: '#D2D1D6',
+        border: '#D2D1D6',
         line: '#EDEDF6',
       },
     },
@@ -51,8 +58,8 @@ module.exports = {
         light: {
           layout: {}, // light theme layout tokens
           colors: {
-            textPrimary: '#1A162E',
-            textSecondary: '#9E9DA8',
+            primary: '#1A162E',
+            secondary: '#9E9DA8',
             bgPrimary: '#F6F6F6',
             bgSecondary: '#EEEEEE',
           }, // light theme colors
@@ -60,8 +67,8 @@ module.exports = {
         dark: {
           layout: {}, // dark theme layout tokens
           colors: {
-            textPrimary: '#FFFFFF',
-            textSecondary: '#9E9DA8',
+            primary: '#FFFFFF',
+            secondary: '#9E9DA8',
             bgPrimary: '#292E39',
             bgSecondary: '#171C28',
           }, // dark theme colors

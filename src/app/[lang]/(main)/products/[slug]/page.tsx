@@ -4,6 +4,7 @@ import { Dictionary, getDictionary } from '@/shared/helpers/getDictionary';
 import ProductInfo from './components/ProductInfo';
 import TabsDetail from './components/TabsDetail';
 import Breadcrumb from '@/layout/Breadcrumb';
+import WrapperPage from '@/components/WrapperPage';
 
 export interface IDetailPageProps {
   params: {
@@ -16,12 +17,10 @@ export default async function DetailPage({ params: { slug, lang } }: IDetailPage
   const dict: Dictionary = await getDictionary(lang);
 
   return (
-    <div className="bg-bgPrimary w-full pt-5 lg:pt-main">
-      <div className="mx-auto w-full xl:w-main">
-        <Breadcrumb />
-        <ProductInfo dict={dict} />
-        <TabsDetail />
-      </div>
-    </div>
+    <WrapperPage>
+      <Breadcrumb />
+      <ProductInfo dict={dict} />
+      <TabsDetail />
+    </WrapperPage>
   );
 }

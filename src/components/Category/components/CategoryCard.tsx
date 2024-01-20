@@ -13,7 +13,7 @@ export default function CategoryCard({
   isActive = false,
 }: ICategoryCard) {
   const bg = isActive ? "bg-bgLightBlue" : "bg-bgSecondary";
-  const text = isActive ? "text-white" : "text-textPrimary";
+  const text = isActive ? "text-white" : "text-primary";
 
   return (
     <div

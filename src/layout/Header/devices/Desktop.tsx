@@ -17,7 +17,7 @@ export default function DesktopHeader() {
       <div className="mx-auto flex w-main items-center">
         <Logo />
         <Nav />
-        {/* <ThemeSwitch /> */}
+        <ThemeSwitch />
         <Actions />
       </div>
     </Navbar>

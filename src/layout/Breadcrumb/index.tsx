@@ -37,7 +37,7 @@ export default function BreadcrumbComponent(props: IBreadcrumbComponentProps) {
           list: 'bg-transparent',
         }}
         itemClasses={{
-          item: 'text-base font-medium text-textSecondary data-[current=true]:text-textPrimary hover:text-textPrimary',
+          item: 'text-base font-medium text-secondary data-[current=true]:text-primary hover:text-primary',
           separator: 'text-xl ml-2 mr-5',
         }}
       >

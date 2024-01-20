@@ -227,7 +227,7 @@ export default function Nav() {
           >
             <a
               href={"#"}
-              className="flex cursor-pointer items-center gap-[6px] text-[15px] font-medium leading-[50px] text-textPrimary"
+              className="flex cursor-pointer items-center gap-[6px] text-[15px] font-medium leading-[50px] text-primary"
             >
               {item.label}
               <ArrayBottomIcon />

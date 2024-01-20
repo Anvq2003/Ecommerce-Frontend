@@ -48,14 +48,14 @@ export default function CartBox(props: ICartBoxProps) {
   const content = (
     <PopoverContent className="w-[700px] shadow-[0px_40px_90px_20px_rgba(200,200,200,0.40)] dark:bg-bgPrimary dark:shadow-[0px_40px_90px_20px_rgba(23,28,40,0.40)]">
       <div className="flex flex-col gap-main py-main">
-        <h2 className="text-[22px] font-medium text-textPrimary dark:opacity-60">You have 3 item</h2>
+        <h2 className="text-[22px] font-medium text-primary dark:opacity-60">You have 3 item</h2>
         <ProductBox productList={list} />
         <Divider orientation="horizontal" />
         <div className="flex flex-col gap-5">
           {info.map((item, index) => (
             <div key={index} className="flex items-center justify-between  last:font-medium dark:opacity-60">
-              <p className="text-[22px] text-textPrimary">{item.label}</p>
-              <p className="text-[22px] text-textPrimary">{item.value}</p>
+              <p className="text-[22px] text-primary">{item.label}</p>
+              <p className="text-[22px] text-primary">{item.value}</p>
             </div>
           ))}
         </div>
@@ -72,7 +72,7 @@ export default function CartBox(props: ICartBoxProps) {
       <PopoverTrigger>
         <div className="flex cursor-pointer items-center gap-[10px] dark:text-white">
           <CartIcon />
-          <span className="text-[15px] font-medium text-textPrimary">$65:20</span>
+          <span className="text-[15px] font-medium text-primary">$65:20</span>
         </div>
       </PopoverTrigger>
       {content}

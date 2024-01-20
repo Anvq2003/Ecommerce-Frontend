@@ -3,7 +3,7 @@ import ProductBox from "@/components/Product";
 import Slider from "@/components/Slider";
 import { IPageProps } from "@/shared/types";
 
-export default async function Home({ params: { lang } }: IPageProps) {
+export default async function HomePage({ params: { lang } }: IPageProps) {
   return (
     <section className="bg-bgPrimary pt-5 lg:pt-main">
       <div className="container flex flex-col gap-5 lg:flex-row lg:gap-main">

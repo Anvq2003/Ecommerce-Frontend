@@ -8,7 +8,7 @@ export default function HeartBox(props: IHeartBoxProps) {
     <>
       <div className="flex items-center gap-[10px] dark:text-white">
         <HeartIcon />
-        <span className="text-[15px] font-medium text-textPrimary">03</span>
+        <span className="text-[15px] font-medium text-primary">03</span>
       </div>
       <div className="h-main w-[1px] bg-line"></div>
     </>

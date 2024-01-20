@@ -1,9 +1,9 @@
 import * as React from 'react';
 
-export interface IProductsProps {
+export interface IProductsPageProps {
 }
 
-export default function Products (props: IProductsProps) {
+export default function ProductsPage (props: IProductsPageProps) {
   return (
     <div>
       

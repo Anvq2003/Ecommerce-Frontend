@@ -24,8 +24,8 @@ export default function ReviewCard({ data }: IReviewCardProps) {
           <Image className="rounded-full object-cover" src={avatar} alt={name} width={80} height={80} />
         </div>
         <div className="w-4/5">
-          <h2 className="mb-[10px] line-clamp-1 text-[22px] font-medium text-textPrimary">{name}</h2>
-          <h4 className="line-clamp-2 font-normal text-textPrimary">{content}</h4>
+          <h2 className="mb-[10px] line-clamp-1 text-[22px] font-medium text-primary">{name}</h2>
+          <h4 className="line-clamp-2 font-normal text-primary">{content}</h4>
         </div>
       </div>
       <div className="flex items-center gap-5">

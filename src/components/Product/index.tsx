@@ -3,7 +3,7 @@ import React from 'react';
 
 import FilterBox from './components/FilterBox';
 
-import ProductCard, { IProductCard } from './components/ProductCard';
+import ProductCard, { IProductCard } from './components/ProductItem';
 import { title } from '@/shared/styles/primitives';
 import ProductList from './components/ProductList';
 

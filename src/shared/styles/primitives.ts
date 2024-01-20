@@ -1,7 +1,7 @@
 import { tv } from 'tailwind-variants';
 
 export const title = tv({
-  base: 'tracking-tight block font-bold text-textPrimary',
+  base: 'tracking-tight block font-bold text-primary',
   variants: {
     color: {
       default: 'textPrimary',

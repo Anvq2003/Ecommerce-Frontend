@@ -6,13 +6,13 @@ import { CheckIcon } from '@heroicons/react/24/outline';
 const checkbox = tv({
   slots: {
     base: 'border-none bg-[#EDEDF6] dark:bg-[#292E39] hover:bg-default-200',
-    content: 'text-textSecondary',
+    content: 'text-secondary',
   },
   variants: {
     isSelected: {
       true: {
-        base: 'bg-bgYellow dark:bg-bgYellow hover:bg-bgYellow dark:opacity-80',
-        content: 'text-textPrimary dark:text-black pl-1',
+        base: 'bg-yellow dark:bg-yellow hover:bg-yellow dark:opacity-80',
+        content: 'text-primary dark:text-black pl-1',
       },
     },
     isFocusVisible: {

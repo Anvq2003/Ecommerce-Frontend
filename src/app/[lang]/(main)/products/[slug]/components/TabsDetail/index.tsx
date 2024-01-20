@@ -46,7 +46,7 @@ export default function TabsDetail(props: ITabsDetailProps) {
           tabList: 'gap-6 w-full relative rounded-none p-0 mb-5',
           cursor: 'w-full bg-textPrimary',
           tab: 'max-w-fit mr-14 h-12',
-          tabContent: 'group-data-[selected=true]:text-textPrimary mb-2 text-[22px] font-medium text-[#9E9DA8]',
+          tabContent: 'group-data-[selected=true]:text-primary mb-2 text-[22px] font-medium text-[#9E9DA8]',
         }}
       >
         {tabs.map((tab) => (
