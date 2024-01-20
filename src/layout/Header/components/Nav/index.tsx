@@ -104,6 +104,97 @@ export default function Nav() {
     },
     {
       label: "Departments",
+      link: "/departments",
+      children: [
+        {
+          image: menuIcon,
+          label: "Departments",
+          link: "/departments",
+          list: [
+            {
+              label: "Departments",
+              link: "/departments",
+            },
+            {
+              label: "Departments 2",
+              link: "/departments ",
+            },
+          ],
+        },
+        {
+          image: menuIcon,
+          label: "Departments",
+          list: [
+            {
+              label: "Departments",
+              link: "/departments",
+            },
+            {
+              label: "Departments 2",
+              link: "/departments ",
+            },
+          ],
+        },
+        {
+          image: menuIcon,
+          label: "Departments",
+          list: [
+            {
+              label: "Departments",
+              link: "/departments",
+            },
+            {
+              label: "Departments 2",
+              link: "/departments ",
+            },
+          ],
+        },
+        {
+          image: menuIcon,
+          label: "Departments",
+          list: [
+            {
+              label: "Departments",
+              link: "/departments",
+            },
+            {
+              label: "Departments 2",
+              link: "/departments ",
+            },
+          ],
+        },
+        {
+          image: menuIcon,
+          label: "Departments",
+          list: [
+            {
+              label: "Departments",
+              link: "/departments",
+            },
+            {
+              label: "Departments 2",
+              link: "/departments ",
+            },
+          ],
+        },
+        {
+          image: menuIcon,
+          label: "Departments",
+          list: [
+            {
+              label: "Departments",
+              link: "/departments",
+            },
+            {
+              label: "Departments 2",
+              link: "/departments ",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      label: "Departments",
       children: [
         {
           image: menuIcon,
