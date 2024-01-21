@@ -30,7 +30,7 @@ export default function BreadcrumbComponent(props: IBreadcrumbComponentProps) {
   }, []);
 
   return (
-    <div className="mb-main flex rounded-[10px] bg-bgSecondary p-3 mx-5 xl:mx-0">
+    <div className="mx-5 mb-main flex rounded-[10px] bg-white p-3 dark:bg-bgSecondary xl:mx-0 shadow-[0px_20px_60px_10px_rgba(237,237,246,0.20)]">
       <Breadcrumbs
         variant="solid"
         classNames={{

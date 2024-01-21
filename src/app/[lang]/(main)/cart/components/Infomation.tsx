@@ -31,7 +31,7 @@ export default function Information(props: IInformationProps) {
   ];
 
   return (
-    <div className="card-main flex h-fit w-[30%] flex-col gap-[14px]">
+    <div className="card-main flex h-fit w-[30%] flex-col gap-[14px] sticky top-0">
       {info.map((item, index) => (
         <>
           {item.divider && <Divider orientation="horizontal" className="bg-border" />}

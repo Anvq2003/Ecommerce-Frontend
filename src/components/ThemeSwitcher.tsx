@@ -26,13 +26,11 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({ className, classNames }) => 
       defaultSelected
       size="lg"
       color="secondary"
-      onChange={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      onChange={onChange}
       value={theme === 'dark' ? 'dark' : 'light'}
       thumbIcon={({ isSelected, className }) =>
         isSelected ? <SunIcon className={className} /> : <MoonIcon className={className} />
       }
-    >
-      Dark mode
-    </Switch>
+    />
   );
 };

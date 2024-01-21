@@ -1,6 +1,7 @@
-import { DeleteIcon, HeartIcon } from '@/components/Icons';
-import { ISelectOption } from '@/shared/types';
+import { motion } from 'framer-motion';
 import * as React from 'react';
+
+import { DeleteIcon, HeartIcon } from '@/components/Icons';
 
 export interface IActionCartProps {}
 
@@ -23,10 +24,16 @@ export default function ActionCart(props: IActionCartProps) {
       {listAction.map((item, index) => {
         const Icon = item.icon;
         return (
-          <div key={index} className="flex cursor-pointer items-center text-secondary" onClick={item.action}>
+          <motion.div
+            key={index}
+            onClick={item.action}
+            whileTap={{ scale: 0.9 }}
+            whileHover={{ scale: 1.1 }}
+            className="flex cursor-pointer items-center text-secondary"
+          >
             <Icon />
             <p className="ml-[10px] text-base font-medium text-secondary">{item.label}</p>
-          </div>
+          </motion.div>
         );
       })}
     </div>

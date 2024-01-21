@@ -1,7 +1,7 @@
 "use client";
 import { extendVariants, Button } from "@nextui-org/react";
 
-const MyButton = extendVariants(Button, {
+const ButtonMain = extendVariants(Button, {
   variants: {
     // <- modify/add variants
     color: {
@@ -20,4 +20,4 @@ const MyButton = extendVariants(Button, {
   },
 });
 
-export default MyButton;
+export default ButtonMain;
