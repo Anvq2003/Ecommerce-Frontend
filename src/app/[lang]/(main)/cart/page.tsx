@@ -1,9 +1,10 @@
+import * as React from 'react';
+
 import product from '@/assets/images/product.png';
+import BubbleInformation from '@/components/BubbleInformation';
 import ProductCart from '@/components/ProductCart';
 import WrapperPage from '@/components/WrapperPage';
 import BreadcrumbComponent from '@/layout/Breadcrumb';
-import * as React from 'react';
-import Information from './components/Infomation';
 
 export interface ICartPageProps {}
 
@@ -16,7 +17,7 @@ export default function CartPage(props: ICartPageProps) {
       quantity: 1,
       category: 'Category 1',
       urlImage: product,
-      total: 100,
+      total: '100.000.000 đ',
     },
     {
       id: '2',
@@ -25,7 +26,7 @@ export default function CartPage(props: ICartPageProps) {
       quantity: 1,
       category: 'Category 1',
       urlImage: product,
-      total: 100,
+      total: '100.000.000 đ',
     },
     {
       id: '3',
@@ -34,7 +35,7 @@ export default function CartPage(props: ICartPageProps) {
       quantity: 1,
       category: 'Category 1',
       urlImage: product,
-      total: 100,
+      total: '100.000.000 đ',
     },
     {
       id: '4',
@@ -43,7 +44,7 @@ export default function CartPage(props: ICartPageProps) {
       quantity: 1,
       category: 'Category 1',
       urlImage: product,
-      total: 100,
+      total: '100.000.000 đ',
     },
     {
       id: '5',
@@ -52,7 +53,7 @@ export default function CartPage(props: ICartPageProps) {
       quantity: 1,
       category: 'Category 1',
       urlImage: product,
-      total: 100,
+      total: '100.000.000 đ',
     },
     {
       id: '6',
@@ -61,7 +62,7 @@ export default function CartPage(props: ICartPageProps) {
       quantity: 1,
       category: 'Category 1',
       urlImage: product,
-      total: 100,
+      total: '100.000.000 đ',
     },
     {
       id: '7',
@@ -70,7 +71,7 @@ export default function CartPage(props: ICartPageProps) {
       quantity: 1,
       category: 'Category 1',
       urlImage: product,
-      total: 100,
+      total: '100.000.000 đ',
     },
     {
       id: '8',
@@ -79,7 +80,7 @@ export default function CartPage(props: ICartPageProps) {
       quantity: 1,
       category: 'Category 1',
       urlImage: product,
-      total: 100,
+      total: '100.000.000 đ',
     },
     {
       id: '9',
@@ -88,16 +89,16 @@ export default function CartPage(props: ICartPageProps) {
       quantity: 1,
       category: 'Category 1',
       urlImage: product,
-      total: 100,
+      total: '100.000.000 đ',
     },
   ];
 
   return (
     <WrapperPage>
       <BreadcrumbComponent />
-      <div className="flex gap-main">
-        <ProductCart productList={carts} title='Cart' />
-        <Information />
+      <div className="flex flex-col gap-5 xl:gap-main mx-5 xl:mx-0 lg:flex-row">
+        <ProductCart showSelected productList={carts} title="Cart" />
+        <BubbleInformation />
       </div>
     </WrapperPage>
   );

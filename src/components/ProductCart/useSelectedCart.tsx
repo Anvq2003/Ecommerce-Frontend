@@ -7,7 +7,7 @@ import lodash from 'lodash';
 export default function useSelectedCart(productList: ICartItem[]) {
   const [selectedKeys, setSelectedKeys] = useState<string[]>([]);
 
-  const onToggleAll = (checked: boolean) => {
+  const onSelectedAll = (checked: boolean) => {
     if (checked) {
       setSelectedKeys(lodash.map(productList, (item) => item?.id));
     } else {
@@ -15,7 +15,7 @@ export default function useSelectedCart(productList: ICartItem[]) {
     }
   };
 
-  const onToggle = (id: string) => {
+  const onSelected = (id: string) => {
     if (selectedKeys?.includes(id)) {
       setSelectedKeys(lodash.filter(selectedKeys, (item) => item !== id));
     } else {
@@ -25,7 +25,7 @@ export default function useSelectedCart(productList: ICartItem[]) {
 
   return {
     selectedKeys,
-    onToggleAll,
-    onToggle,
+    onSelected,
+    onSelectedAll,
   };
 }

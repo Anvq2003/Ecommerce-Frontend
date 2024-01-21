@@ -42,7 +42,6 @@ module.exports = {
         'light-blue': '#77DAE6',
         purple: '#7644E1',
 
-        border: '#D2D1D6',
         line: '#EDEDF6',
       },
     },
@@ -62,6 +61,7 @@ module.exports = {
             secondary: '#9E9DA8',
             bgPrimary: '#F6F6F6',
             bgSecondary: '#EEEEEE',
+            border: '#D2D1D6',
           }, // light theme colors
         },
         dark: {
@@ -71,6 +71,7 @@ module.exports = {
             secondary: '#9E9DA8',
             bgPrimary: '#292E39',
             bgSecondary: '#171C28',
+            border: '#292E39',
           }, // dark theme colors
         },
         // ... custom themes
