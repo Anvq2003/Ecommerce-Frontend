@@ -1,9 +1,5 @@
-import { Locale } from "@/config/i18n";
-import { SVGProps } from "react";
-
-export type IconSvgProps = SVGProps<SVGSVGElement> & {
-  size?: number;
-};
+import { IconSvgProps } from '@/components/Icons';
+import { Locale } from '@/config/i18n';
 
 export interface IPageProps {
   params: {
@@ -14,7 +10,9 @@ export interface IPageProps {
 export interface ISelectOption {
   value: string;
   label: string;
-  icon?: React.FC<IconSvgProps>;
+
+  icon?: React.FC<IconSvgProps> | React.ReactNode;
+  description?: string;
   action?: () => void;
   [key: string]: any;
 }
@@ -24,4 +22,3 @@ export interface ITab {
   component: React.FC;
   href?: string;
 }
-

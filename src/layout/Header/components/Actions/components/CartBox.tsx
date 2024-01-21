@@ -60,7 +60,7 @@ export default function CartBox(props: ICartBoxProps) {
           ))}
         </div>
         <Divider orientation="horizontal" />
-        <MyButton className="w-1/2 self-end" color="yellow" size="large">
+        <MyButton className="w-1/2 self-end" color="yellow" radius='full' size="large">
           Check out all
         </MyButton>
       </div>

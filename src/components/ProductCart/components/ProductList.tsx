@@ -7,7 +7,7 @@ export interface IProductListProps {
 
 export default function ProductList({ productList }: IProductListProps) {
   return (
-    <div className="p-main">
+    <div className="">
       {productList.map((item, index) => (
         <ProductItem key={index} data={item} />
       ))}

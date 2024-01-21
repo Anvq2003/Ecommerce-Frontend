@@ -11,7 +11,7 @@ const MyButton = extendVariants(Button, {
     size: {
       icon: "h-[50px] min-w-[50px]",
       medium: "h-[46px] text-lg rounded-md",
-      large: "h-[68px] text-[22px] rounded-full",
+      large: "h-[68px] text-[22px]",
     },
   },
   defaultVariants: {
