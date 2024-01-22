@@ -96,9 +96,9 @@ export default function CartPage(props: ICartPageProps) {
   return (
     <WrapperPage>
       <BreadcrumbComponent />
-      <div className="flex flex-col gap-5 xl:gap-main mx-5 xl:mx-0 lg:flex-row">
+      <div className="mx-5 flex flex-col gap-5 lg:flex-row xl:mx-0 xl:gap-main">
         <ProductCart showSelected productList={carts} title="Cart" />
-        <BubbleInformation />
+        <BubbleInformation textButton="Continue to Checkout"/>
       </div>
     </WrapperPage>
   );

@@ -1,4 +1,4 @@
-import { title } from '@/shared/styles/primitives';
+import { titleStyle } from '@/shared/styles/primitives';
 import * as React from 'react';
 import Avatar from '@/images/avatar.png';
 import { StaticImageData } from 'next/image';
@@ -33,7 +33,7 @@ export default function Reviews(props: IReviewsProps) {
   ];
   return (
     <div className="">
-      <h2 className={title({ className: 'mb-main' })}>What our customers are saying</h2>
+      <h2 className={titleStyle({ className: 'mb-main' })}>What our customers are saying</h2>
       <ReviewList reviewList={list} />
     </div>
   );

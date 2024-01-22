@@ -4,6 +4,7 @@ import * as React from 'react';
 import product from '@/images/product.png';
 import ProductBox from './ProductBox';
 import MyButton from '@/components/Button';
+import { titleStyle } from '@/shared/styles/primitives';
 
 export interface ICartBoxProps {}
 
@@ -48,7 +49,7 @@ export default function CartBox(props: ICartBoxProps) {
   const content = (
     <PopoverContent className="w-[700px] shadow-[0px_40px_90px_20px_rgba(200,200,200,0.40)] dark:bg-bgPrimary dark:shadow-[0px_40px_90px_20px_rgba(23,28,40,0.40)]">
       <div className="flex flex-col gap-main py-main">
-        <h2 className="text-[22px] font-medium text-primary dark:opacity-60">You have 3 item</h2>
+        <h2 className={titleStyle({ size: 'sm', className: 'dark:opacity-60' })}>You have 3 item</h2>
         <ProductBox productList={list} />
         <Divider orientation="horizontal" />
         <div className="flex flex-col gap-5">
@@ -60,7 +61,7 @@ export default function CartBox(props: ICartBoxProps) {
           ))}
         </div>
         <Divider orientation="horizontal" />
-        <MyButton className="w-1/2 self-end" color="yellow" radius='full' size="large">
+        <MyButton className="w-1/2 self-end" color="yellow" radius="full" size="large">
           Check out all
         </MyButton>
       </div>

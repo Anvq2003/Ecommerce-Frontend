@@ -1,4 +1,5 @@
 import { StarIcon } from '@/components/Icons';
+import { titleStyle } from '@/shared/styles/primitives';
 import Image, { StaticImageData } from 'next/image';
 import * as React from 'react';
 
@@ -16,15 +17,15 @@ export interface IReviewCardProps {
 
 export default function ReviewCard({ data }: IReviewCardProps) {
   const { avatar, name, content, rating, totalRating } = data;
-  
+
   return (
-    <div className="rounded-2xl bg-[#FAFAFD] dark:bg-bgSecondary p-main">
+    <div className="rounded-2xl bg-[#FAFAFD] p-main dark:bg-bgSecondary">
       <div className="mb-5 flex gap-5">
         <div className="w-1/5">
           <Image className="rounded-full object-cover" src={avatar} alt={name} width={80} height={80} />
         </div>
         <div className="w-4/5">
-          <h2 className="mb-[10px] line-clamp-1 text-[22px] font-medium text-primary">{name}</h2>
+          <h2 className={titleStyle({ className: 'mb-[10px] line-clamp-1' })}>{name}</h2>
           <h4 className="line-clamp-2 font-normal text-primary">{content}</h4>
         </div>
       </div>

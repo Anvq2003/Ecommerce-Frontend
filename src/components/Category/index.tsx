@@ -1,7 +1,7 @@
 import category from '@/assets/images/category.png';
 import React from 'react';
 
-import { title } from '@/styles/primitives';
+import { titleStyle } from '@/styles/primitives';
 
 import { ICategoryCard } from './components/CategoryCard';
 import CategoryList from './components/CategoryList';
@@ -67,7 +67,7 @@ export default function CategoryBox() {
 
   return (
     <div className="mb-5 w-full px-5 lg:mb-0 lg:w-[250px] lg:px-0">
-      <h2 className={title({ class: 'mb-5' })}>Category</h2>
+      <h2 className={titleStyle({ size: 'lg', class: 'mb-5' })}>Category</h2>
       <CategoryList categoryList={array} />
     </div>
   );

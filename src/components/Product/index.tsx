@@ -3,12 +3,12 @@ import React from 'react';
 
 import FilterBox from './components/FilterBox';
 
-import ProductCard, { IProductCard } from './components/ProductItem';
-import { title } from '@/shared/styles/primitives';
+import ProductCard, { IProductItem } from './components/ProductItem';
+import { titleStyle } from '@/shared/styles/primitives';
 import ProductList from './components/ProductList';
 
 export default function ProductBox() {
-  const array: IProductCard[] = [
+  const array: IProductItem[] = [
     {
       urlImage: productImage,
       name: 'name product 1  name product 1  name product 1name product 1  name product 1  name product 1 name product 1  name product 1  name product 1  ',
@@ -35,7 +35,7 @@ export default function ProductBox() {
   return (
     <div className="mb-[38px] px-5 lg:px-0">
       <div className="mb-main flex items-center justify-between">
-        <h2 className={title()}>Total LavAzza 1320</h2>
+        <h2 className={titleStyle({ size: 'lg' })}>Total LavAzza 1320</h2>
         <FilterBox />
       </div>
       <ProductList productList={array} />

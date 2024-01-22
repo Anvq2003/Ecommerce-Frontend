@@ -6,6 +6,7 @@ import { ICartItem } from './components/ProductItem';
 import ProductList from './components/ProductList';
 import useSelectedCart from './useSelectedCart';
 import FooterBox from './components/FooterBox';
+import { titleStyle } from '@/shared/styles/primitives';
 
 export interface IProductCartProps {
   productList: ICartItem[];
@@ -23,7 +24,7 @@ export default function ProductCart({ productList, showSelected, title }: IProdu
 
   return (
     <div className="card-main flex-1">
-      <h1 className="mb-3 text-[22px] font-medium text-primary">{title}</h1>
+      <h1 className={titleStyle({ className: 'mb-3' })}>{title}</h1>
       {showSelected && (
         <Checkbox
           color="warning"
