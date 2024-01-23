@@ -1,21 +1,24 @@
 'use client';
 
+import { titleStyle } from '@/shared/styles/primitives';
 import { Checkbox } from '@nextui-org/react';
 
+import FooterBox from './components/FooterBox';
 import { ICartItem } from './components/ProductItem';
 import ProductList from './components/ProductList';
 import useSelectedCart from './useSelectedCart';
-import FooterBox from './components/FooterBox';
-import { titleStyle } from '@/shared/styles/primitives';
 
 export interface IProductCartProps {
   productList: ICartItem[];
   title: string;
   showSelected?: boolean;
+  hideFooter?: boolean;
+  showButton?: boolean;
 }
 
-export default function ProductCart({ productList, showSelected, title }: IProductCartProps) {
-  const { onSelected, onSelectedAll, selectedKeys } = useSelectedCart(productList);
+export default function ProductCart(props: IProductCartProps) {
+  const { productList, showSelected, title, hideFooter, showButton } = props;
+  const { selectedKeys, onSelected, onSelectedAll } = useSelectedCart(productList);
 
   const styleCheckbox = {
     base: 'mb-2',
@@ -41,8 +44,9 @@ export default function ProductCart({ productList, showSelected, title }: IProdu
         productList={productList}
         showSelected={showSelected}
         selectedKeys={selectedKeys}
+        showButton={showButton}
       />
-      <FooterBox />
+      {!hideFooter && <FooterBox />}
     </div>
   );
 }

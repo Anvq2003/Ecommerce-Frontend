@@ -3,11 +3,10 @@
 import { Checkbox, Divider, Select, SelectItem } from '@nextui-org/react';
 import Image from 'next/image';
 import * as React from 'react';
-import Quantity from './components/QuantityBox';
 import QuantityBox from './components/QuantityBox';
 import ActionCart from './components/ActionCart';
 import ButtonMain from '@/components/Button';
-
+import { motion } from 'framer-motion';
 export interface ICartItem {
   id: string;
   name: string;
@@ -23,11 +22,11 @@ export interface IProductItemProps {
   showSelected?: boolean;
   onSelected?: (key: string) => void;
   selectedKeys?: string[];
-  isCheckout?: boolean;
+  showButton?: boolean;
 }
 
 export default function ProductItem(props: IProductItemProps) {
-  const { data, isCheckout, selectedKeys, showSelected, onSelected = () => {} } = props;
+  const { data, showButton, selectedKeys, showSelected, onSelected = () => {} } = props;
 
   const animals = [
     {
@@ -49,7 +48,12 @@ export default function ProductItem(props: IProductItemProps) {
 
   return (
     <>
-      <div className="flex justify-between">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        className="flex justify-between"
+      >
         {showSelected && (
           <Checkbox
             isSelected={selectedKeys?.includes(data.id)}
@@ -72,8 +76,8 @@ export default function ProductItem(props: IProductItemProps) {
           <h4 className="text-lg font-medium text-secondary">
             {data.price} | <span className="text-green">In Stock</span>
           </h4>
-          <div className="flex flex-col gap-3 md:gap-main">
-            <div className="flex flex-col md:flex-row gap-2 md:gap-5">
+          <div className="flex flex-col gap-3 md:gap-main md:flex-row">
+            <div className="flex flex-col gap-2 md:flex-row md:gap-5">
               <Select
                 items={animals}
                 aria-label="Select an animal"
@@ -90,19 +94,19 @@ export default function ProductItem(props: IProductItemProps) {
               </Select>
               <QuantityBox quantity={2} />
             </div>
-            <h3 className="w-full md:hidden text-lg font-bold">{data.total}</h3>
+            <h3 className="w-full text-lg font-bold md:hidden">{data.total}</h3>
             <div className="flex flex-1 items-center lg:justify-end">
               <ActionCart />
 
-              {isCheckout && (
-                <ButtonMain className="ml-auto" color="yellow" size="lg">
+              {showButton && (
+                <ButtonMain className="ml-auto" color="yellow" size="lg" radius='full'>
                   Check Out
                 </ButtonMain>
               )}
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
       <Divider className="my-main bg-border" orientation="horizontal" />
     </>
   );

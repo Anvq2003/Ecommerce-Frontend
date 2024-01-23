@@ -8,7 +8,7 @@ export interface IQuantityBoxProps {
 
 export default function QuantityBox({ quantity }: IQuantityBoxProps) {
   return (
-    <div className="flex w-[115px] items-center justify-between rounded-[10px] border-1 border-border px-5 py-[10px]">
+    <div className="flex h-11 w-[115px] items-center justify-between rounded-[10px] border-1 border-border px-5 ">
       <motion.div whileTap={{ scale: 0.9 }} whileHover={{ scale: 1.1 }} className="cursor-pointer select-none">
         <MinusIcon />
       </motion.div>
