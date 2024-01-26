@@ -9,7 +9,7 @@ export default function SearchMobile(props: ISearchMobileProps) {
 
   const classNames = {
     base: 'w-full',
-    inputWrapper: 'border-none shadow-none px-4 bg-white',
+    inputWrapper: 'border-none shadow-none px-4 bg-white dark:bg-bgSecondary',
     input: 'text-primary text-base',
     clearButton: 'text-primary',
     helperWrapper: 'hidden',

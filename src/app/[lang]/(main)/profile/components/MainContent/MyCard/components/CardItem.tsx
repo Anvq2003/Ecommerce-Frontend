@@ -28,8 +28,8 @@ export default function CardItem({ data, isAddCard }: ICardItemProps) {
   return isAddCard ? (
     <CardPlus />
   ) : (
-    <div className="flex w-[33%] flex-col items-stretch max-md:ml-0 max-md:w-full">
-      <div className="flex w-full grow items-end justify-between gap-0 rounded-xl bg-[#1E2E69] pb-5 pl-5 max-md:mt-8">
+    <div className="flex flex-col max-md:ml-0 max-md:w-full">
+      <div className="flex w-full grow items-end justify-between gap-0 rounded-xl bg-[#1E2E69] pb-5 pl-5">
         <div className="z-[1] mt-5 flex grow basis-[0%] flex-col items-stretch">
           <div className="flex items-center gap-2">
             <Image

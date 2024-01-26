@@ -1,7 +1,9 @@
 'use client';
 
-import InfoList from './components/InfoList';
 import { PhoneIcon } from '@heroicons/react/24/outline';
+
+import Heading from '../Heading';
+import InfoList from './components/InfoList';
 
 export interface IMyInfoProps {}
 
@@ -23,13 +25,10 @@ export default function MyInfo(props: IMyInfoProps) {
       content: '+000 11122 2345 657',
     },
   ];
-  
+
   return (
-    <div className='w-full'>
-      <div className="mt-8 self-start text-2xl font-bold leading-9 text-gray-900">Account infoMyCard</div>
-      <div className="mt-1 self-start whitespace-nowrap text-base leading-6 text-gray-900">
-        Addresses, contact information and password
-      </div>
+    <div className="w-full">
+      <Heading title="Account info" subTitle="Addresses, contact information and password" />
       <InfoList infoList={infoList} />
     </div>
   );

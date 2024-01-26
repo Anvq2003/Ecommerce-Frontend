@@ -18,11 +18,11 @@ interface IMenuItemProps {
 export default function MenuItem({ data }: IMenuItemProps) {
   return (
     <div>
-      <div className="text-lg font-medium leading-6 text-gray-900">{data.title}</div>
+      <div className="text-lg font-medium leading-6">{data.title}</div>
       {data.children.map((item, index) => (
         <div key={index} className="mt-4 flex items-stretch justify-between gap-2.5">
           {item.icon}
-          <div className="shrink grow basis-auto self-start text-base leading-6 text-gray-900">{item.title}</div>
+          <div className="shrink grow basis-auto self-start text-base leading-6">{item.title}</div>
         </div>
       ))}
     </div>

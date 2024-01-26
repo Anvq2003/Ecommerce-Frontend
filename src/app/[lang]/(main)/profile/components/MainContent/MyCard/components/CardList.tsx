@@ -8,7 +8,7 @@ export interface ICardListProps {
 export default function CardList({ cardsList }: ICardListProps) {
   return (
     <div className="mt-4 self-stretch max-md:max-w-full">
-      <div className="flex gap-5 max-md:flex-col max-md:items-stretch max-md:gap-0">
+      <div className="grid grid-cols-1 gap-5 lg:grid-cols-2 xl:grid-cols-3">
         {cardsList && cardsList.map((item, index) => <CardItem key={index} {...item} />)}
       </div>
     </div>

@@ -10,7 +10,7 @@ export default function ProfilePage(props: IProfilePageProps) {
   return (
     <WrapperPage>
       <BreadcrumbComponent />
-      <div className="mx-5 flex flex-col gap-5 lg:flex-row xl:mx-0 xl:gap-main">
+      <div className="mx-5 flex flex-col gap-5 md:flex-row xl:mx-0 xl:gap-main">
         <MenuLeft />
         <MainContent />
       </div>

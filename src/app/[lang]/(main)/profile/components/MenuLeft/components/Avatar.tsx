@@ -8,7 +8,7 @@ export interface IAvatarProps {}
 
 export default function Avatar(props: IAvatarProps) {
   return (
-    <div className="relative flex aspect-[1.4024390243902438] w-full flex-col items-stretch justify-center overflow-hidden overflow-hidden rounded-t-[20px] shadow-2xl">
+    <div className="relative flex aspect-[1.4024390243902438] w-full flex-col items-stretch justify-center overflow-hidden rounded-t-[20px] shadow-2xl">
       <Image
         src={BgAvatar}
         alt="Background Avatar"
@@ -17,7 +17,7 @@ export default function Avatar(props: IAvatarProps) {
         height={246}
       />
       <div className="absolute inset-0 z-10 h-full w-full bg-gradient-to-b from-[rgba(26,22,46,0.00)] to-[#1A162E]" />
-      <div className="relative z-20 flex flex-col items-stretch rounded-3xl px-16 pb-5 pt-10 shadow-2xl max-md:px-5">
+      <div className="relative z-20 flex flex-col items-stretch rounded-3xl pb-5 md:pb-10 shadow-2xl">
         <Image
           src={AvatarMain}
           width={116}

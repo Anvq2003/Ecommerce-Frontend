@@ -11,22 +11,16 @@ module.exports = {
   ],
   darkMode: 'class',
   theme: {
-    card: {
-      background: '#000',
-      shadow: '0 0 0 1px #EDEDF6',
-      hover: {
-        shadow: '0 0 0 1px #EDEDF6',
-      },
-    },
     extend: {
       container: {
         center: true,
-        screens: {
-          sm: '640px',
-          md: '768px',
-          lg: '1024px',
-          xl: '1340px',
-        },
+        // screens: {
+          // sm (640px)	max-width: 640px;
+          // md (768px)	max-width: 768px;
+          // lg (1024px)	max-width: 1024px;
+          // xl (1280px)	max-width: 1280px;
+          // 2xl (1536px)	max-width: 1536px;
+        // },
       },
       spacing: {
         main: '30px',

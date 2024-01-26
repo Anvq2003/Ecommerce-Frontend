@@ -4,17 +4,23 @@ export const titleStyle = tv({
   base: 'tracking-tight block font-bold text-primary',
   variants: {
     color: {
-      default: 'textPrimary',
+      default: 'text-primary',
     },
     size: {
       sm: 'text-[18px] font-medium',
       md: 'text-[22px] font-medium',
-      lg: 'lg:text-[24px] lg:font-bold',
+      lg: 'text-[24px] font-bold',
     },
     fullWidth: {
       true: 'w-full block',
     },
   },
+  compoundVariants: [
+    {
+      size: ['sm', 'md', 'lg'],
+      class: 'tracking-tight',
+    },
+  ],
   defaultVariants: {
     size: 'md',
     color: 'default',
@@ -25,12 +31,10 @@ export const subtitleStyle = tv({
   base: 'w-full block text-primary',
   variants: {
     size: {
-      sm: '',
       md: 'text-[15px] font-normal',
-      lg: '',
     },
     color: {
-      default: 'textPrimary',
+      default: 'text-primary',
     },
   },
   defaultVariants: {

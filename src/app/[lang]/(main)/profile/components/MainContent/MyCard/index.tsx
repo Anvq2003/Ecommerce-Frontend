@@ -5,6 +5,7 @@ import CardBrand2 from '@/assets/images/card-brand-2.png';
 import CardBrand3 from '@/assets/images/card-brand-3.png';
 import CardBrand from '@/assets/images/card-brand.png';
 import CardList from './components/CardList';
+import Heading from '../Heading';
 export interface IMyCardProps {}
 
 export default function MyCard(props: IMyCardProps) {
@@ -48,8 +49,7 @@ export default function MyCard(props: IMyCardProps) {
   ];
   return (
     <>
-      <div className="self-start whitespace-nowrap text-2xl font-bold leading-9 text-gray-900">My Wallet</div>
-      <div className="mt-1 self-start whitespace-nowrap text-base leading-6 text-gray-900">Payment methods</div>
+      <Heading title="Account info" subTitle="Addresses, contact information and password" />
       <CardList cardsList={listCard} />
     </>
   );
