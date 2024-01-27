@@ -8,7 +8,7 @@ import { IMenuItem } from './components/Menu/MenuItem';
 
 export interface IMenuLeftProps {}
 
-export default function MenuLeft(props: IMenuLeftProps) {
+export default function  MenuLeft(props: IMenuLeftProps) {
   const menu: IMenuItem[] = [
     {
       title: 'Thông tin cá nhân',
@@ -18,7 +18,7 @@ export default function MenuLeft(props: IMenuLeftProps) {
           title: 'Personal info',
           link: '/profile/information',
         },
-        {
+        { 
           icon: <UserIcon className="mr-2 h-6 w-6" />,
           title: 'Addresses',
           link: '/profile/information',

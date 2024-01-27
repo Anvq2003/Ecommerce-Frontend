@@ -4,11 +4,13 @@ import { PlusIcon } from '@/components/Icons';
 import * as React from 'react';
 import { motion } from 'framer-motion';
 
-export interface ICardPlusProps {}
+export interface ICardPlusProps {
+  onClickAdd?: () => void;
+}
 
-export default function CardPlus(props: ICardPlusProps) {
+export default function CardPlus({ onClickAdd }: ICardPlusProps) {
   return (
-    <div className="flex cursor-pointer flex-col items-stretch max-md:ml-0 max-md:w-full">
+    <div onClick={onClickAdd} className="flex cursor-pointer flex-col items-stretch max-md:ml-0 max-md:w-full">
       <motion.div
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}

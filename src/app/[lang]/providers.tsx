@@ -3,6 +3,7 @@
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
 import { ThemeProviderProps } from 'next-themes/dist/types';
 import { useRouter } from 'next/navigation';
+import NextNProgress from 'nextjs-progressbar';
 import * as React from 'react';
 
 import { i18n, Locale } from '@/config/i18n';
@@ -25,7 +26,10 @@ export function Providers({ children, themeProps, lang }: ProvidersProps) {
 
   return (
     <NextUIProvider navigate={router.push}>
-      <NextThemesProvider {...themeProps}>{children}</NextThemesProvider>
+      <NextThemesProvider {...themeProps}>
+        <NextNProgress color="#29D" startPosition={0.3} stopDelayMs={200} height={3} showOnShallow={true} />
+        {children}
+      </NextThemesProvider>
     </NextUIProvider>
   );
 }

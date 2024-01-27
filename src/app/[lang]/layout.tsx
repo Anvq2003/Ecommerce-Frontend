@@ -31,14 +31,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-  params,
-}: {
-  children: React.ReactNode;
-  params: { lang: Locale };
-}) {
-  
+export default function RootLayout({ children, params }: { children: React.ReactNode; params: { lang: Locale } }) {
   return (
     <html lang={params.lang} suppressHydrationWarning>
       <head />

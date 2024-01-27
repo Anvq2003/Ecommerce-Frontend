@@ -22,3 +22,8 @@ export interface ITab {
   component: React.FC;
   href?: string;
 }
+
+export interface IModal<T = any> {
+  open: boolean;
+  data?: T;
+}

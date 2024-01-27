@@ -4,9 +4,6 @@ import * as React from 'react';
 import CardBrand2 from '@/assets/images/card-brand-2.png';
 import CardBrand3 from '@/assets/images/card-brand-3.png';
 import CardBrand from '@/assets/images/card-brand.png';
-import { PlusIcon } from '@/components/Icons';
-
-import CardPlus from './CardPlus';
 
 export interface ICardItem {
   background: string;
@@ -20,14 +17,10 @@ export interface ICardItem {
 
 export interface ICardItemProps {
   data: ICardItem;
-  onClick?: () => void;
-  isAddCard?: boolean;
 }
 
-export default function CardItem({ data, isAddCard }: ICardItemProps) {
-  return isAddCard ? (
-    <CardPlus />
-  ) : (
+export default function CardItem({ data }: ICardItemProps) {
+  return (
     <div className="flex flex-col max-md:ml-0 max-md:w-full">
       <div className="flex w-full grow items-end justify-between gap-0 rounded-xl bg-[#1E2E69] pb-5 pl-5">
         <div className="z-[1] mt-5 flex grow basis-[0%] flex-col items-stretch">
@@ -55,7 +48,7 @@ export default function CardItem({ data, isAddCard }: ICardItemProps) {
             </div>
           </div>
         </div>
-        <div className="flex grow basis-[0%] flex-col justify-between items-center self-stretch">
+        <div className="flex grow basis-[0%] flex-col items-center justify-between self-stretch">
           <Image
             alt="card-brand-2"
             src={CardBrand2}
