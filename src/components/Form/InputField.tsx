@@ -17,8 +17,7 @@ export default function InputField(props: IInputFieldProps) {
       key="email"
       type="email"
       label="Email"
-      labelPlacement="outside"
-      placeholder="Enter your email"
+      labelPlacement={!props.label ? 'inside' : 'outside'}
       {...props}
     />
   );

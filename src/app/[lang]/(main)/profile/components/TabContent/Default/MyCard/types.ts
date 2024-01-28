@@ -9,10 +9,3 @@ export interface IModalAddProps {
   setModal: React.Dispatch<React.SetStateAction<IModal>>;
 }
 
-export interface IAction {
-  label: string;
-  variant: 'light' | 'dark' | any;
-  color: 'primary' | 'secondary' | 'success' | 'warning' | 'danger' | 'yellow' | any;
-  className: string;
-  onPress: () => void;
-}

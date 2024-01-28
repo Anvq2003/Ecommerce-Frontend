@@ -3,11 +3,11 @@ import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
 import ButtonMain from '@/components/Button';
-import renderForm, { IForm } from '@/shared/helpers/formRenderer';
+import { IActionForm, IForm, renderActionForm, renderForm } from '@/shared/helpers/formRenderer';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Modal, ModalBody, ModalContent, ModalFooter, ModalHeader } from '@nextui-org/react';
 
-import { FormFields, IAction, IModalAddProps } from '../types';
+import { FormFields, IModalAddProps } from '../types';
 
 export const formSchema = z.object({
   name: z.string().nonempty({ message: 'Name is required' }),
@@ -33,24 +33,21 @@ export default function ModalAdd({ modal, setModal }: IModalAddProps) {
         name: 'name',
         label: 'Name',
         placeholder: 'Imran Khan',
-        control,
       },
       {
         field: 'input',
         name: 'cardNumber',
         label: 'Card Number',
         placeholder: '1234 5678 9012 3456',
-        control,
       },
       {
         field: 'input',
         name: 'cvv',
         label: 'CVV',
         placeholder: '123',
-        control,
       },
     ],
-    [control],
+    [],
   );
 
   const formRight: IForm[] = useMemo(
@@ -77,13 +74,23 @@ export default function ModalAdd({ modal, setModal }: IModalAddProps) {
     [control],
   );
 
-  const actions: IAction[] = useMemo(
+  const formBottom: IForm[] = useMemo(
+    () => [
+      {
+        field: 'checkbox',
+        name: 'default',
+        label: 'Set as default card',
+      },
+    ],
+    [],
+  );
+
+  const actions: IActionForm[] = useMemo(
     () => [
       {
         label: 'Close',
         variant: 'light',
         color: 'danger',
-        className: '',
         onPress: onClose,
       },
       {
@@ -98,40 +105,23 @@ export default function ModalAdd({ modal, setModal }: IModalAddProps) {
   );
 
   const styles = {
+    base: 'p-4 md:p-main dark:bg-bgSecondary',
     body: 'py-6',
-    base: 'p-4 md:p-main',
     closeButton: 'text-2xl',
   };
 
   return (
     <Modal classNames={styles} size="4xl" isOpen={modal.open} onClose={onClose}>
       <ModalContent>
-        {(onClose) => (
-          <>
-            <ModalHeader className="flex flex-col gap-1 text-[22px] font-semibold">
-              Add credit or debit card
-            </ModalHeader>
-            <ModalBody>
-              <div className="grid grid-cols-1 gap-main md:grid-cols-2">
-                {renderForm(formLeft)}
-                {renderForm(formRight)}
-              </div>
-            </ModalBody>
-            <ModalFooter>
-              {actions.map((action, index) => (
-                <ButtonMain
-                  key={index}
-                  color={action.color}
-                  variant={action.variant}
-                  className={action.className}
-                  onPress={action.onPress}
-                >
-                  {action.label}
-                </ButtonMain>
-              ))}
-            </ModalFooter>
-          </>
-        )}
+        <ModalHeader className="flex flex-col gap-1 text-[22px] font-semibold">Add credit or debit card</ModalHeader>
+        <ModalBody>
+          <div className="mb-3 flex flex-col gap-main md:flex-row">
+            {renderForm(formLeft)}
+            {renderForm(formRight)}
+          </div>
+          {renderForm(formBottom)}
+        </ModalBody>
+        <ModalFooter>{renderActionForm(actions)}</ModalFooter>
       </ModalContent>
     </Modal>
   );

@@ -1,5 +1,6 @@
 import { IconSvgProps } from '@/components/Icons';
 import { Locale } from '@/config/i18n';
+import { ButtonProps } from '@nextui-org/button';
 
 export interface IPageProps {
   params: {

@@ -13,7 +13,7 @@ export interface IInfoItemProps {
 export default function InfoItem({ data }: IInfoItemProps) {
   const Icon = data.icon;
   return (
-    <div className="flex flex-col items-start justify-center rounded-xl bg-neutral-100 dark:bg-bgPrimary py-2.5 pl-2.5 pr-16 max-md:max-w-full max-md:pr-5">
+    <div className="flex flex-col items-start justify-center rounded-xl bg-bgPrimary py-2.5 pl-2.5 pr-16 max-md:max-w-full max-md:pr-5">
       <div className="flex items-stretch gap-2.5">
         <div className="flex aspect-square h-[54px] w-[54px] flex-col items-center justify-center rounded-lg bg-white dark:bg-bgSecondary  px-4">
           <Icon size={24} />

@@ -1,7 +1,7 @@
-import CategoryBox from "@/components/Category";
-import ProductBox from "@/components/Product";
-import Slider from "@/components/Slider";
-import { IPageProps } from "@/shared/types";
+import CategoryBox from '@/components/Category';
+import ProductBox from '@/components/Product';
+import Slider from '@/components/Slider';
+import { IPageProps } from '@/shared/types';
 
 export default async function HomePage({ params: { lang } }: IPageProps) {
   return (

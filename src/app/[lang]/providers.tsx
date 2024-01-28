@@ -7,7 +7,8 @@ import NextNProgress from 'nextjs-progressbar';
 import * as React from 'react';
 
 import { i18n, Locale } from '@/config/i18n';
-import useLanguageContext, { languageSelector, setLanguageSelector } from '@/contexts/language';
+import useLanguageContext, { setLanguageSelector } from '@/contexts/language';
+import { ThemeProvider as MaterialTailwindProvider } from '@material-tailwind/react';
 import { NextUIProvider } from '@nextui-org/system';
 
 export interface ProvidersProps {
@@ -27,8 +28,10 @@ export function Providers({ children, themeProps, lang }: ProvidersProps) {
   return (
     <NextUIProvider navigate={router.push}>
       <NextThemesProvider {...themeProps}>
-        <NextNProgress color="#29D" startPosition={0.3} stopDelayMs={200} height={3} showOnShallow={true} />
-        {children}
+        <MaterialTailwindProvider>
+          <NextNProgress color="#29D" startPosition={0.3} stopDelayMs={200} height={3} showOnShallow={true} />
+          {children}
+        </MaterialTailwindProvider>
       </NextThemesProvider>
     </NextUIProvider>
   );

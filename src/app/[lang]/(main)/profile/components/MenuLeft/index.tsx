@@ -8,7 +8,7 @@ import { IMenuItem } from './components/Menu/MenuItem';
 
 export interface IMenuLeftProps {}
 
-export default function  MenuLeft(props: IMenuLeftProps) {
+export default function MenuLeft(props: IMenuLeftProps) {
   const menu: IMenuItem[] = [
     {
       title: 'Thông tin cá nhân',
@@ -18,7 +18,7 @@ export default function  MenuLeft(props: IMenuLeftProps) {
           title: 'Personal info',
           link: '/profile/information',
         },
-        { 
+        {
           icon: <UserIcon className="mr-2 h-6 w-6" />,
           title: 'Addresses',
           link: '/profile/information',
@@ -73,8 +73,8 @@ export default function  MenuLeft(props: IMenuLeftProps) {
   ];
 
   return (
-    <div className="flex md:w-1/3 lg:w-1/4 flex-col items-stretch w-full">
-      <div className="flex w-full flex-col items-stretch rounded-3xl bg-bgSecondary pb-8 shadow-2xl">
+    <div className="flex w-full flex-col items-stretch md:w-1/3 lg:w-1/4">
+      <div className="shadow-main flex w-full flex-col items-stretch rounded-3xl bg-white pb-8 dark dark:bg-bgSecondary">
         <Avatar />
         <Menu menu={menu} />
       </div>
