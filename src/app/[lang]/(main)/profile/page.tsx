@@ -15,8 +15,8 @@ export default function ProfilePage(props: IProfilePageProps) {
         <MenuLeft />
 
         <div className="card-main flex-1 h-fit">
-          <PersonalInfo />
-          {/* <Default /> */}
+          {/* <PersonalInfo /> */}
+          <Default />
         </div>
       </div>
     </WrapperPage>

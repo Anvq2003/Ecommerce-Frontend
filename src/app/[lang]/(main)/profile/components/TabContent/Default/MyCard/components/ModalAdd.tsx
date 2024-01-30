@@ -1,11 +1,10 @@
-import React, { useCallback, useMemo } from 'react';
+import { useCallback, useMemo } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
-import ButtonMain from '@/components/Button';
-import { IActionForm, IForm, renderActionForm, renderForm } from '@/shared/helpers/formRenderer';
+import ModalMain from '@/components/ModalMain';
+import { IActionForm, IForm, renderForm } from '@/shared/helpers/formRenderer';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Modal, ModalBody, ModalContent, ModalFooter, ModalHeader } from '@nextui-org/react';
 
 import { FormFields, IModalAddProps } from '../types';
 
@@ -91,6 +90,7 @@ export default function ModalAdd({ modal, setModal }: IModalAddProps) {
         label: 'Close',
         variant: 'light',
         color: 'danger',
+        className: 'font-medium',
         onPress: onClose,
       },
       {
@@ -104,25 +104,13 @@ export default function ModalAdd({ modal, setModal }: IModalAddProps) {
     [onClose],
   );
 
-  const styles = {
-    base: 'p-4 md:p-main dark:bg-bgSecondary',
-    body: 'py-6',
-    closeButton: 'text-2xl',
-  };
-
   return (
-    <Modal classNames={styles} size="4xl" isOpen={modal.open} onClose={onClose}>
-      <ModalContent>
-        <ModalHeader className="flex flex-col gap-1 text-[22px] font-semibold">Add credit or debit card</ModalHeader>
-        <ModalBody>
-          <div className="mb-3 flex flex-col gap-main md:flex-row">
-            {renderForm(formLeft)}
-            {renderForm(formRight)}
-          </div>
-          {renderForm(formBottom)}
-        </ModalBody>
-        <ModalFooter>{renderActionForm(actions)}</ModalFooter>
-      </ModalContent>
-    </Modal>
+    <ModalMain title="Add credit or debit card" modal={modal} setModal={setModal} actions={actions}>
+      <div className="mb-3 flex flex-col gap-main md:flex-row">
+        {renderForm(formLeft)}
+        {renderForm(formRight)}
+      </div>
+      {renderForm(formBottom)}
+    </ModalMain>
   );
 }

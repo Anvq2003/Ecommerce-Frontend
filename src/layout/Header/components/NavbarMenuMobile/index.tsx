@@ -1,9 +1,8 @@
-import menuIcon from '/public/assets/images/menu-icon.png';
-
 import { CartIcon, HeartIcon } from '@/components/Icons';
 import { Accordion, AccordionItem, NavbarMenu, ScrollShadow } from '@nextui-org/react';
 
-import MenuItem from '../Nav/components/Menu/MenuItem';
+import { navBarList } from '../../data';
+import MenuCard from '../Nav/components/MenuCard';
 
 interface INavbarMenuMobileProps {}
 
@@ -20,113 +19,6 @@ export default function NavbarMenuMobile({}: INavbarMenuMobileProps) {
       icon: <HeartIcon />,
       number: 2,
       onClick: () => {},
-    },
-  ];
-
-  const menu = [
-    {
-      label: 'Departments',
-      children: [
-        {
-          image: menuIcon,
-          label: 'Departments',
-          list: [
-            {
-              label: 'Departments',
-              link: '/departments',
-            },
-            {
-              label: 'Departments 2',
-              link: '/departments ',
-            },
-          ],
-        },
-        {
-          image: menuIcon,
-          label: 'Departments',
-          list: [
-            {
-              label: 'Departments',
-              link: '/departments',
-            },
-            {
-              label: 'Departments 2',
-              link: '/departments ',
-            },
-          ],
-        },
-        {
-          image: menuIcon,
-          label: 'Departments',
-          list: [
-            {
-              label: 'Departments',
-              link: '/departments',
-            },
-            {
-              label: 'Departments 2',
-              link: '/departments ',
-            },
-          ],
-        },
-        {
-          image: menuIcon,
-          label: 'Departments',
-          list: [
-            {
-              label: 'Departments',
-              link: '/departments',
-            },
-            {
-              label: 'Departments 2',
-              link: '/departments ',
-            },
-          ],
-        },
-        {
-          image: menuIcon,
-          label: 'Departments',
-          list: [
-            {
-              label: 'Departments',
-              link: '/departments',
-            },
-            {
-              label: 'Departments 2',
-              link: '/departments ',
-            },
-          ],
-        },
-        {
-          image: menuIcon,
-          label: 'Departments',
-          list: [
-            {
-              label: 'Departments',
-              link: '/departments',
-            },
-            {
-              label: 'Departments 2',
-              link: '/departments ',
-            },
-          ],
-        },
-      ],
-    },
-    {
-      label: 'Departments 2',
-      children: [
-        {
-          image: menuIcon,
-          label: 'Departments 2',
-          list: [
-            {
-              label: 'Departments 2',
-              link: '/departments 2',
-            },
-          ],
-        },
-      ],
     },
   ];
 
@@ -154,12 +46,10 @@ export default function NavbarMenuMobile({}: INavbarMenuMobileProps) {
       </div>
       <div>
         <Accordion className="p-0" showDivider={false} itemClasses={itemClasses}>
-          {menu.map((item, index) => (
+          {navBarList.map((item, index) => (
             <AccordionItem key={index} aria-label={item.label} title={item.label}>
               <ScrollShadow className="max-h-[500px] w-full px-1">
-                {item?.children?.map((child) => (
-                  <MenuItem key={child.label} image={child.image} label={child.label} list={child.list} />
-                ))}
+                {item?.children?.map((child, index) => <MenuCard key={index} menu={child} />)}
               </ScrollShadow>
             </AccordionItem>
           ))}
