@@ -28,6 +28,7 @@
       "@/shared/*": ["src/shared/*"],
       "@/lib/*": ["src/lib/*"],
       "@/services/*": ["src/services/*"],
+      "@/sections/*": ["src/sections/*"],
       "@/translations/*": ["src/translations/*"],
       "@/store/*": ["src/store/*"],
       "@/features/*": ["src/store/features/*"],

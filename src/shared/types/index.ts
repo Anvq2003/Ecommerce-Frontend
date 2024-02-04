@@ -1,6 +1,5 @@
 import { IconSvgProps } from '@/components/Icons';
 import { Locale } from '@/config/i18n';
-import { ButtonProps } from '@nextui-org/button';
 
 export interface IPageProps {
   params: {
@@ -27,4 +26,11 @@ export interface ITab {
 export interface IModal<T = any> {
   open: boolean;
   data?: T;
+}
+
+export interface IBaseData<T = any> {
+  data: {
+    id: string;
+    attributes: T;
+  };
 }
