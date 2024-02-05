@@ -11,81 +11,82 @@
       "locale": "en",
       "publishedAt": "2024-02-02T13:47:47.781Z",
       "layout": "default",
-      "image": {
-        "data": {
-          "id": 42,
-          "attributes": {
-            "name": "slider.png",
-            "alternativeText": null,
-            "caption": null,
-            "width": 2680,
-            "height": 910,
-            "formats": {
-              "thumbnail": {
-                "name": "thumbnail_slider.png",
-                "hash": "thumbnail_slider_303cf3fa04",
-                "ext": ".png",
-                "mime": "image/png",
-                "path": null,
-                "width": 245,
-                "height": 83,
-                "size": 15.69,
-                "url": "https://grocery-store-s1.s3.ap-southeast-1.amazonaws.com/thumbnail_slider_303cf3fa04.png"
-              },
-              "small": {
-                "name": "small_slider.png",
-                "hash": "small_slider_303cf3fa04",
-                "ext": ".png",
-                "mime": "image/png",
-                "path": null,
-                "width": 500,
-                "height": 170,
-                "size": 49.88,
-                "url": "https://grocery-store-s1.s3.ap-southeast-1.amazonaws.com/small_slider_303cf3fa04.png"
-              },
-              "medium": {
-                "name": "medium_slider.png",
-                "hash": "medium_slider_303cf3fa04",
-                "ext": ".png",
-                "mime": "image/png",
-                "path": null,
-                "width": 750,
-                "height": 255,
-                "size": 98.74,
-                "url": "https://grocery-store-s1.s3.ap-southeast-1.amazonaws.com/medium_slider_303cf3fa04.png"
-              },
-              "large": {
-                "name": "large_slider.png",
-                "hash": "large_slider_303cf3fa04",
-                "ext": ".png",
-                "mime": "image/png",
-                "path": null,
-                "width": 1000,
-                "height": 340,
-                "size": 162.96,
-                "url": "https://grocery-store-s1.s3.ap-southeast-1.amazonaws.com/large_slider_303cf3fa04.png"
-              }
-            },
-            "hash": "slider_303cf3fa04",
-            "ext": ".png",
-            "mime": "image/png",
-            "size": 219.77,
-            "url": "https://grocery-store-s1.s3.ap-southeast-1.amazonaws.com/slider_303cf3fa04.png",
-            "previewUrl": null,
-            "provider": "aws-s3",
-            "provider_metadata": null,
-            "createdAt": "2024-02-04T04:04:55.369Z",
-            "updatedAt": "2024-02-04T04:04:55.369Z"
-          }
-        }
-      },
       "sections": [
         {
           "id": 9,
           "__component": "sections.slider",
           "title": "ĐẶT CÀ PHÊ YÊU THÍCH CỦA BẠN",
           "description": null,
-          "link": "http://localhost:1337/admin/content-manager/collectionType/api::page.page/2?plugins[i18n][locale]=vi"
+          "link": "http://localhost:1337/admin/content-manager/collectionType/api::page.page/2?plugins[i18n][locale]=vi",
+
+          "image": {
+            "data": {
+              "id": 42,
+              "attributes": {
+                "name": "slider.png",
+                "alternativeText": null,
+                "caption": null,
+                "width": 2680,
+                "height": 910,
+                "formats": {
+                  "thumbnail": {
+                    "name": "thumbnail_slider.png",
+                    "hash": "thumbnail_slider_303cf3fa04",
+                    "ext": ".png",
+                    "mime": "image/png",
+                    "path": null,
+                    "width": 245,
+                    "height": 83,
+                    "size": 15.69,
+                    "url": "https://grocery-store-s1.s3.ap-southeast-1.amazonaws.com/thumbnail_slider_303cf3fa04.png"
+                  },
+                  "small": {
+                    "name": "small_slider.png",
+                    "hash": "small_slider_303cf3fa04",
+                    "ext": ".png",
+                    "mime": "image/png",
+                    "path": null,
+                    "width": 500,
+                    "height": 170,
+                    "size": 49.88,
+                    "url": "https://grocery-store-s1.s3.ap-southeast-1.amazonaws.com/small_slider_303cf3fa04.png"
+                  },
+                  "medium": {
+                    "name": "medium_slider.png",
+                    "hash": "medium_slider_303cf3fa04",
+                    "ext": ".png",
+                    "mime": "image/png",
+                    "path": null,
+                    "width": 750,
+                    "height": 255,
+                    "size": 98.74,
+                    "url": "https://grocery-store-s1.s3.ap-southeast-1.amazonaws.com/medium_slider_303cf3fa04.png"
+                  },
+                  "large": {
+                    "name": "large_slider.png",
+                    "hash": "large_slider_303cf3fa04",
+                    "ext": ".png",
+                    "mime": "image/png",
+                    "path": null,
+                    "width": 1000,
+                    "height": 340,
+                    "size": 162.96,
+                    "url": "https://grocery-store-s1.s3.ap-southeast-1.amazonaws.com/large_slider_303cf3fa04.png"
+                  }
+                },
+                "hash": "slider_303cf3fa04",
+                "ext": ".png",
+                "mime": "image/png",
+                "size": 219.77,
+                "url": "https://grocery-store-s1.s3.ap-southeast-1.amazonaws.com/slider_303cf3fa04.png",
+                "previewUrl": null,
+                "provider": "aws-s3",
+                "provider_metadata": null,
+                "createdAt": "2024-02-04T04:04:55.369Z",
+                "updatedAt": "2024-02-04T04:04:55.369Z"
+              }
+            }
+          }
         },
         {
           "id": 13,
@@ -95,9 +96,9 @@
         {
           "id": 13,
           "__component": "sections.grid",
-          "column": 3,
-          "space": 50,
-          "type": "category"
+          "type": "category",
+          "columns": 3,
+          "spacing": 40
         },
         {
           "id": 14,
@@ -107,30 +108,11 @@
         {
           "id": 14,
           "__component": "sections.grid",
-          "column": 4,
-          "space": 30,
-          "type": "product"
+          "type": "product",
+          "columns": 4,
+          "spacing": 30
         }
-      ],
-      "seo": null,
-      "localizations": {
-        "data": [
-          {
-            "id": 2,
-            "attributes": {
-              "title": "Trang chủ",
-              "slug": "home",
-              "description": "Trang chủ",
-              "auth": false,
-              "createdAt": "2024-02-02T13:48:57.177Z",
-              "updatedAt": "2024-02-04T15:20:32.417Z",
-              "locale": "vi",
-              "publishedAt": "2024-02-02T13:48:57.177Z",
-              "layout": "default"
-            }
-          }
-        ]
-      }
+      ]
     }
   },
   "meta": {}

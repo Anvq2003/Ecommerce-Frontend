@@ -34,3 +34,26 @@ export interface IBaseData<T = any> {
     attributes: T;
   };
 }
+
+export interface IBaseSection<T = any> {
+  value: T;
+  sections: IBaseSection[];
+}
+
+export enum LayoutType {
+  DEFAULT = 'default',
+  ONLY_CONTENT = 'onlyContent',
+}
+
+export interface IPageAttributes {
+  title: string;
+  slug: string;
+  description: string;
+  auth: boolean;
+  createdAt: string;
+  updatedAt: string;
+  locale: string;
+  publishedAt: string;
+  layout: LayoutType | string;
+  sections: any[];
+}

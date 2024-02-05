@@ -1,10 +1,11 @@
-import { titleStyle } from '@/shared/styles/primitives';
+import { IBaseSection } from '@/shared/types';
 import * as React from 'react';
 
-export interface ITitleProps {
+interface ITitleProps {
   title: string;
+  href?: string;
 }
 
-export default function Title(props: ITitleProps) {
-  return <h2 className={titleStyle({ size: 'lg' })}>title</h2>;
+export default function Title({ value }: IBaseSection<ITitleProps>) {
+  return <h2 className="text-2xl font-bold text-primary">{value?.title}</h2>;
 }

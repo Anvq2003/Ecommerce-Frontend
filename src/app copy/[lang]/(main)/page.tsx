@@ -1,5 +1,5 @@
 import CategoryBox from '@/components/Category';
-import ProductBox from '@/components/Product';
+import ProductBox from '@/components/ProductList';
 import Slider from '@/components/Slider';
 import { IPageProps } from '@/shared/types';
 
@@ -10,7 +10,7 @@ export default async function HomePage({ params: { lang } }: IPageProps) {
         <CategoryBox />
         <div className="flex-1">
           <Slider />
-          <ProductBox />
+          {/* <ProductBox /> */}
         </div>
       </div>
     </section>

@@ -1,15 +1,27 @@
-import * as React from 'react';
-interface IGrid {
-  type: 'product' | 'category';
+import { IBaseSection } from '@/shared/types';
+
+import CategoryBox from './components/CateroryBox';
+import ProductBox from './components/ProductBox';
+
+enum GridType {
+  PRODUCT = 'product',
+  CATEGORY = 'category',
+}
+export interface IGridProps {
+  type: GridType;
   columns: number;
   spacing: number;
 }
 
-export interface IGridProps {
-  value: IGrid;
-  sections: any;
-}
+export default function Grid(props: IBaseSection<IGridProps>) {
+  switch (props?.value?.type) {
+    case GridType.PRODUCT:
+      return <ProductBox {...props} />;
 
-export default function Grid(props: IGridProps) {
-  return <div>grid</div>;
+    case GridType.CATEGORY:
+      return <CategoryBox {...props} />;
+
+    default:
+      return null;
+  }
 }
