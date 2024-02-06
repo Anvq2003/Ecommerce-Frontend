@@ -8,7 +8,7 @@ import SearchBox from './components/SearchBox';
 
 export default function Information() {
   return (
-    <div className="flex flex-1 items-center justify-end gap-5">
+    <div className="flex  items-center justify-end gap-5">
       <SearchBox />
 
       <div className="flex h-[50px] items-center gap-5 rounded-lg bg-white px-5 dark:bg-bgPrimary">
