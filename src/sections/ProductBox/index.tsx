@@ -1,14 +1,19 @@
-import * as React from 'react';
-
 import productImage from '@/assets/images/product.png';
-import { IProductItem } from '@/components/ProductList/components/ProductItem';
-import { IBaseSection } from '@/shared/types';
-
-import { IGridProps } from '../..';
 import ProductList from '@/components/ProductList';
+import { IProductItem } from '@/components/ProductList/components/ProductItem';
+import { IBaseSection, IGrid } from '@/shared/types';
 
-export default function ProductBox({ value }: IBaseSection<IGridProps>) {
-  const { columns, spacing } = value;
+import FilterBox from './components/FilterBox';
+
+interface IProductBoxProps {
+  title: string;
+  grid: IGrid;
+  href?: any;
+  filter: boolean;
+}
+
+export default function ProductBox({ value }: IBaseSection<IProductBoxProps>) {
+  const { title, grid, filter } = value;
   const array: IProductItem[] = [
     {
       urlImage: productImage,
@@ -46,5 +51,14 @@ export default function ProductBox({ value }: IBaseSection<IGridProps>) {
       star: 4,
     },
   ];
-  return <ProductList products={array} columns={columns} spacing={spacing} />;
+
+  return (
+    <section aria-label="Product Box">
+      <div className="mb-5 flex items-center justify-between">
+        <h2 className="text-2xl font-bold text-primary">{title}</h2>
+        {filter && <FilterBox />}
+      </div>
+      <ProductList products={array} grid={grid} />
+    </section>
+  );
 }

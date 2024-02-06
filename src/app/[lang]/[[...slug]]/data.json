@@ -1,24 +1,23 @@
 {
   "data": {
-    "id": 1,
+    "id": 2,
     "attributes": {
-      "title": "home",
+      "title": "Trang chủ",
       "slug": "home",
-      "description": "home",
+      "description": "Trang chủ",
       "auth": false,
-      "createdAt": "2024-02-02T13:47:47.781Z",
-      "updatedAt": "2024-02-04T15:20:32.646Z",
-      "locale": "en",
-      "publishedAt": "2024-02-02T13:47:47.781Z",
+      "createdAt": "2024-02-02T13:48:57.177Z",
+      "updatedAt": "2024-02-06T14:24:17.649Z",
+      "locale": "vi",
+      "publishedAt": "2024-02-02T13:48:57.177Z",
       "layout": "default",
       "sections": [
         {
-          "id": 9,
+          "id": 12,
           "__component": "sections.slider",
           "title": "ĐẶT CÀ PHÊ YÊU THÍCH CỦA BẠN",
           "description": null,
           "link": "http://localhost:1337/admin/content-manager/collectionType/api::page.page/2?plugins[i18n][locale]=vi",
-
           "image": {
             "data": {
               "id": 42,
@@ -89,28 +88,31 @@
           }
         },
         {
-          "id": 13,
-          "__component": "sections.title",
-          "title": "Danh mục"
+          "id": 4,
+          "__component": "sections.category-box",
+          "title": "Category",
+          "herf": {
+            "data": null
+          },
+          "grid": {
+            "id": 7,
+            "columns": 3,
+            "spacing": 50
+          }
         },
         {
-          "id": 13,
-          "__component": "sections.grid",
-          "type": "category",
-          "columns": 3,
-          "spacing": 40
-        },
-        {
-          "id": 14,
-          "__component": "sections.title",
-          "title": "Sản phẩm nổi bật"
-        },
-        {
-          "id": 14,
-          "__component": "sections.grid",
-          "type": "product",
-          "columns": 4,
-          "spacing": 30
+          "id": 4,
+          "__component": "sections.product-box",
+          "title": "Product",
+          "filter": true,
+          "herf": {
+            "data": null
+          },
+          "grid": {
+            "id": 8,
+            "columns": 4,
+            "spacing": 30
+          }
         }
       ]
     }

@@ -36,7 +36,7 @@ export interface IBaseData<T = any> {
 }
 
 export interface IBaseSection<T = any> {
-  value: T;
+  value: T | any;
   sections: IBaseSection[];
 }
 
@@ -56,4 +56,9 @@ export interface IPageAttributes {
   publishedAt: string;
   layout: LayoutType | string;
   sections: any[];
+}
+
+export interface IGrid {
+  columns: number;
+  spacing: number;
 }

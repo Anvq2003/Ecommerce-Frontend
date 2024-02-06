@@ -9,9 +9,9 @@ export default function Header() {
   const device = useDeviceType();
 
   return (
-    <>
+    <header aria-label="Header">
       {device === EScreenType?.DESKTOP ? <Desktop /> : <Mobile />}
       {device === 'mobile' && <SearchMobile />}
-    </>
+    </header>
   );
 }

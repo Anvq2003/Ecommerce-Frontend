@@ -19,7 +19,7 @@ export default async function Page({ params }: IPageProps) {
   const currentSections = attributes.sections;
 
   return (
-    <div className="bg-bgPrimary">
+    <div aria-label="Page" className="bg-bgPrimary">
       {currentLayout === LayoutType.DEFAULT && <Header />}
       <main className="mx-auto flex w-main flex-col gap-main pt-5 lg:gap-10">
         <RenderSections sectionsOfPage={currentSections} />
