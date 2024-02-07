@@ -26,7 +26,7 @@ export default function ProductCard({ data }: IProductItemProps) {
         </div>
       </div>
       <div className="flex flex-col gap-4">
-        <h2 className="line-clamp-2 max-h-[48px] text-base font-medium text-primary">{name}</h2>
+        <h2 className="line-clamp-2 max-h-[48px] text-base font-semibold text-primary">{name}</h2>
         <p className="text-[15px] leading-[22px] text-secondary">{category}</p>
         <div className="flex items-center justify-between">
           <h3 className="text-base font-medium text-primary">${price}</h3>

@@ -1,5 +1,6 @@
 import { IconSvgProps } from '@/components/Icons';
 import { Locale } from '@/config/i18n';
+import { Dictionary } from '../helpers/getDictionary';
 
 export interface IPageProps {
   params: {
@@ -38,6 +39,7 @@ export interface IBaseData<T = any> {
 export interface IBaseSection<T = any> {
   value: T | any;
   sections: IBaseSection[];
+  dict: Dictionary;
 }
 
 export enum LayoutType {

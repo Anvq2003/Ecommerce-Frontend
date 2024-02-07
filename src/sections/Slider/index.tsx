@@ -8,10 +8,10 @@ interface ISliderProps {
   link: string;
 }
 
-export default function Slider({ value }: IBaseSection<ISliderProps>) {
+export default function Slider({ value, dict }: IBaseSection<ISliderProps>) {
   return (
-    <section aria-label="Slider" className="w-full px-5 lg:px-0">
-      <Image className="rounded-5 object-cover" src={slider} alt="slider" width={1340} height={455} />
+    <section aria-label="Slider" className="w-full">
+      <Image className="rounded-5 object-cover" src={slider} alt="slider" />
     </section>
   );
 }
