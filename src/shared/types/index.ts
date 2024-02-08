@@ -31,7 +31,7 @@ export interface IModal<T = any> {
 
 export interface IBaseData<T = any> {
   data: {
-    id: string;
+    id: number;
     attributes: T;
   };
 }
@@ -47,6 +47,37 @@ export enum LayoutType {
   ONLY_CONTENT = 'onlyContent',
 }
 
+export interface IGrid {
+  columns: number;
+  spacing: number;
+}
+
+export interface IImage {
+  name: string;
+  width: number;
+  height: number;
+  url: string;
+  
+  formats: {
+    thumbnail: {
+      url: string;
+    };
+    small?: {
+      url: string;
+    };
+    medium?: {
+      url: string;
+    };
+    large?: {
+      url: string;
+    };
+  };
+}
+
+export enum ThemeType {
+  LIGHT = 'light',
+  DARK = 'dark',
+}
 export interface IPageAttributes {
   title: string;
   slug: string;
@@ -54,13 +85,11 @@ export interface IPageAttributes {
   auth: boolean;
   createdAt: string;
   updatedAt: string;
-  locale: string;
+  locale: Locale;
   publishedAt: string;
-  layout: LayoutType | string;
-  sections: any[];
-}
-
-export interface IGrid {
-  columns: number;
-  spacing: number;
+  layout: LayoutType;
+  breadcrumbs: true;
+  image: IImage;
+  sections: IBaseSection[];
+  [key: string]: any;
 }

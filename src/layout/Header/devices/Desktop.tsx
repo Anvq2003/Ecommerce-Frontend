@@ -4,8 +4,11 @@ import { ThemeSwitch } from '@/components/ThemeSwitcher';
 import Actions from '../components/Actions';
 import Nav from '../components/Nav';
 import { Navbar } from '@nextui-org/navbar';
+import { IHeaderProps } from '..';
 
-export default function DesktopHeader() {
+export default function DesktopHeader({ value }: IHeaderProps) {
+  const attributes = value?.data?.attributes;
+
   return (
     <Navbar
       shouldHideOnScroll
@@ -15,7 +18,7 @@ export default function DesktopHeader() {
       }}
     >
       <div className="mx-auto flex w-main items-center justify-between">
-        <Logo />
+        <Logo logo={attributes?.logo} logoDark={attributes?.logoDark} />
         <Nav />
         <ThemeSwitch />
         <Actions />

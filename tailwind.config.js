@@ -7,6 +7,7 @@ module.exports = withMT({
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/layout/**/*.{js,ts,jsx,tsx,mdx}',
     './src/shared/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/sections/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
     './node_modules/@material-tailwind/react/components/**/*.{js,ts,jsx,tsx}',
@@ -24,6 +25,9 @@ module.exports = withMT({
         // xl (1280px)	max-width: 1280px;
         // 2xl (1536px)	max-width: 1536px;
         // },
+      },
+      borderRadius: {
+        main: '20px',
       },
       spacing: {
         main: '30px',
