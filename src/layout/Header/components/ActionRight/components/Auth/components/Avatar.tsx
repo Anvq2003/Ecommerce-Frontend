@@ -1,17 +1,7 @@
-import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Avatar, AvatarIcon } from '@nextui-org/react';
-import avatarImg from '/public/assets/images/avatar.png';
-import Image from 'next/image';
-import React from 'react';
+import { Avatar, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger } from '@nextui-org/react';
 
 export default function MyAvatar() {
   return (
-    // <Avatar
-    //   icon={<AvatarIcon />}
-    //   classNames={{
-    //     base: 'bg-gradient-to-br w-[44px] h-[44px] from-[#FFB457] to-[#FF705B]',
-    //     icon: 'text-black/80',
-    //   }}
-    // />
     <Dropdown size="lg" placement="bottom-end">
       <DropdownTrigger>
         <Avatar

@@ -81,15 +81,17 @@ export enum ThemeType {
 export interface IPageAttributes {
   title: string;
   slug: string;
-  description: string;
-  auth: boolean;
+  description: string | null;
+
+  auth: boolean | any;
+  layout: LayoutType | any;
+  breadcrumbs: boolean | any;
+  image: IImage | any;
+  sections: IBaseSection[] | any;
+
   createdAt: string;
   updatedAt: string;
-  locale: Locale;
+  locale: Locale | string;
   publishedAt: string;
-  layout: LayoutType;
-  breadcrumbs: true;
-  image: IImage;
-  sections: IBaseSection[];
   [key: string]: any;
 }

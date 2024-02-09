@@ -14,17 +14,30 @@ interface ILogoProps {
 
 export default function Logo({ logo, logoDark }: ILogoProps) {
   const { theme } = useTheme();
-  
-  const url = useMemo(() => logo?.data?.attributes?.url, [logo]);
-  const urlDark = useMemo(() => logoDark?.data?.attributes?.url, [logoDark]);
+
+  const attributes = useMemo(() => logo?.data?.attributes, [logo]);
+  const urlDark = useMemo(() => logoDark?.data?.attributes, [logoDark]);
 
   // return <Link href="/">{theme === 'dark' ? <LogoDark /> : <LogoLight />}</Link>;
+  
   return (
     <Link href="/">
       {theme === ThemeType?.LIGHT ? (
-        <Image src={url} alt="Logo" width={100} height={100} />
+        <Image
+          alt="Logo"
+          src={attributes?.url}
+          width={attributes?.width}
+          height={attributes?.height}
+          className="max-h-8 object-contain object-left"
+        />
       ) : (
-        <Image src={urlDark} alt="Logo" width={100} height={100} />
+        <Image
+          alt="Logo"
+          src={urlDark?.url}
+          width={urlDark?.width}
+          height={urlDark?.height}
+          className="max-h-8 object-contain object-left"
+        />
       )}
     </Link>
   );

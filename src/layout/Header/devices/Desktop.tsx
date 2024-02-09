@@ -1,13 +1,15 @@
 import Logo from '@/components/Logo';
 import { ThemeSwitch } from '@/components/ThemeSwitcher';
 
-import Actions from '../components/Actions';
+import ActionRight from '../components/ActionRight';
 import Nav from '../components/Nav';
 import { Navbar } from '@nextui-org/navbar';
-import { IHeaderProps } from '..';
+import { IHeaderAttributes } from '../types';
 
-export default function DesktopHeader({ value }: IHeaderProps) {
-  const attributes = value?.data?.attributes;
+export default function DesktopHeader({ attributes }: IHeaderAttributes) {
+  if (!attributes) return null;
+
+  const { logo, logoDark, nav } = attributes;
 
   return (
     <Navbar
@@ -18,10 +20,10 @@ export default function DesktopHeader({ value }: IHeaderProps) {
       }}
     >
       <div className="mx-auto flex w-main items-center justify-between">
-        <Logo logo={attributes?.logo} logoDark={attributes?.logoDark} />
-        <Nav />
+        <Logo logo={logo} logoDark={logoDark} />
+        <Nav navBarList={nav} />
         <ThemeSwitch />
-        <Actions />
+        <ActionRight attributes={attributes} />
       </div>
     </Navbar>
   );

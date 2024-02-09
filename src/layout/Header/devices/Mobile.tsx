@@ -3,10 +3,10 @@ import { useState } from 'react';
 import Logo from '@/components/Logo';
 import { Navbar, NavbarContent, NavbarMenuToggle } from '@nextui-org/react';
 
-import Avatar from '../components/Actions/components/Avatar';
 import NavbarMenuMobile from '../components/NavbarMenuMobile';
+import { IHeaderAttributes } from '../types';
 
-export default function Mobile() {
+export default function Mobile({ attributes }: IHeaderAttributes) {
   const [isOpen, onOpenChange] = useState(false);
 
   return (
@@ -22,11 +22,11 @@ export default function Mobile() {
       </NavbarContent>
 
       <NavbarContent className="gap-4 sm:flex" justify="center">
-        <Logo />
+        {/* <Logo /> */}
       </NavbarContent>
 
       <NavbarContent justify="end">
-        <Avatar />
+        {/* <Avatar /> */}
       </NavbarContent>
 
       <NavbarMenuMobile />

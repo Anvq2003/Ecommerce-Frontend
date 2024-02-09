@@ -17,7 +17,7 @@ export interface IPageProps {
 
 export default async function Page({ params }: IPageProps) {
   const dict = await getDictionary(params.lang);
-  const attributes: IPageAttributes = account?.data?.attributes;
+  const attributes: IPageAttributes = home?.data?.attributes;
   const currentLayout = attributes.layout;
   const currentSections = attributes.sections;
   const showBreadcrumbs = attributes.breadcrumbs;
