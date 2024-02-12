@@ -1,5 +1,8 @@
 import { IBaseData, IPageAttributes, IImage } from '@/shared/types';
-import { EFormat, IWrapperIcon } from './components/ActionRight/components/Auth/components/WrapperIcon';
+import {
+  EFormat,
+  IWrapperIcon,
+} from './components/ActionRight/components/Auth/components/WrapperIcon';
 
 export interface INavItem {
   id: number;
@@ -7,11 +10,16 @@ export interface INavItem {
   disable: boolean | null;
   link: IBaseData<IPageAttributes> | any;
 }
+export enum ActionType {
+  HEART = 'heart',
+  CART = 'cart',
+}
 
-interface IActionItem {
+export interface IActionItem {
+  type: ActionType | any;
   id: number;
-  icon: string;
-  format: EFormat | string;
+  icon: string | any;
+  format: EFormat | any;
   showNumber: boolean;
   visible: boolean;
   image: IBaseData<IImage> | any;
@@ -31,11 +39,11 @@ enum EButtonType {
   QUATERNARY = 'quaternary',
 }
 
-interface IButton {
+export interface IButton {
   text: string;
-  iconLeft: string | null;
-  iconRight: string | null;
-  type: EButtonType | string;
+  iconLeft: string | any;
+  iconRight: string | any;
+  type: EButtonType | any;
   link: IBaseData<IPageAttributes> | any;
   linkDetail: string | null;
 }

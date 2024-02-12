@@ -1,9 +1,9 @@
 import { IHeaderAttributes } from '../../types';
-import AuthBox from './components/Auth';
-import NoAuthBox from './components/NoAuth';
+import Auth from './components/Auth';
+import NoAuth from './components/NoAuth';
 
 export default function ActionRight({ attributes }: IHeaderAttributes) {
-  const auth = true;
+  const auth = false;
 
-  return auth ? <AuthBox auth={attributes?.auth} /> : <NoAuthBox  noAuth={attributes?.noAuth} />
+  return auth ? <Auth auth={attributes?.auth} /> : <NoAuth  noAuth={attributes?.noAuth} />
 }

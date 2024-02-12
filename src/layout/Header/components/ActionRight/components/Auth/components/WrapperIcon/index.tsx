@@ -10,17 +10,17 @@ export enum EFormat {
 export interface IWrapperIcon {
   id: number;
   icon: string;
-  format: EFormat | string;
+  format: EFormat | any;
   visible: boolean;
   image: IBaseData<IImage> | any;
 }
 
 export interface IWrapperIconProps {
   data: IWrapperIcon;
+  base?: string;
 }
 
 export default function WrapperIcon({ data }: IWrapperIconProps) {
-  console.log(JSON.parse(data?.icon));
   return (
     data?.visible &&
     (data?.format === EFormat.ICON ? (
@@ -30,10 +30,12 @@ export default function WrapperIcon({ data }: IWrapperIconProps) {
       />
     ) : (
       <Image
-        src={data?.image?.url}
-        alt={data?.image?.alt}
-        width={data?.image?.width}
-        height={data?.image?.height}
+        src={data?.image?.data?.attributes?.url}
+        alt={data?.image?.data?.attributes?.alt}
+        // width={data?.image?.data?.attributes?.width}
+        // height={data?.image?.data?.attributes?.height}
+        width={20}
+        height={20}
       />
     ))
   );

@@ -572,7 +572,7 @@ export const header = {
     id: 1,
     attributes: {
       createdAt: '2024-02-06T13:56:43.696Z',
-      updatedAt: '2024-02-09T03:17:28.430Z',
+      updatedAt: '2024-02-12T10:24:32.093Z',
       locale: 'vi',
       logo: {
         data: {
@@ -892,21 +892,62 @@ export const header = {
         search: {
           id: 1,
           icon: '{"name":"MagnifyingGlassIcon","component":"<svg xmlns=\\"http://www.w3.org/2000/svg\\" fill=\\"none\\" viewBox=\\"0 0 24 24\\" stroke-width=\\"1.5\\" stroke=\\"currentColor\\" aria-hidden=\\"true\\" data-slot=\\"icon\\"><path stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\" d=\\"m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z\\"></path></svg>"}',
-          format: 'icon',
+          format: 'image',
           visible: true,
           image: {
-            data: null,
+            data: {
+              id: 48,
+              attributes: {
+                name: 'Search.png',
+                alternativeText: null,
+                caption: null,
+                width: 48,
+                height: 48,
+                formats: null,
+                hash: 'Search_97027cfce2',
+                ext: '.png',
+                mime: 'image/png',
+                size: 0.49,
+                url: 'https://grocery-store-s1.s3.ap-southeast-1.amazonaws.com/Search_97027cfce2.png',
+                previewUrl: null,
+                provider: 'aws-s3',
+                provider_metadata: null,
+                createdAt: '2024-02-12T10:17:07.007Z',
+                updatedAt: '2024-02-12T10:17:07.007Z',
+              },
+            },
           },
         },
         actions: [
           {
             id: 1,
             icon: '{"name":"HeartIcon","component":"<svg xmlns=\\"http://www.w3.org/2000/svg\\" fill=\\"none\\" viewBox=\\"0 0 24 24\\" stroke-width=\\"1.5\\" stroke=\\"currentColor\\" aria-hidden=\\"true\\" data-slot=\\"icon\\"><path stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\" d=\\"M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z\\"></path></svg>"}',
-            format: 'icon',
+            format: 'image',
             showNumber: true,
             visible: true,
+            type: 'heart',
             image: {
-              data: null,
+              data: {
+                id: 47,
+                attributes: {
+                  name: 'Heart.png',
+                  alternativeText: null,
+                  caption: null,
+                  width: 42,
+                  height: 40,
+                  formats: null,
+                  hash: 'Heart_f119a171e0',
+                  ext: '.png',
+                  mime: 'image/png',
+                  size: 0.51,
+                  url: 'https://grocery-store-s1.s3.ap-southeast-1.amazonaws.com/Heart_f119a171e0.png',
+                  previewUrl: null,
+                  provider: 'aws-s3',
+                  provider_metadata: null,
+                  createdAt: '2024-02-12T10:17:06.926Z',
+                  updatedAt: '2024-02-12T10:17:06.926Z',
+                },
+              },
             },
             link: {
               data: {
@@ -961,11 +1002,32 @@ export const header = {
           {
             id: 2,
             icon: '{"name":"ShoppingCartIcon","component":"<svg xmlns=\\"http://www.w3.org/2000/svg\\" fill=\\"none\\" viewBox=\\"0 0 24 24\\" stroke-width=\\"1.5\\" stroke=\\"currentColor\\" aria-hidden=\\"true\\" data-slot=\\"icon\\"><path stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\" d=\\"M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z\\"></path></svg>"}',
-            format: 'icon',
+            format: 'image',
             showNumber: true,
             visible: true,
+            type: 'cart',
             image: {
-              data: null,
+              data: {
+                id: 46,
+                attributes: {
+                  name: 'Buy.png',
+                  alternativeText: null,
+                  caption: null,
+                  width: 40,
+                  height: 40,
+                  formats: null,
+                  hash: 'Buy_ddbbc68a55',
+                  ext: '.png',
+                  mime: 'image/png',
+                  size: 0.42,
+                  url: 'https://grocery-store-s1.s3.ap-southeast-1.amazonaws.com/Buy_ddbbc68a55.png',
+                  previewUrl: null,
+                  provider: 'aws-s3',
+                  provider_metadata: null,
+                  createdAt: '2024-02-12T10:17:06.874Z',
+                  updatedAt: '2024-02-12T10:17:35.760Z',
+                },
+              },
             },
             link: {
               data: null,
@@ -1006,7 +1068,7 @@ export const header = {
             id: 2,
             attributes: {
               createdAt: '2024-02-06T13:57:16.300Z',
-              updatedAt: '2024-02-09T03:17:28.457Z',
+              updatedAt: '2024-02-12T10:24:32.120Z',
               locale: 'en',
             },
           },
