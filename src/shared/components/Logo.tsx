@@ -28,7 +28,7 @@ export default function Logo({ logo, logoDark }: ILogoProps) {
           src={attributes?.url}
           width={attributes?.width}
           height={attributes?.height}
-          className="max-h-8 object-contain object-left"
+          className="max-h-8 object-contain"
         />
       ) : (
         <Image
@@ -36,7 +36,7 @@ export default function Logo({ logo, logoDark }: ILogoProps) {
           src={urlDark?.url}
           width={urlDark?.width}
           height={urlDark?.height}
-          className="max-h-8 object-contain object-left"
+          className="max-h-8 object-contain"
         />
       )}
     </Link>

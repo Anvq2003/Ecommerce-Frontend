@@ -4,7 +4,16 @@ import { ThemeSwitch } from '@/components/ThemeSwitcher';
 import ActionRight from '../components/ActionRight';
 import Nav from '../components/Nav';
 import { Navbar } from '@nextui-org/navbar';
-import { IHeaderAttributes } from '../types';
+import { IBaseData } from '@/shared/types';
+import { IHeader } from '../types';
+
+export interface IHeaderProps {
+  value: IBaseData<IHeader>;
+}
+
+export interface IHeaderAttributes {
+  attributes: Pick<IHeader, 'logo' | 'logoDark' | 'nav' | 'auth' | 'noAuth'>;
+}
 
 export default function DesktopHeader({ attributes }: IHeaderAttributes) {
   if (!attributes) return null;

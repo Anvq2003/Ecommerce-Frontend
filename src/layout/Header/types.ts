@@ -60,10 +60,4 @@ export interface IHeader {
   noAuth: INoAuth;
 }
 
-export interface IHeaderProps {
-  value: IBaseData<IHeader>;
-}
 
-export interface IHeaderAttributes {
-  attributes: Pick<IHeader, 'logo' | 'logoDark' | 'nav' | 'auth' | 'noAuth'>;
-}

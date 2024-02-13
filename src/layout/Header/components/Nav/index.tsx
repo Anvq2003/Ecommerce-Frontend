@@ -8,7 +8,7 @@ interface INavListProps {
 export default function NavList({ navBarList }: INavListProps) {
   return (
     <nav className="">
-      <ul className="flex items-center gap-3">
+      <ul className="flex items-center gap-main">
         {navBarList.map((item, index) => (
           <NavItem key={index} menu={item} />
         ))}
