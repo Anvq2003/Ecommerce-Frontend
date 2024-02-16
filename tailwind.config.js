@@ -25,6 +25,9 @@ module.exports = withMT({
         // 2xl (1536px)	max-width: 1536px;
         // },
       },
+      borderRadius: {
+        main: '20px',
+      },
       spacing: {
         main: '30px',
       },

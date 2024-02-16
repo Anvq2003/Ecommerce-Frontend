@@ -3,10 +3,12 @@ import { useState } from 'react';
 import Logo from '@/components/Logo';
 import { Navbar, NavbarContent, NavbarMenuToggle } from '@nextui-org/react';
 
-import Avatar from '../components/Actions/components/Avatar';
 import NavbarMenuMobile from '../components/NavbarMenuMobile';
+import { IHeaderAttributes } from './Desktop';
+import MyAvatar from '../components/ActionRight/components/Auth/components/Avatar';
 
-export default function Mobile() {
+export default function Mobile({ attributes }: IHeaderAttributes) {
+  const { logo, logoDark } = attributes;
   const [isOpen, onOpenChange] = useState(false);
 
   return (
@@ -22,11 +24,11 @@ export default function Mobile() {
       </NavbarContent>
 
       <NavbarContent className="gap-4 sm:flex" justify="center">
-        <Logo />
+        <Logo logo={logo} logoDark={logoDark} />
       </NavbarContent>
 
       <NavbarContent justify="end">
-        <Avatar />
+        <MyAvatar />
       </NavbarContent>
 
       <NavbarMenuMobile />

@@ -16,8 +16,8 @@
     "incremental": true,
     "plugins": [
       {
-        "name": "next"
-      }
+        "name": "next",
+      },
     ],
     "baseUrl": "./",
     "paths": {
@@ -27,19 +27,21 @@
       "@/shared/*": ["src/shared/*"],
       "@/lib/*": ["src/lib/*"],
       "@/services/*": ["src/services/*"],
+      "@/sections/*": ["src/sections/*"],
       "@/translations/*": ["src/translations/*"],
       "@/store/*": ["src/store/*"],
       "@/features/*": ["src/store/features/*"],
       "@/styles/*": ["src/shared/styles/*"],
       "@/components/*": ["src/shared/components/*"],
       "@/types/*": ["src/shared/types/*"],
+      "@/components/*": ["src/shared/components/*"],
       "@/hooks/*": ["src/shared/hooks/*"],
       "@/constants/*": ["src/shared/constants/*"],
       "@/contexts/*": ["src/shared/contexts/*"],
       "@/assets/*": ["public/assets/*"],
       "@/images/*": ["public/assets/images/*"],
-    }
+    },
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
 }

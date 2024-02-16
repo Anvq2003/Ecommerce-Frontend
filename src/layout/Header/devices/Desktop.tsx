@@ -1,11 +1,25 @@
 import Logo from '@/components/Logo';
 import { ThemeSwitch } from '@/components/ThemeSwitcher';
 
-import Actions from '../components/Actions';
+import ActionRight from '../components/ActionRight';
 import Nav from '../components/Nav';
 import { Navbar } from '@nextui-org/navbar';
+import { IBaseData } from '@/shared/types';
+import { IHeader } from '../types';
 
-export default function DesktopHeader() {
+export interface IHeaderProps {
+  value: IBaseData<IHeader>;
+}
+
+export interface IHeaderAttributes {
+  attributes: Pick<IHeader, 'logo' | 'logoDark' | 'nav' | 'auth' | 'noAuth'>;
+}
+
+export default function DesktopHeader({ attributes }: IHeaderAttributes) {
+  if (!attributes) return null;
+
+  const { logo, logoDark, nav } = attributes;
+
   return (
     <Navbar
       shouldHideOnScroll
@@ -14,11 +28,11 @@ export default function DesktopHeader() {
         wrapper: 'max-w-[1340px] px-0 mx-auto flex items-center',
       }}
     >
-      <div className="mx-auto flex w-main items-center">
-        <Logo />
-        <Nav />
+      <div className="mx-auto flex w-main items-center justify-between">
+        <Logo logo={logo} logoDark={logoDark} />
+        <Nav navBarList={nav} />
         <ThemeSwitch />
-        <Actions />
+        <ActionRight attributes={attributes} />
       </div>
     </Navbar>
   );

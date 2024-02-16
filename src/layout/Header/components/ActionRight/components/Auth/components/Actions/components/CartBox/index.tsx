@@ -2,13 +2,13 @@ import { CartIcon } from '@/components/Icons';
 import { Divider, Input, Popover, PopoverContent, PopoverTrigger } from '@nextui-org/react';
 import * as React from 'react';
 import product from '@/images/product.png';
-import ProductBox from './ProductBox';
+import ProductBox from '../../../ProductBox';
 import MyButton from '@/components/Button';
 import { titleStyle } from '@/shared/styles/primitives';
+import { IActionItem } from '@/layout/Header/types';
+import WrapperIcon from '../../../WrapperIcon';
 
-export interface ICartBoxProps {}
-
-export default function CartBox(props: ICartBoxProps) {
+export default function CartBox(props: IActionItem) {
   const list = [
     {
       name: 'Nike Air Max 270 React ENG',
@@ -49,12 +49,17 @@ export default function CartBox(props: ICartBoxProps) {
   const content = (
     <PopoverContent className="w-[700px] shadow-[0px_40px_90px_20px_rgba(200,200,200,0.40)] dark:bg-bgPrimary dark:shadow-[0px_40px_90px_20px_rgba(23,28,40,0.40)]">
       <div className="flex flex-col gap-main py-main">
-        <h2 className={titleStyle({ size: 'sm', className: 'dark:opacity-60' })}>You have 3 item</h2>
+        <h2 className={titleStyle({ size: 'sm', className: 'dark:opacity-60' })}>
+          You have 3 item
+        </h2>
         <ProductBox productList={list} />
         <Divider orientation="horizontal" />
         <div className="flex flex-col gap-5">
           {info.map((item, index) => (
-            <div key={index} className="flex items-center justify-between  last:font-medium dark:opacity-60">
+            <div
+              key={index}
+              className="flex items-center justify-between  last:font-medium dark:opacity-60"
+            >
               <p className="text-[22px] text-primary">{item.label}</p>
               <p className="text-[22px] text-primary">{item.value}</p>
             </div>
@@ -72,8 +77,10 @@ export default function CartBox(props: ICartBoxProps) {
     <Popover key={'bottom'} showArrow offset={30} placement="bottom-end" backdrop="transparent">
       <PopoverTrigger>
         <div className="flex cursor-pointer items-center gap-[10px] dark:text-white">
-          <CartIcon />
-          <span className="text-[15px] font-medium text-primary">$65:20</span>
+          <WrapperIcon data={props} />
+          {props?.showNumber && (
+            <span className="text-[15px] font-medium text-primary">$65:20</span>
+          )}
         </div>
       </PopoverTrigger>
       {content}
