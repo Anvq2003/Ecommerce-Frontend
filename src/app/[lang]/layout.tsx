@@ -6,7 +6,6 @@ import { Metadata } from 'next';
 import { gordita } from '@/assets/fonts';
 import { i18n, Locale } from '@/config/i18n';
 import { siteConfig } from '@/config/site';
-
 import { Providers } from './providers';
 import StoreProvider from './storeProvider';
 
@@ -20,10 +19,6 @@ export const metadata: Metadata = {
     template: `%s - ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' },
-  ],
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon-16x16.png',

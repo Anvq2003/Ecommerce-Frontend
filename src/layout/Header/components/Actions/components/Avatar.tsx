@@ -2,8 +2,11 @@ import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Avatar, AvatarIc
 import avatarImg from '/public/assets/images/avatar.png';
 import Image from 'next/image';
 import React from 'react';
+import { useSession } from 'next-auth/client';
 
 export default function MyAvatar() {
+  const [session, loading] = useSession();
+  console.debug('session', session);
   return (
     <Avatar
       icon={<AvatarIcon />}

@@ -9,10 +9,6 @@ import AuthModal from './auth';
 
 export default function DefaultLayout({ children }: any) {
   const {isOpen, onOpen, onClose} = useDisclosure();
-
-  useEffect(() => {
-    onOpen();
-  }, []);
   
   return (
     <div className="bg-bgSecondary">

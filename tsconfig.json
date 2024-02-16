@@ -22,7 +22,6 @@
     "baseUrl": "./",
     "paths": {
       "@/app/*": ["src/app/*"],
-      "@/components/*": ["src/components/*"],
       "@/config/*": ["src/config/*"],
       "@/layout/*": ["src/layout/*"],
       "@/shared/*": ["src/shared/*"],
@@ -32,6 +31,7 @@
       "@/store/*": ["src/store/*"],
       "@/features/*": ["src/store/features/*"],
       "@/styles/*": ["src/shared/styles/*"],
+      "@/components/*": ["src/shared/components/*"],
       "@/types/*": ["src/shared/types/*"],
       "@/hooks/*": ["src/shared/hooks/*"],
       "@/constants/*": ["src/shared/constants/*"],

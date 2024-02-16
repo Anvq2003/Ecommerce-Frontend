@@ -1,5 +1,5 @@
 import * as React from 'react';
-import ProductItem, { IProductItem } from './ProductItem';
+import ProductItem, { IProductItem } from './ProductCard';
 
 export interface IProductListProps {
   productList: IProductItem[];

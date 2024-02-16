@@ -29,7 +29,13 @@ export function Providers({ children, themeProps, lang }: ProvidersProps) {
     <NextUIProvider navigate={router.push}>
       <NextThemesProvider {...themeProps}>
         <MaterialTailwindProvider>
-          <NextNProgress color="#29D" startPosition={0.3} stopDelayMs={200} height={3} showOnShallow={true} />
+          <NextNProgress
+            color="#29D"
+            startPosition={0.3}
+            stopDelayMs={200}
+            height={3}
+            showOnShallow={true}
+          />
           {children}
         </MaterialTailwindProvider>
       </NextThemesProvider>
