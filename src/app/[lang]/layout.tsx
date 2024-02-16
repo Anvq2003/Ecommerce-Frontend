@@ -2,7 +2,6 @@ import '@/shared/styles/globals.scss';
 
 import clsx from 'clsx';
 import { Metadata } from 'next';
-import { SessionProvider } from 'next-auth/react';
 
 import { gordita } from '@/assets/fonts';
 import { i18n, Locale } from '@/config/i18n';
@@ -39,16 +38,11 @@ export default function RootLayout({
     <html lang={params.lang} suppressHydrationWarning>
       <head />
       <body className={clsx('min-h-screen overflow-x-hidden antialiased', gordita.className)}>
-        <SessionProvider>
-          <StoreProvider>
-            <Providers
-              lang={params.lang}
-              themeProps={{ attribute: 'class', defaultTheme: 'light' }}
-            >
-              {children}
-            </Providers>
-          </StoreProvider>
-        </SessionProvider>
+        <StoreProvider>
+          <Providers lang={params.lang} themeProps={{ attribute: 'class', defaultTheme: 'light' }}>
+            {children}
+          </Providers>
+        </StoreProvider>
       </body>
     </html>
   );

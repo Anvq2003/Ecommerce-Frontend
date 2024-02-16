@@ -1,10 +1,11 @@
 'use client';
 
+import { SessionProvider } from 'next-auth/react';
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
 import { ThemeProviderProps } from 'next-themes/dist/types';
 import { useRouter } from 'next/navigation';
 import NextNProgress from 'nextjs-progressbar';
-import * as React from 'react';
+import { useEffect } from 'react';
 
 import { i18n, Locale } from '@/config/i18n';
 import useLanguageContext, { setLanguageSelector } from '@/contexts/language';
@@ -21,7 +22,7 @@ export function Providers({ children, themeProps, lang }: ProvidersProps) {
   const router = useRouter();
   const setLanguage = useLanguageContext(setLanguageSelector);
 
-  React.useEffect(() => {
+  useEffect(() => {
     setLanguage(lang || i18n.defaultLocale);
   }, [lang, setLanguage]);
 
@@ -29,14 +30,16 @@ export function Providers({ children, themeProps, lang }: ProvidersProps) {
     <NextUIProvider navigate={router.push}>
       <NextThemesProvider {...themeProps}>
         <MaterialTailwindProvider>
-          <NextNProgress
-            color="#29D"
-            startPosition={0.3}
-            stopDelayMs={200}
-            height={3}
-            showOnShallow={true}
-          />
-          {children}
+          <SessionProvider>
+            <NextNProgress
+              color="#29D"
+              startPosition={0.3}
+              stopDelayMs={200}
+              height={3}
+              showOnShallow={true}
+            />
+            {children}
+          </SessionProvider>
         </MaterialTailwindProvider>
       </NextThemesProvider>
     </NextUIProvider>

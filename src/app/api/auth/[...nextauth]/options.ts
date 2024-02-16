@@ -12,6 +12,16 @@ export const options: NextAuthOptions = {
   ],
 
   callbacks: {
+    session: ({ session, token }) => {
+      return {
+        ...session,
+        user: {
+          ...session.user,
+          id: token.id,
+          randomKey: token.randomKey,
+        },
+      };
+    },
     async jwt({ user, token, account }) {
       const isSignIn = user ? true : false;
       if (isSignIn) {
