@@ -2,12 +2,14 @@ import '@/shared/styles/globals.scss';
 
 import clsx from 'clsx';
 import { Metadata } from 'next';
+import { SessionProvider } from 'next-auth/react';
 
 import { gordita } from '@/assets/fonts';
 import { i18n, Locale } from '@/config/i18n';
 import { siteConfig } from '@/config/site';
+
 import { Providers } from './providers';
-import StoreProvider from './storeProvider';
+import StoreProvider from './StoreProvider';
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
@@ -26,16 +28,27 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children, params }: { children: React.ReactNode; params: { lang: Locale } }) {
+export default function RootLayout({
+  children,
+  params,
+}: {
+  children: React.ReactNode;
+  params: { lang: Locale };
+}) {
   return (
     <html lang={params.lang} suppressHydrationWarning>
       <head />
       <body className={clsx('min-h-screen overflow-x-hidden antialiased', gordita.className)}>
-        <StoreProvider>
-          <Providers lang={params.lang} themeProps={{ attribute: 'class', defaultTheme: 'light' }}>
-            {children}
-          </Providers>
-        </StoreProvider>
+        <SessionProvider>
+          <StoreProvider>
+            <Providers
+              lang={params.lang}
+              themeProps={{ attribute: 'class', defaultTheme: 'light' }}
+            >
+              {children}
+            </Providers>
+          </StoreProvider>
+        </SessionProvider>
       </body>
     </html>
   );

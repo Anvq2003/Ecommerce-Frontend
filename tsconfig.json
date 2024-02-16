@@ -22,6 +22,7 @@
     "baseUrl": "./",
     "paths": {
       "@/app/*": ["src/app/*"],
+      "@/api/*": ["src/app/api/*"],
       "@/config/*": ["src/config/*"],
       "@/layout/*": ["src/layout/*"],
       "@/shared/*": ["src/shared/*"],
@@ -32,7 +33,6 @@
       "@/store/*": ["src/store/*"],
       "@/features/*": ["src/store/features/*"],
       "@/styles/*": ["src/shared/styles/*"],
-      "@/components/*": ["src/shared/components/*"],
       "@/types/*": ["src/shared/types/*"],
       "@/components/*": ["src/shared/components/*"],
       "@/hooks/*": ["src/shared/hooks/*"],
