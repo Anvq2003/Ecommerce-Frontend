@@ -35,7 +35,7 @@ export function Providers({ children, themeProps, lang }: ProvidersProps) {
               color="#29D"
               startPosition={0.3}
               stopDelayMs={200}
-              height={3}
+              height={10}
               showOnShallow={true}
             />
             {children}
