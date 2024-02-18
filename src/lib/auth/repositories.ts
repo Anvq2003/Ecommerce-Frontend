@@ -1,17 +1,13 @@
-import { AxiosInstance } from 'axios';
 import axiosInstance from '../http/axiosInstance';
 import { IUser } from './entity';
 
 type IUserRepository = {
-  create: (user: IUser) => Promise<void>;
+  create: (user: IUser) => Promise<IUser>;
 };
 
-export function UserRepository(axios: AxiosInstance): IUserRepository {
-  return {
-    create: async (user: IUser) => {
-      await axios.post('/users', user);
-    },
-  };
-}
-
-export default UserRepository(axiosInstance);
+export const UserRepository: IUserRepository = {
+  create: async (user: IUser) => {
+    const response = await axiosInstance.post('/auth/local/register', user);
+    return response.data;
+  },
+};
