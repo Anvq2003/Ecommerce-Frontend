@@ -15,7 +15,7 @@ export default function DesktopHeader() {
       wrapper: 'max-w-[1340px] px-0 mx-auto flex items-center',
     }}
   >
-    <div className="mx-auto flex w-main items-center">
+    <div className="mx-auto flex w-main items-center justify-between">
       <Logo />
       <Nav />
       <ThemeSwitch />

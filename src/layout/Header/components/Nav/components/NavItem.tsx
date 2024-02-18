@@ -11,7 +11,7 @@ export default function NavItem({ menu }: IMenuCardProps) {
       <li>
         <a
           href={'#'}
-          className="flex cursor-pointer items-center gap-[6px] text-[15px] font-medium leading-[50px] text-primary"
+          className="flex capitalize cursor-pointer whitespace-nowrap  items-center gap-[6px] text-[15px] font-medium leading-[50px] text-primary"
         >
           {menu?.label}
         </a>
@@ -29,7 +29,7 @@ export default function NavItem({ menu }: IMenuCardProps) {
       >
         <MenuHandler>
           <ListItem
-            className="flex cursor-pointer items-center gap-1.5 text-[15px] font-medium text-primary"
+            className="flex cursor-pointer capitalize items-center gap-1.5 text-[15px] font-medium text-primary"
             selected={isMenuOpen}
           >
             {menu?.label}
