@@ -1,6 +1,6 @@
 'use client';
 
-import { BreadcrumbItem, Breadcrumbs } from '@nextui-org/react';
+import { BreadcrumbItem, Breadcrumbs } from "@heroui/react";
 import * as React from 'react';
 
 export interface IBreadcrumbComponentProps {}

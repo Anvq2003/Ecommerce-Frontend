@@ -1,7 +1,7 @@
 'use client';
 import { subtitleStyle, titleStyle } from '@/shared/styles/primitives';
 import MyButton from '@/components/Button';
-import { Divider, radio } from '@nextui-org/react';
+import { Divider, radio } from "@heroui/react";
 import * as React from 'react';
 import { EScreenType, useDeviceType } from '@/shared/hooks/useDeviceType';
 import InformationDesktop from './components/Desktop';

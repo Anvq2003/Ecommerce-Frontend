@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { useParams } from 'next/navigation';
 import * as React from 'react';
-import { Button, Chip, Select, SelectItem } from '@nextui-org/react';
+import { Button, Chip, Select, SelectItem } from "@heroui/react";
 
 import MyButton from '@/components/Button';
 import { BagIcon, CartIcon, CompareIcon, HeartIcon, StarIcon } from '@/components/Icons';

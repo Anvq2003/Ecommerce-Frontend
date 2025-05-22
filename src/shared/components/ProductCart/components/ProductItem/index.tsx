@@ -1,6 +1,6 @@
 'use client';
 
-import { Checkbox, Divider, Select, SelectItem } from '@nextui-org/react';
+import { Checkbox, Divider, Select, SelectItem } from "@heroui/react";
 import Image from 'next/image';
 import * as React from 'react';
 import QuantityBox from './components/QuantityBox';

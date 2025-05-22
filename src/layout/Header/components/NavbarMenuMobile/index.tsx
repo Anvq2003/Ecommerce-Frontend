@@ -1,5 +1,5 @@
 import { CartIcon, HeartIcon } from '@/components/Icons';
-import { Accordion, AccordionItem, NavbarMenu, ScrollShadow } from '@nextui-org/react';
+import { Accordion, AccordionItem, NavbarMenu, ScrollShadow } from "@heroui/react";
 
 import { navBarList } from '../../data';
 import MenuCard from '../Nav/components/MenuCard';

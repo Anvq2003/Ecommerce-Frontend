@@ -1,6 +1,6 @@
 import ButtonMain from '@/components/Button';
 import { subtitleStyle, titleStyle } from '@/shared/styles/primitives';
-import { Divider } from '@nextui-org/react';
+import { Divider } from "@heroui/react";
 
 import { IBubbleInformationProps } from '../';
 

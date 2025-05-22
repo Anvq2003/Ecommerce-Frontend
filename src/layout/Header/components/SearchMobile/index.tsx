@@ -1,5 +1,5 @@
 import { SearchIcon } from '@/components/Icons';
-import { Input } from '@nextui-org/input';
+import { Input } from "@heroui/input";
 import * as React from 'react';
 
 export interface ISearchMobileProps {}

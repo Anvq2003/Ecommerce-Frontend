@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import MenuCard, { IMenuCardProps } from './MenuCard';
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
-import { MenuHandler, Typography, ListItem, MenuList, Menu } from '@material-tailwind/react';
 
 export default function NavItem({ menu }: IMenuCardProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,7 +19,8 @@ export default function NavItem({ menu }: IMenuCardProps) {
 
   return (
     <React.Fragment>
-      <Menu
+      <div className=""></div>
+      {/* <Menu
         open={isMenuOpen}
         handler={setIsMenuOpen}
         // offset={{ mainAxis: 30, crossAxis: 150, alignmentAxis: 100 }}
@@ -41,7 +41,7 @@ export default function NavItem({ menu }: IMenuCardProps) {
             {menu?.children?.map((item, index) => <MenuCard key={index} menu={item} />)}
           </ul>
         </MenuList>
-      </Menu>
+      </Menu> */}
     </React.Fragment>
   );
 }

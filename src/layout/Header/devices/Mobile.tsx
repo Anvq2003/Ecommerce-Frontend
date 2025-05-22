@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import Logo from '@/components/Logo';
-import { Navbar, NavbarContent, NavbarMenuToggle } from '@nextui-org/react';
+import { Navbar, NavbarContent, NavbarMenuToggle } from "@heroui/react";
 
 import Avatar from '../components/Actions/components/Avatar';
 import NavbarMenuMobile from '../components/NavbarMenuMobile';

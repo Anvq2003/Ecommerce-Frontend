@@ -2,7 +2,7 @@ import Logo from '@/components/Logo';
 import { ThemeSwitch } from '@/components/ThemeSwitcher';
 
 import Nav from '../components/Nav';
-import { Navbar } from '@nextui-org/navbar';
+import { Navbar } from "@heroui/navbar";
 import Actions from '../components/Actions';
 
 export default function DesktopHeader() {

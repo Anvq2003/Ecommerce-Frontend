@@ -1,5 +1,5 @@
 import { FilterIcon } from "@/components/Icons";
-import { Popover, PopoverContent, PopoverTrigger } from "@nextui-org/react";
+import { Popover, PopoverContent, PopoverTrigger } from "@heroui/react";
 import React from "react";
 
 export default function FilterBox() {

@@ -1,16 +1,13 @@
-import { nextui } from '@nextui-org/theme';
-import withMT from '@material-tailwind/react/utils/withMT';
+import { heroui } from '@heroui/theme';
 
 /** @type {import('tailwindcss').Config} */
-module.exports = withMT({
+module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/layout/**/*.{js,ts,jsx,tsx,mdx}',
     './src/shared/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-    './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
-    './node_modules/@material-tailwind/react/components/**/*.{js,ts,jsx,tsx}',
-    './node_modules/@material-tailwind/react/theme/components/**/*.{js,ts,jsx,tsx}',
+    './node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}',
   ],
   darkMode: 'class',
   theme: {
@@ -47,7 +44,7 @@ module.exports = withMT({
     },
   },
   plugins: [
-    nextui({
+    heroui({
       prefix: 'nextui', // prefix for themes variables
       addCommonColors: false, // override common colors (e.g. "blue", "green", "pink").
       defaultTheme: 'light', // default theme from the themes object
@@ -84,4 +81,4 @@ module.exports = withMT({
       },
     }),
   ],
-});
+};

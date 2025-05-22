@@ -3,7 +3,7 @@ import { useCallback } from 'react';
 
 import { IActionForm, renderActionForm } from '@/shared/helpers/formRenderer';
 import { IModal } from '@/shared/types';
-import { Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, ModalProps } from '@nextui-org/react';
+import { Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, ModalProps } from "@heroui/react";
 
 export interface IModalMainProps extends ModalProps {
   title: string;

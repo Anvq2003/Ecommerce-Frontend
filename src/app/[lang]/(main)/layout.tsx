@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 
 import Footer from '@/layout/Footer';
 import Header from '@/layout/Header';
-import { useDisclosure } from '@nextui-org/react';
+import { useDisclosure } from "@heroui/react";
 
 import AuthModal from './auth';
 

@@ -1,4 +1,4 @@
-import { Checkbox, CheckboxProps } from '@nextui-org/react';
+import { Checkbox, CheckboxProps } from "@heroui/react";
 
 export interface ICheckboxFieldProps extends CheckboxProps {}
 

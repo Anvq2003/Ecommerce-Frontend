@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { ISelectOption } from '@/shared/types';
-import { CheckboxGroup } from '@nextui-org/react';
+import { CheckboxGroup } from "@heroui/react";
 
 import { CustomCheckbox } from './CustomCheckbox';
 import { titleStyle } from '@/shared/styles/primitives';

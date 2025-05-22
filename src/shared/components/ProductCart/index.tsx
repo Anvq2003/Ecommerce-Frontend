@@ -1,7 +1,7 @@
 'use client';
 
 import { titleStyle } from '@/shared/styles/primitives';
-import { Checkbox } from '@nextui-org/react';
+import { Checkbox } from "@heroui/react";
 
 import FooterBox from './components/FooterBox';
 import { ICartItem } from './components/ProductItem';

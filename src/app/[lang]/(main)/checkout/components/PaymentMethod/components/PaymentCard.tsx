@@ -1,7 +1,7 @@
 import Image, { StaticImageData } from 'next/image';
 import * as React from 'react';
 import { checkoutStyle } from '../../style';
-import { Checkbox } from '@nextui-org/react';
+import { Checkbox } from "@heroui/react";
 export interface IPaymentCard {
   image: string | StaticImageData;
   name: string;

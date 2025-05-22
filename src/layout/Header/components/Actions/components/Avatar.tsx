@@ -5,7 +5,7 @@ import {
   DropdownItem,
   Avatar,
   AvatarIcon,
-} from '@nextui-org/react';
+} from "@heroui/react";
 import avatarImg from '/public/assets/images/avatar.png';
 import Image from 'next/image';
 import React from 'react';

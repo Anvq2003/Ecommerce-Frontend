@@ -9,8 +9,7 @@ import { useEffect } from 'react';
 
 import { i18n, Locale } from '@/config/i18n';
 import useLanguageContext, { setLanguageSelector } from '@/contexts/language';
-import { ThemeProvider as MaterialTailwindProvider } from '@material-tailwind/react';
-import { NextUIProvider } from '@nextui-org/system';
+import { HeroUIProvider } from "@heroui/system";
 
 export interface ProvidersProps {
   children: React.ReactNode;
@@ -27,9 +26,8 @@ export function Providers({ children, themeProps, lang }: ProvidersProps) {
   }, [lang, setLanguage]);
 
   return (
-    <NextUIProvider navigate={router.push}>
+    <HeroUIProvider navigate={router.push}>
       <NextThemesProvider {...themeProps}>
-        <MaterialTailwindProvider>
           <SessionProvider>
             <NextNProgress
               color="#29D"
@@ -40,8 +38,7 @@ export function Providers({ children, themeProps, lang }: ProvidersProps) {
             />
             {children}
           </SessionProvider>
-        </MaterialTailwindProvider>
       </NextThemesProvider>
-    </NextUIProvider>
+    </HeroUIProvider>
   );
 }

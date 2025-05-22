@@ -1,5 +1,5 @@
 import { titleStyle } from '@/shared/styles/primitives';
-import { Divider } from '@nextui-org/react';
+import { Divider } from "@heroui/react";
 import payment from '@/assets/images/payment.png';
 
 import PaymentList from './components/PaymentList';

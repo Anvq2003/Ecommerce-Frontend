@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Chip, tv, useCheckbox, VisuallyHidden } from '@nextui-org/react';
+import { Chip, tv, useCheckbox, VisuallyHidden } from "@heroui/react";
 import { CheckIcon } from '@heroicons/react/24/outline';
 
 const checkbox = tv({

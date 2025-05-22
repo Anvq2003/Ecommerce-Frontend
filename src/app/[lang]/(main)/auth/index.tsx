@@ -8,7 +8,7 @@ import { GoogleIcon, LockIcon, MailIcon } from '@/components/Icons';
 import Logo from '@/components/Logo';
 import { IForm, renderForm } from '@/shared/helpers/formRenderer';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Modal, ModalBody, ModalContent } from '@nextui-org/react';
+import { Modal, ModalBody, ModalContent } from "@heroui/react";
 import CheckboxField from '@/components/Form/CheckBoxField';
 
 const signInSchema = z.object({

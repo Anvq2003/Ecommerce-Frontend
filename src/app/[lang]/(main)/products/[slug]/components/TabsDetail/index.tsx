@@ -3,7 +3,7 @@
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 
 import { ITab } from '@/shared/types';
-import { Tab, Tabs } from '@nextui-org/react';
+import { Tab, Tabs } from "@heroui/react";
 
 import Description from './components/Description';
 import Reviews from './components/Reviews';

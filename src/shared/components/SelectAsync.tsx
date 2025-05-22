@@ -3,7 +3,7 @@
 import { ISelectOption } from '@/shared/types';
 import * as React from 'react';
 import lodash from 'lodash';
-import { Select, SelectProps } from '@nextui-org/react';
+import { Select, SelectProps } from "@heroui/react";
 
 export interface ISelectAsyncProps<T = any> extends SelectProps<T | any> {
   items?: ISelectOption[];

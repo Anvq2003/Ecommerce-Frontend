@@ -1,4 +1,4 @@
-import { Input, InputProps } from '@nextui-org/input';
+import { Input, InputProps } from "@heroui/input";
 
 export interface IInputFieldProps extends InputProps {}
 

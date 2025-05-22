@@ -1,5 +1,5 @@
 import { HeartIcon } from "@/components/Icons";
-import { Button } from "@nextui-org/button";
+import { Button } from "@heroui/button";
 import * as React from "react";
 
 export interface IButtonHeartProps {}

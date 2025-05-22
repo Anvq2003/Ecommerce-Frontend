@@ -1,7 +1,7 @@
 import ButtonMain from '@/components/Button';
 import CheckboxField from '@/components/Form/CheckBoxField';
 import InputField from '@/components/Form/InputField';
-import { ButtonProps } from '@nextui-org/button';
+import { ButtonProps } from "@heroui/button";
 
 export type FieldType = 'input' | 'checkbox' | 'select';
 export type Type = 'text' | 'email' | 'password' | 'number' | 'tel' | 'url';

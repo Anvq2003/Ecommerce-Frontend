@@ -1,5 +1,5 @@
 import { CartIcon } from '@/components/Icons';
-import { Divider, Input, Popover, PopoverContent, PopoverTrigger } from '@nextui-org/react';
+import { Divider, Input, Popover, PopoverContent, PopoverTrigger } from "@heroui/react";
 import * as React from 'react';
 import product from '@/images/product.png';
 import ProductBox from './ProductBox';
